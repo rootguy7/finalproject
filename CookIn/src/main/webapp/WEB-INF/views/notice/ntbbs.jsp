@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/css/commbbs.css">
 <!-- 부가적인 테마 -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -131,6 +132,12 @@
 					<td class="bcount">5</td>
 				</tr>
 			</table>
+			<div class="row">
+					<div class="col-md-10"></div>
+					<div class="col-md-2">
+						<button type="button" class="btn btn-default">글쓰기</button>
+					</div>
+			</div>
 			<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-2 sel">

@@ -45,7 +45,7 @@
 		<span id="admintop">관리자 페이지</span>
       </div>
       <div class="logo">
-		<a href="cook/admin"><img src="../resources/imgs/logo.png"></a>
+		<a href="/cook/admin"><img src="/cook/resources/imgs/logo.png"></a>
       </div>
       <div class="division"></div>
    </div>
