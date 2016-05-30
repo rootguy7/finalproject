@@ -47,7 +47,9 @@ table tr{
 		<div class="col-md-1 content"></div>
 	  	<div class="col-md-8 content">
 			<div>
-		  		<span class="titlename">입금 확인</span>
+		  		<span class="titlename">
+					<h3>주문관리<small>입금확인</small></h3>
+				</span>
 		  		<table class="table table-condensed table-bordered">
 			  		<colgroup>
 		                <col width="50" />
@@ -90,10 +92,8 @@ table tr{
 		  	</div>
 	  </div>
 		<div class="col-md-1 content"></div>
-	</div>
-	<!-- 페이징 start -->
-	<div class="row">
-		<div class="col-md-12" id="pagination">
+		<!-- 페이징 start -->
+	  <div class="col-md-10" id="pagination">
 			<ul class="pagination">
 			    <li>
 			      <a href="#" aria-label="Previous">
@@ -112,8 +112,8 @@ table tr{
 			    </li>
 			 </ul>
 		</div>
+	  <!-- 페이징 end -->
 	</div>
-	<!-- 페이징 end -->
 </div>
 <%@include file="../footer.jsp" %>
 </body>

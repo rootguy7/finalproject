@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>관리자-배송관리 페이지</title> 
+<title>관리자-배송확인 페이지</title>
 <style type="text/css">
 table {
 	border-collapse: collapse;
@@ -42,28 +42,27 @@ table tr{
 	  	<div class="col-md-2">
 			<%@ include file="../adminmenu.jsp" %>
 		</div>
-	  <div class="col-md-1 content"></div>
+		<div class="col-md-1 content"></div>
 	  <div class="col-md-8 content">
 		<div>
-	  		<span class="titlename">배송 확인</span>
+	  		<span class="titlename">
+				<h3>주문관리<small>배송확인</small></h3>
+			</span>
 	  		<table class="table table-condensed table-bordered">
 		  		<colgroup>
-	                <col width="50" />
 	                <col width="100" />
 	                <col width="200" />
 	                <col width="500" />
 	                <col width="200" />
 	            </colgroup>
-				<tr><th class="title">check</th><th class="title">index</th><th class="title">입금 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
+				<tr><th class="title">index</th><th class="title">배송 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
 				<tr>
-					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 				</tr>
 				<tr>
-					<td>내용2</td>
 					<td>내용2</td>
 					<td>내용2</td>
 					<td>내용2</td>
@@ -72,11 +71,9 @@ table tr{
 			</table>
 		</div>
 	  </div>
-	  <div class="col-md-1 content"></div>
-	</div>
+	<div class="col-md-1 content"></div>
 	<!-- 페이징 start -->
-	<div class="row">
-		<div class="col-md-12" id="pagination">
+	  <div class="col-md-10" id="pagination">
 			<ul class="pagination">
 			    <li>
 			      <a href="#" aria-label="Previous">
@@ -95,8 +92,8 @@ table tr{
 			    </li>
 			 </ul>
 		</div>
+	  <!-- 페이징 end -->
 	</div>
-	<!-- 페이징 end -->
 </div>
 <%@include file="../footer.jsp" %>
 </body>

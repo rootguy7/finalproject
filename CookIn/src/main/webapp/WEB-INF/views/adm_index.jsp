@@ -34,6 +34,8 @@
 	  	<div class="col-md-2">
 			<%@ include file="adminmenu.jsp" %>
 		</div>
+		<div class="col-md-1 content"></div>
+		<div class="col-md-8 content">
 		<!-- contents 해야할일 -->
 		<div class="span3 contents">
       		<div class="widget">
@@ -59,17 +61,19 @@
 		      	</div>
 	      	</div>
       	</div>
-		<div class="col-md-8">
+		<div class="col-md-11">
 			<div class="widget">
 	            <div class="widget-header">
 	                <i class="icon-bar-chart"></i>
-	                <h3>접속 통계 그래프</h3>
+	                <h3>월별 판매 그래프</h3>
 	            </div>
 	            <div class="widget-content">
 	                <canvas id="bar-chart" class="chart-holder" width="800" height="250"></canvas>
 	            </div>
 	        </div>
 		</div>
+		</div>
+		<div class="col-md-1 content"></div>
 	</div>
 </div>
 <%@include file="footer.jsp" %>
