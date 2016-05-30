@@ -37,4 +37,8 @@ public class AdminController {
 	public String qna(){
 		return "admin/qna";
 	}	
+	@RequestMapping("/admin/bbsdetail")
+	public String detail(){
+		return "admin/bbsdetail";
+	}	
 }

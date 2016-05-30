@@ -27,6 +27,7 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 		    var index = $('.rownum:eq('+(ridx)+')>td:eq(0)').text();
 			alert('클릭한 No : '+index);
 // 			location.href="/Hanbit/customer/boardDetail.do?index="+index;
+			location.href="/cook/admin/bbsdetail";
 		});
 	});
 </script>
