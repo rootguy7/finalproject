@@ -8,10 +8,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>관리자 페이지</title>
-<link rel="stylesheet" href="../resources/css/base-admin-responsive.css">
-<link rel="stylesheet" href="../resources/css/bootstrap-responsive.min.css">
-<link rel="stylesheet" href="../resources/css/style.css">
-<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cook/resources/css/base-admin-responsive.css">
+<link rel="stylesheet" href="/cook/resources/css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="/cook/resources/css/style.css">
+<link rel="stylesheet" href="/cook/resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <style>
 	*{
@@ -24,7 +24,7 @@
 	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="../resources/js/bootstrap.min.js"></script>
+<script src="/cook/resources/js/bootstrap.min.js"></script>
 </head>
 <body>
 <%@include file="header2.jsp" %>
@@ -73,11 +73,11 @@
 	</div>
 </div>
 <%@include file="footer.jsp" %>
-<script src="../resources/js/base.js"></script>
-<script src="../resources/js/chart.min.js"></script>
-<script src="../resources/js/excanvas.min.js"></script>
-<script src="../resources/js/faq.js"></script>
-<script src="../resources/js/bar.js"></script>
+<script src="/cook/resources/js/base.js"></script>
+<script src="/cook/resources/js/chart.min.js"></script>
+<script src="/cook/resources/js/excanvas.min.js"></script>
+<script src="/cook/resources/js/faq.js"></script>
+<script src="/cook/resources/js/bar.js"></script>
 <script type="text/javascript">
 var barChartData = {
     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],

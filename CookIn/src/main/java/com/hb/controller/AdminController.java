@@ -5,35 +5,43 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AdminController {
-	@RequestMapping("/admin/") //���� ����
+	@RequestMapping("/admin")
 	public String index(){
 		return "adm_index";
 	}
-	@RequestMapping("/info/") //�?���� 
+	@RequestMapping("/admin/info")
 	public String info(){
 		return "admin/info";
 	}
-	@RequestMapping("/list/") //��ǰ����Ʈ
+	@RequestMapping("/admin/input")
+	public String input(){
+		return "admin/input";
+	}
+	@RequestMapping("/admin/edit")
+	public String edit(){
+		return "admin/edit";
+	}
+	@RequestMapping("/admin/del")
+	public String del(){
+		return "admin/del";
+	}
+	@RequestMapping("/admin/list")
 	public String list(){
 		return "admin/list";
 	}
-	@RequestMapping("/order/") //�ֹ�Ȯ��
+	@RequestMapping("/admin/order")
 	public String order(){
 		return "admin/order";
 	}	
-	@RequestMapping("/deposit/") //�Ա�Ȯ��
+	@RequestMapping("/admin/deposit")
 	public String deposit(){
 		return "admin/deposit";
 	}
-	@RequestMapping("/delivery/") //�Ա�Ȯ��
-	public String delivery(){
-		return "admin/delivery";
-	}
-	@RequestMapping("/notice/") //��������
+	@RequestMapping("/admin/notice")
 	public String notice(){
 		return "admin/notice";	
 	}
-	@RequestMapping("/qna/") //��������
+	@RequestMapping("/admin/qna")
 	public String qna(){
 		return "admin/qna";
 	}	

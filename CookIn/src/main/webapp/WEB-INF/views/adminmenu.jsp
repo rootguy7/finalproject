@@ -27,7 +27,7 @@
    }
    .con{	
    	  font-size: 12px;	
-   } 
+   }
 </style>
 <script type="text/javascript">
 	$('tr').click( function() {
@@ -41,19 +41,21 @@
 <!-- 	<div class="col-md-3 leftmenu"> -->
 		<table class="table table-condensed">
 		 	<tr class="title"><th>고객 관리</th></tr>
-			<tr><td><a class="con" href="/cook/info/">회원 정보</a></td></tr>
+			<tr><td><a class="con" href="/cook/admin/info">고객 정보</a></td></tr>
 			
-		 	<tr class="title"><th>상품 관리</th></tr>		
-			<tr><td><a class="con" href="/cook/list/">전체 상품</a></td></tr>
+		 	<tr class="title"><th>상품 관리</th></tr>
+			<tr><td><a class="con" href="/cook/admin/input">상품 입고</a></td></tr>		
+			<tr><td><a class="con" href="/cook/admin/edit">상품 수정</a></td></tr>		
+			<tr><td><a class="con" href="/cook/admin/del">상품 삭제</a></td></tr>		
+			<tr><td><a class="con" href="/cook/admin/list">전체 상품 리스트</a></td></tr>
 					
 		 	<tr class="title"><th>주문 관리</th></tr>
-			<tr><td><a class="con" href="/cook/order/">주문 확인</a></td></tr>		
-			<tr><td><a class="con" href="/cook/deposit/">입금 확인</a></td></tr>	
-			<tr><td><a class="con" href="/cook/delivery/">배송 확인</a></td></tr>	
+			<tr><td><a class="con" href="/cook/admin/order">주문 확인</a></td></tr>		
+			<tr><td><a class="con" href="/cook/admin/deposit">입금 확인</a></td></tr>	
 			
 		 	<tr class="title"><th>게시물 관리</th></tr>
-			<tr><td><a class="con" href="/cook/notice/">공지사항</a></td></tr>		
-			<tr><td><a class="con" href="/cook/qna/">질의응답</a></td></tr>		
+			<tr><td><a class="con" href="/cook/admin/notice">공지사항</a></td></tr>		
+			<tr><td><a class="con" href="/cook/admin/qna">질의응답</a></td></tr>		
 		</table> 
 <!-- 	</div> -->
 	<!-- 메뉴 구성 끝  -->
