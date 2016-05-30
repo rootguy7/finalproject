@@ -27,8 +27,6 @@ table tr{
 	display: inline-block;
 	text-align: center;
 }
-.btn{
-}
 </style>
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -87,8 +85,11 @@ table tr{
 					</tr>
 				</table>
 			</div>
+			<div class="col-md-10"></div>
+			<div class="col-md-1">
 			<div class="btn">
-				<button type="button">배송 승인</button>
+				<a class="btn btn-default" href="#" role="button">배송 승인</a>
+		  	</div>
 		  	</div>
 	  </div>
 		<div class="col-md-1 content"></div>
