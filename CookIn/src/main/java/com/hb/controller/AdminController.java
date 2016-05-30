@@ -13,18 +13,6 @@ public class AdminController {
 	public String info(){
 		return "admin/info";
 	}
-	@RequestMapping("/admin/input")
-	public String input(){
-		return "admin/input";
-	}
-	@RequestMapping("/admin/edit")
-	public String edit(){
-		return "admin/edit";
-	}
-	@RequestMapping("/admin/del")
-	public String del(){
-		return "admin/del";
-	}
 	@RequestMapping("/admin/list")
 	public String list(){
 		return "admin/list";
@@ -36,6 +24,10 @@ public class AdminController {
 	@RequestMapping("/admin/deposit")
 	public String deposit(){
 		return "admin/deposit";
+	}
+	@RequestMapping("/admin/delivery")
+	public String delivery(){
+		return "admin/delivery";
 	}
 	@RequestMapping("/admin/notice")
 	public String notice(){

@@ -42,7 +42,8 @@ table tr{
 	  	<div class="col-md-2">
 			<%@ include file="../adminmenu.jsp" %>
 		</div>
-	  <div class="col-md-10 content">
+		<div class="col-md-1 content"></div>
+	  <div class="col-md-8 content">
 		<div>
 	  		<span class="titlename">주문 확인</span>
 	  		<table class="table table-condensed table-bordered">
@@ -68,6 +69,7 @@ table tr{
 			</table>
 		</div>
 	  </div>
+	<div class="col-md-1 content"></div>
 	</div>
 	<!-- 페이징 start -->
 	<div class="row">

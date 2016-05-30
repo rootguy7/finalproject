@@ -44,50 +44,52 @@ table tr{
 	  	<div class="col-md-2">
 			<%@ include file="../adminmenu.jsp" %>
 		</div>
-	  <div class="col-md-10 content">
-		<div>
-	  		<span class="titlename">입금 확인</span>
-	  		<table class="table table-condensed table-bordered">
-		  		<colgroup>
-	                <col width="50" />
-	                <col width="100" />
-	                <col width="200" />
-	                <col width="500" />
-	                <col width="200" />
-	            </colgroup>
-				<tr><th class="title">check</th><th class="title">index</th><th class="title">입금 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
-				<tr>
-					<td>
-						<div class="checkbox">
-						  <label>
-						    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-						  </label>
-						</div>
-					</td>
-					<td>내용1</td>
-					<td>내용1</td>
-					<td>내용1</td>
-					<td>내용1</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="checkbox">
-						  <label>
-						    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-						  </label>
-						</div>
-					</td>
-					<td>내용2</td>
-					<td>내용2</td>
-					<td>내용2</td>
-					<td>내용2</td>
-				</tr>
-			</table>
-		</div>
-		<div class="btn">
-			<button type="button">배송 승인</button>
-	  	</div>
+		<div class="col-md-1 content"></div>
+	  	<div class="col-md-8 content">
+			<div>
+		  		<span class="titlename">입금 확인</span>
+		  		<table class="table table-condensed table-bordered">
+			  		<colgroup>
+		                <col width="50" />
+		                <col width="100" />
+		                <col width="200" />
+		                <col width="500" />
+		                <col width="200" />
+		            </colgroup>
+					<tr><th class="title">check</th><th class="title">index</th><th class="title">입금 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
+					<tr>
+						<td>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+							  </label>
+							</div>
+						</td>
+						<td>내용1</td>
+						<td>내용1</td>
+						<td>내용1</td>
+						<td>내용1</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkbox">
+							  <label>
+							    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+							  </label>
+							</div>
+						</td>
+						<td>내용2</td>
+						<td>내용2</td>
+						<td>내용2</td>
+						<td>내용2</td>
+					</tr>
+				</table>
+			</div>
+			<div class="btn">
+				<button type="button">배송 승인</button>
+		  	</div>
 	  </div>
+		<div class="col-md-1 content"></div>
 	</div>
 	<!-- 페이징 start -->
 	<div class="row">

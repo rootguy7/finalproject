@@ -42,7 +42,8 @@ table tr{
 	  	<div class="col-md-2">
 			<%@ include file="../adminmenu.jsp" %>
 		</div>
-	  <div class="col-md-10 content">
+	  <div class="col-md-1 content"></div>
+	  <div class="col-md-8 content">
 		<div>
 	  		<span class="titlename">배송 확인</span>
 	  		<table class="table table-condensed table-bordered">
@@ -59,8 +60,10 @@ table tr{
 					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
+					<td>내용1</td>
 				</tr>
 				<tr>
+					<td>내용2</td>
 					<td>내용2</td>
 					<td>내용2</td>
 					<td>내용2</td>
@@ -69,6 +72,7 @@ table tr{
 			</table>
 		</div>
 	  </div>
+	  <div class="col-md-1 content"></div>
 	</div>
 	<!-- 페이징 start -->
 	<div class="row">

@@ -48,35 +48,37 @@ table tr{
 	  	<div class="col-md-2">
 			<%@ include file="../adminmenu.jsp" %>
 		</div>
-	  <div class="col-md-10 content">
-		<div>
-	  		<span class="titlename">회원 정보</span>
-	  		<table class="table table-condensed table-bordered">
-		  		<colgroup>
-	                <col width="100" />
-	                <col width="200" />
-	                <col width="200" />
-	                <col width="300" />
-	                <col width="300" />
-	            </colgroup>
-				<tr><th class="title">index</th><th class="title">id</th><th class="title">name</th><th class="title">mobile</th><th class="title">point</th></tr>	
-				<tr>
-					<td>내용1</td>
-					<td>내용1</td>
-					<td>내용1</td>
-					<td>내용1</td>
-					<td>내용1</td>	
-				</tr>
-				<tr>
-					<td>내용2</td>
-					<td>내용2</td>
-					<td>내용2</td>
-					<td>내용2</td>
-					<td>내용2</td>
-				</tr>
-			</table>
-		</div>
-	  </div>
+		<div class="col-md-1 content"></div>
+	 	<div class="col-md-8 content">
+			<div>
+		  		<span class="titlename">회원 정보</span>
+		  		<table class="table table-condensed table-bordered">
+			  		<colgroup>
+		                <col width="100" />
+		                <col width="200" />
+		                <col width="200" />
+		                <col width="300" />
+		                <col width="300" />
+		            </colgroup>
+					<tr><th class="title">index</th><th class="title">id</th><th class="title">name</th><th class="title">mobile</th><th class="title">point</th></tr>	
+					<tr>
+						<td>내용1</td>
+						<td>내용1</td>
+						<td>내용1</td>
+						<td>내용1</td>
+						<td>내용1</td>	
+					</tr>
+					<tr>
+						<td>내용2</td>
+						<td>내용2</td>
+						<td>내용2</td>
+						<td>내용2</td>
+						<td>내용2</td>
+					</tr>
+				</table>
+			</div>
+	  	</div>
+	  	<div class="col-md-1 content"></div>
 	</div>
 	<!-- 페이징 start -->
 	<div class="row">
