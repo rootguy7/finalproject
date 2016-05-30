@@ -24,38 +24,6 @@
 	.container{
 		width:100%;
 	}
-	.bno{
-		width: 5%;
-	}
-	.btit{
-		width: 55%;
-	}
-	.btime{
-		width: 15%;
-	}
-	.bname{
-		width: 15%;
-	}
-	.bcount{
-		width: 10%;
-	}
-	tr th, tr td{
-		text-align: center;
-	}
-	.rowmain{
-		margin-bottom: 100px;
-		margin-top: 250px;
-	}
-	h1{
-		margin: 20px 0px;
-	}
-	.sel{
-		padding-right: 0px;
-		padding-left: 0px;
-	}
-	.tabletd{
-		margin-bottom: 0px;
-	}
 </style>
 <!-- jquery -->
 <script
