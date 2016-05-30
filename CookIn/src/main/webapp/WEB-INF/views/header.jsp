@@ -46,16 +46,16 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/myba/resources/js/bootstrap.min.js"></script>
+<script src="/cook/resources/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="header col-md-12">
 		<div class="toolbar">
-			<a href="/myba">HOME/</a><a href="#">LOGIN/</a><a href="join">JOIN/</a>
-			<a href="#">마이페이지/</a><a href="#">장바구니/</a><a href="/myba/qna">FAQ</a>
+			<a href="/cook">HOME/</a><a href="#">LOGIN/</a><a href="join">JOIN/</a>
+			<a href="#">마이페이지/</a><a href="#">장바구니/</a><a href="/cook/qna">FAQ</a>
 		</div>
 		<div class="logo">
-			<a href="/myba"><img src="resources/imgs/logo.png"></a>
+			<a href="/cook"><img src="resources/imgs/logo.png"></a>
 		</div>
 	</div>
 </body>
