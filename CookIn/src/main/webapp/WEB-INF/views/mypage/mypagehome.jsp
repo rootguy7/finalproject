@@ -18,14 +18,60 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="/cook/resources/css/bootstrap.min.css"></script>
+<script>
+        $(document).ready(function() {
+            $('a[data-toggle="tab"]').on('hidden.bs.tab', function(e){
+                alert("이벤트 실행됨");
+            });
+        });
+</script>
 </head>
 <body>
 	<%@ include file="../header.jsp" %>
 	  
 				 	<!-- nav start -->
 				<%@ include file="../nav.jsp" %>
-				
-<div class="container">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>MY PAGE</h2>
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a data-target="#home"
+						id="home-tab" role="tab" data-toggle="tab" aria-controls="home"
+						aria-expanded="true">전체주문내역</a></li>
+					<li role="presentation" class=""><a data-target="#point"
+						role="tab" id="point-tab" data-toggle="tab"
+						aria-controls="point" aria-expanded="false">내포인트</a></li>
+					<li role="presentation" class=""><a data-target="#diary"
+						id="diary-tab" role="tab" data-toggle="tab" aria-controls="diary"
+						aria-expanded="false">내가쓴글</a></li>
+					<li role="presentation" class=""><a data-target="#setting"
+						role="tab" id="setting-tab" data-toggle="tab"
+						aria-controls="setting" aria-expanded="false">나의설정</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+					<div role="tabpanel" class="tab-pane fade active in" id="home"
+						aria-labelledby="home-tab">
+						<%@ include file="../mypage/allorder.jsp"%>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="point"
+						aria-labelledby="point-tab">
+						<%@ include file="../mypage/point.jsp"%>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="diary"
+						aria-labelledby="diary-tab">
+						<%@ include file="../mypage/mydiary.jsp"%>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="setting"
+						aria-labelledby="setting-tab">
+						<%@ include file="../mypage/setting.jsp"%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="container">
 	<div class="row">
 		<div class="col-md-12">
 	<ul class="nav nav-tabs nav-justified">
@@ -36,7 +82,7 @@
 	</ul>
 		</div>
 	</div>
-</div>
+</div> -->
 	
 		<%@ include file="../footer.jsp" %>
 </body>
