@@ -13,18 +13,6 @@ public class AdminController {
 	public String info(){
 		return "admin/info";
 	}
-	@RequestMapping("/input/") //상품입고
-	public String input(){
-		return "admin/input";
-	}
-	@RequestMapping("/edit/") //상품수정
-	public String edit(){
-		return "admin/edit";
-	}
-	@RequestMapping("/del/") //상품삭제
-	public String del(){
-		return "admin/del";
-	}
 	@RequestMapping("/list/") //상품리스트
 	public String list(){
 		return "admin/list";
@@ -36,6 +24,10 @@ public class AdminController {
 	@RequestMapping("/deposit/") //입금확인
 	public String deposit(){
 		return "admin/deposit";
+	}
+	@RequestMapping("/delivery/") //입금확인
+	public String delivery(){
+		return "admin/delivery";
 	}
 	@RequestMapping("/notice/") //공지사항
 	public String notice(){
