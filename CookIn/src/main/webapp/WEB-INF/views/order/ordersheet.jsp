@@ -24,8 +24,6 @@
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="/cook/resources/js/bootstrap.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
     function sample6_execDaumPostcode() {
         new daum.Postcode({
@@ -221,7 +219,7 @@
 				</tr>
 				</table>
 				<div class="text-center">
-				<button type="button" class="btn btn-default" >바로 결제하기</button>
+				<button type="button" class="btn btn-default" onclick="location.href='/cook/complete'">바로 결제하기</button>
 				</div>
 				<br/><br/>
             </div> <!-- col-md- end -->
