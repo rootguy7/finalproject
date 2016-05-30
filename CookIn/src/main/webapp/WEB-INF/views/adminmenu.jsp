@@ -27,7 +27,7 @@
    }
    .con{	
    	  font-size: 12px;	
-   }
+   } 
 </style>
 <script type="text/javascript">
 	$('tr').click( function() {

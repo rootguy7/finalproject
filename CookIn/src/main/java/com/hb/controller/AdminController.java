@@ -5,35 +5,35 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AdminController {
-	@RequestMapping("/admin/") //°ü¸®ÀÚ ¸ÞÀÎ
+	@RequestMapping("/admin/") //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public String index(){
 		return "adm_index";
 	}
-	@RequestMapping("/info/") //°í°´Á¤º¸
+	@RequestMapping("/info/") //ï¿½?ï¿½ï¿½ï¿½ï¿½ 
 	public String info(){
 		return "admin/info";
 	}
-	@RequestMapping("/list/") //»óÇ°¸®½ºÆ®
+	@RequestMapping("/list/") //ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Æ®
 	public String list(){
 		return "admin/list";
 	}
-	@RequestMapping("/order/") //ÁÖ¹®È®ÀÎ
+	@RequestMapping("/order/") //ï¿½Ö¹ï¿½È®ï¿½ï¿½
 	public String order(){
 		return "admin/order";
 	}	
-	@RequestMapping("/deposit/") //ÀÔ±ÝÈ®ÀÎ
+	@RequestMapping("/deposit/") //ï¿½Ô±ï¿½È®ï¿½ï¿½
 	public String deposit(){
 		return "admin/deposit";
 	}
-	@RequestMapping("/delivery/") //ÀÔ±ÝÈ®ÀÎ
+	@RequestMapping("/delivery/") //ï¿½Ô±ï¿½È®ï¿½ï¿½
 	public String delivery(){
 		return "admin/delivery";
 	}
-	@RequestMapping("/notice/") //°øÁö»çÇ×
+	@RequestMapping("/notice/") //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public String notice(){
 		return "admin/notice";	
 	}
-	@RequestMapping("/qna/") //ÁúÀÇÀÀ´ä
+	@RequestMapping("/qna/") //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public String qna(){
 		return "admin/qna";
 	}	
