@@ -21,7 +21,6 @@
 <script>
         $(document).ready(function() {
             $('a[data-toggle="tab"]').on('hidden.bs.tab', function(e){
-                alert("이벤트 실행됨");
             });
         });
 </script>
@@ -71,19 +70,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-	<ul class="nav nav-tabs nav-justified">
-	  <li role="presentation" class="active"><a href="/cook/mypage/allorder">전체주문내역</a></li>
-	  <li role="presentation"><a href="/cook/mypage/point">내포인트</a></li>
-	  <li role="presentation"><a href="/cook/mypage/allorder">내가쓴글</a></li>
-	  <li role="presentation"><a href="/cook/mypage/setting">나의설정</a></li>
-	</ul>
-		</div>
-	</div>
-</div> -->
-	
 		<%@ include file="../footer.jsp" %>
 </body>
 </html>
