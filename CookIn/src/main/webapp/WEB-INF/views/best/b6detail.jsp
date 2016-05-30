@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>b6detail</title>
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/myba/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cook/resources/css/bootstrap.min.css">
 <!-- 부가적인 테마 -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -56,7 +56,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/myba/resources/js/bootstrap.min.js"></script>
+<script src="/cook/resources/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$("document").ready(function() {   // 장바구니 스크롤 이동 
 	    var currentPosition = parseInt($("#right_section").css("top"));  
@@ -79,8 +79,8 @@
 					<!-- 사이드 장바구니 -->
 						<div class="col-md-1">  
 							 <div id="right_section">  
-							     <div><a href="#"><img src="/myba/resources/imgs/side1.PNG" class="jangbaguni"></a></div>
-							     <div><a href="#"><img src="/myba/resources/imgs/side2.PNG" class="jangbaguni"></a></div>
+							     <div><a href="#"><img src="/cook/resources/imgs/side1.PNG" class="jangbaguni"></a></div>
+							     <div><a href="#"><img src="/cook/resources/imgs/side2.PNG" class="jangbaguni"></a></div>
 							</div>	
 						</div>
 					<!--사이드 제외 content start -->
@@ -88,7 +88,7 @@
     <div class="col-md-10">
            <div class="row">
             <div class="col-md-7">
-                <img class="detailcookies" src="/myba/resources/imgs/ck6.PNG">
+                <img class="detailcookies" src="/cook/resources/imgs/ck6.PNG">
             </div>
             <!-- /.col-md-8 -->
             <div class="col-md-5">
@@ -135,7 +135,7 @@
 
         <!-- First Featurette -->
         <div class="featurette" id="about">
-            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1" src="/myba/resources/imgs/b6d1.PNG">
+            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1" src="/cook/resources/imgs/b6d1.PNG">
             <h2 class="featurette-heading">NO.1
                 <span class="text-muted">다크 코코아비스킷</span>
             </h2>
@@ -146,7 +146,7 @@
 
         <!-- Second Featurette -->
         <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/myba/resources/imgs/b6d2.PNG">
+            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/cook/resources/imgs/b6d2.PNG">
             <h2 class="featurette-heading">NO.2
                 <span class="text-muted">쿠키 위드 풀45 모카크림</span>
             </h2>
@@ -157,7 +157,7 @@
 
         <!-- Third Featurette -->
         <div class="featurette" id="contact">
-            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1"src="/myba/resources/imgs/b6d3.PNG">
+            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1"src="/cook/resources/imgs/b6d3.PNG">
             <h2 class="featurette-heading">NO.3
                 <span class="text-muted">쿠키 위드 풀45 코코아크림</span>
             </h2>

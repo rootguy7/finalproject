@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>bestlist</title>
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/myba/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="/cook/resources/css/bootstrap.min.css">
 <!-- 부가적인 테마 -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -68,7 +68,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/myba/resources/js/bootstrap.min.js"></script>
+<script src="/cook/resources/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$("document").ready(function() {   // 장바구니 스크롤 이동 
 	    var currentPosition = parseInt($("#right_section").css("top"));  
@@ -94,8 +94,8 @@
 
             <div class="col-md-1"> <!-- 장바구니 -->
 							 <div id="right_section">  
-							     <div><a href="#"><img src="/myba/resources/imgs/side1.PNG" class="jangbaguni"></a></div>
-							     <div><a href="#"><img src="/myba/resources/imgs/side2.PNG" class="jangbaguni"></a></div>
+							     <div><a href="#"><img src="/cook/resources/imgs/side1.PNG" class="jangbaguni"></a></div>
+							     <div><a href="#"><img src="/cook/resources/imgs/side2.PNG" class="jangbaguni"></a></div>
 						</div>		
             </div>
 
@@ -112,13 +112,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="/myba/resources/imgs/best1.PNG">
+                                    <img class="slide-image" src="/cook/resources/imgs/best1.PNG">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="/myba/resources/imgs/best2.PNG" >
+                                    <img class="slide-image" src="/cook/resources/imgs/best2.PNG" >
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="/myba/resources/imgs/best3.PNG" >
+                                    <img class="slide-image" src="/cook/resources/imgs/best3.PNG" >
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -136,10 +136,10 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/myba/b1detail"><img src="/myba/resources/imgs/ck1.PNG" ></a>
+                            <a href="/cook/b1detail"><img src="/cook/resources/imgs/ck1.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">1,000\</h4>
-                                <h4><a href="/myba/b1detail">허쉬 자이언트 초콜렛</a>
+                                <h4><a href="/cook/b1detail">허쉬 자이언트 초콜렛</a>
                                 </h4>
                                 <p>허쉬 자이언트 초콜렛(크림카카오, 화이트, 밀크)</p>
                             </div>
@@ -157,10 +157,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/myba/b2detail"><img src="/myba/resources/imgs/ck2.PNG" ></a>
+                            <a href="/cook/b2detail"><img src="/cook/resources/imgs/ck2.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">800\</h4>
-                                <h4><a href="/myba/b2detail">로아커웨하스 미니 3종</a>
+                                <h4><a href="/cook/b2detail">로아커웨하스 미니 3종</a>
                                 </h4>
                                 <p>로하커웨하스 미니45g 3종(나폴리타너,바닐라,크림카카오) </p>
                             </div>
@@ -178,10 +178,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/myba/b3detail"><img src="/myba/resources/imgs/ck3.PNG" ></a>
+                            <a href="/cook/b3detail"><img src="/cook/resources/imgs/ck3.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">2,300\</h4>
-                                <h4><a href="/myba/b3detail">하리보 신상품 판타지아</a>
+                                <h4><a href="/cook/b3detail">하리보 신상품 판타지아</a>
                                 </h4>
                                 <p>하리보 신상품 판타지아 200g/ 크레지파이션 175g </p>
                             </div>
@@ -199,10 +199,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/myba/b4detail"><img src="/myba/resources/imgs/ck4.PNG" ></a>
+                            <a href="/cook/b4detail"><img src="/cook/resources/imgs/ck4.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">2,700\</h4>
-                                <h4><a href="/myba/b4detail">우마이봉 4종 </a>
+                                <h4><a href="/cook/b4detail">우마이봉 4종 </a>
                                 </h4>
                                 <p>우마이봉(멘타이,초코,치즈,콘포타지)_유통기한 임박 세일</p>
                             </div>
@@ -220,10 +220,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/myba/b5detail"><img src="/myba/resources/imgs/ck5.PNG" ></a>
+                            <a href="/cook/b5detail"><img src="/cook/resources/imgs/ck5.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">1,100\</h4>
-                                <h4><a href="/myba/b5detail">피오렐라 초코 비스켓</a>
+                                <h4><a href="/cook/b5detail">피오렐라 초코 비스켓</a>
                                 </h4>
                                 <p>피오렐라 초코 비스켓_ 유통기한 임박 세일(2016.06.26)</p>
                             </div>
@@ -241,10 +241,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/myba/b6detail"><img src="/myba/resources/imgs/ck6.PNG" ></a>
+                            <a href="/cook/b6detail"><img src="/cook/resources/imgs/ck6.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">2,500\</h4>
-                                <h4><a href="/myba/b6detail">바이올란타 3종</a>
+                                <h4><a href="/cook/b6detail">바이올란타 3종</a>
                                 </h4>
                                 <p>full45 & cookies & cream biscuits </p>
                             </div>
@@ -265,8 +265,8 @@
 
        <div class="col-md-1"> <!-- 장바구니 -->
 							 <div id="right_section2">  
-							     <div><a href="#"><img src="/myba/resources/imgs/side1.PNG" class="jangbaguni"></a></div>
-							     <div><a href="#"><img src="/myba/resources/imgs/side2.PNG" class="jangbaguni"></a></div>
+							     <div><a href="#"><img src="/cook/resources/imgs/side1.PNG" class="jangbaguni"></a></div>
+							     <div><a href="#"><img src="/cook/resources/imgs/side2.PNG" class="jangbaguni"></a></div>
 						</div>		
             </div>
 

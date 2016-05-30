@@ -59,10 +59,10 @@
 							<li class="divider"></li>
 							<li><a href="#">기타</a></li>
 						</ul></li>
-						<p class="navbar-text"><a href="/myba/best" class="best navbar-link">베스트상품</a></p>
-						<p class="navbar-text"><a href="/myba/new" class="new navbar-link">신규상품</a></p>
-						<p class="navbar-text"><a href="/myba/notice" class="notice navbar-link">공지사항</a></p>
-						<p class="navbar-text"><a href="/myba/qna" class="qna navbar-link">질의응답</a></p>
+						<p class="navbar-text"><a href="/cook/best" class="best navbar-link">베스트상품</a></p>
+						<p class="navbar-text"><a href="/cook/new" class="new navbar-link">신규상품</a></p>
+						<p class="navbar-text"><a href="/cook/notice" class="notice navbar-link">공지사항</a></p>
+						<p class="navbar-text"><a href="/cook/qna" class="qna navbar-link">질의응답</a></p>
 				</ul>
 				<!-- 주 메뉴목록 end -->
 			</div>
