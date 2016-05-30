@@ -36,10 +36,12 @@
 	$('.carousel').carousel({
 		  interval: 2000
 		})
+		
 </script>
 </head>
 <body>
 	<%@ include file="header.jsp" %>
+	<%@ include file="login/login.jsp" %>
 	  
 				 	<!-- nav start -->
 				<%@ include file="nav.jsp" %>
