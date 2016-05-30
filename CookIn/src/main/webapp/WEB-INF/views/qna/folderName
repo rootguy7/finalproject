@@ -1,0 +1,12 @@
+<고객>
+전체상품 - all
+베스트상품 - best
+신규 - new
+공지사항 - notice
+질의읭답 - qna
+
+<관리자admin>
+고객관리 - customer
+상품관리 - product
+주문관리 - order
+게시물관리 - board
