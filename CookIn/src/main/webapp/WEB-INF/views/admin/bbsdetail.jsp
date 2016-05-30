@@ -11,7 +11,20 @@
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="../resources/css/commbbs.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
+<style type="text/css">
+	#commentParentText{
+		width: 90%;
+	}
+	.rpadding{
+		padding-right: 30px;
+	}
+	.mcenter{
+		width: 60%;
+	}
+/* 	tr, td{ */
+/* 		border: solid 1px red; */
+/* 	} */
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="../resources/js/bootstrap.min.js"></script>
 <script type="text/javascript">
@@ -38,21 +51,26 @@
 		<div><!-- 주요 컨텐츠 내용 시작 -->
 		         <table class="table table-condensed tablemain">
             <thead>
-               <tr align="center">
+               <tr>
                   <th colspan="3" id="boardtitle">제에에목</th>
                </tr>
             </thead>
             <tbody>  
                <tr>
-                  <td>작성일</td>
-                  <td colspan="2">91.05.31</td>
+                  <td class="text-right"><span class="rpadding">작성일</span></td>
+                  <td colspan="2" class="text-justify mcenter">91.05.31</td>
                </tr>
                <tr>  
-                  <td>글쓴이</td>
-                  <td colspan="2">김주형<span id="clickconents">조회 :  클릭한 수</span></td>
+                  <td class="text-right rmargin"><span class="rpadding">글쓴이</span></td>
+                  <td class="text-justify mcenter">김주형</td>
+                  <td><span id="clickconents" class="text-justify">조회수 :  클릭한 수</span></td>
                </tr>
                <tr>  
-                  <td colspan="2"><p>쓴거 내용</p> 내용</p> 내용</p></td>
+                  <td colspan="3" class="text-justify">
+                  <!-- 글 내용 -->
+                  	<p>쓴거 내용</p> 내용</p> 내용</p>
+                  <!-- 글 내용 끗 -->
+                  </td>
                </tr>
             </tbody>
          </table>
