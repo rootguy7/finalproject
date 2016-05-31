@@ -4,16 +4,53 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <title>Insert title here</title>
-</head>
 <style type="text/css">
 	h3{
 		text-align: center;
 	}
+	#dd{
+		width: 600px;
+	}
+	.form-control5{
+		width: 30%;
+	}
+	#datepicker,#datepicker2{
+		width: 80px;
+	}
 </style>
+<script type="text/javascript">
+	$(function(){
+		$("#datepicker").datepicker();		
+		$("#datepicker2").datepicker();		
+	});
+</script>
 </head>
 <body>
 	<h3>ORDER LIST</h3>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="panel panel-default" id="dd">
+					<div class="panel-body">
+						기간별조회 
+						<button class="btn btn-default" type="submit">1주일</button>
+						<button class="btn btn-default" type="submit">15일</button>
+						<button class="btn btn-default" type="submit">1개월</button>
+							
+						<span>Date:<input type="text" id="datepicker">~<input type="text" id="datepicker2"></span>
+
+						<button class="btn btn-default" type="submit">조회하기</button>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2"></div>

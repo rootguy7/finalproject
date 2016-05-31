@@ -15,8 +15,8 @@
 	.well{
 		width: 20%;
 	}
-	.panel{
-		width: 80%;
+	.aa{
+		width: 700px;
 	}
 </style>
 </head>
@@ -27,7 +27,7 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<div class="alert alert-warning" role="alert">[박지윤]님이 쇼핑몰에서 사용 가능한 적립금 내역입니다.</div>
-				<div class="panel panel-default">
+				<div class="panel panel-default" id="aa">
 				 <div class="panel-body">
 				    > 총 보유 적립금액
 				    <span class="well well-sm">240원</span> 
