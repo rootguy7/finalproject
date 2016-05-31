@@ -27,7 +27,11 @@
 	color:black;
 	font-size: 10pt;
 	background-color:#e6e6e6;
-}
+	}
+
+	#li1{
+		list-style-type: none;
+	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="../resources/js/bootstrap.min.js"></script>
