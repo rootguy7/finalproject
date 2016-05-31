@@ -40,7 +40,7 @@
 		display: inline-block;
 	}
 	#seldomain{
-		width: 30%;
+		width: 32%;
 		display: inline-block;
 	}
 	
@@ -50,6 +50,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="resources/js/bootstrap.min.js"></script>
+<script src="/cook/resources/js/jquery-1.12.2.min.js"></script>
+<script src="/cook/resources/js/search.js"></script>
 <script type="text/javascript">
 // 	$('.carousel').carousel({
 // 		  interval: 2000
@@ -59,6 +61,13 @@ var re_pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,12}$/;//영문 + 최소 1개�
 
 
 		$(document).ready(function(){
+			$(function() {
+				$("#postcodify_search_button").click(
+						function(e){e.preventDefault();
+						})});
+			$("#postcodify_search_button").postcodifyPopUp();
+			
+			
 			$(function(){
                 //모달을 전역변수로 선언
                 var modalContents = $(".modal-contents");
@@ -480,7 +489,7 @@ var re_pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,12}$/;//영문 + 최소 1개�
             <div class="form-group" id="divPostNumber">
                 <label for="inputPostNumber" class="col-lg-3 control-label">우편 번호</label>
                 <div class="col-lg-9">
-                    <input type="text" class="form-control onlyNumber" id="postNumber" data-rule-required="true" placeholder="주소 검색 시, 자동 입력 됩니다." >
+                    <input type="text" class="form-control onlyNumber postcodify_postcode5" id="postNumber" data-rule-required="true" placeholder="주소 검색 시, 자동 입력 됩니다." >
                     <!-- 주소 검색 -->
                     <button id="postcodify_search_button" type="button" class="btn btn-default">주소 검색</button>
                 </div>
@@ -489,7 +498,7 @@ var re_pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,12}$/;//영문 + 최소 1개�
                 <label for="inputaddr" class="col-lg-3 control-label">주소</label>
                 <div class="col-lg-9">
                 <!-- 하는중 -->
-                    <input type="text" class="form-control" id="mainaddr" data-rule-required="true" placeholder="주소 검색 시, 자동 입력 됩니다." >
+                    <input type="text" class="form-control postcodify_address" id="mainaddr" data-rule-required="true" placeholder="주소 검색 시, 자동 입력 됩니다." >
                 </div>
             </div>
             <div class="form-group" id="divsubaddr">
