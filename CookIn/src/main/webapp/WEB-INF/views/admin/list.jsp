@@ -26,6 +26,11 @@ table tr{
 	text-align: center;
 }
 </style>
+
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="../resources/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 function getRow(rowValue) {
 	var rowIndex = rowValue.rowIndex;
@@ -34,16 +39,12 @@ function getRow(rowValue) {
 $(document).ready(function(){
 	$('.rownum').on('click', function() {
 		var ridx=getRow(this);
-	    var index = $('.rownum:eq('+(ridx)+')>td:eq(0)').text();
-		alert('클릭한 No : '+index);
-		location.href="/cook/admin/bbsdetail";
+	    var index = $('.rownum:eq('+(ridx)+')>td:eq(0)').text();//$('.rownum:eq(1)>td:eq(0)').text();
+		/* alert('클릭한 No : '+index); */
+		location.href="/cook/admin/listdetail";
 	});
 });
 </script>
-<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="../resources/js/bootstrap.min.js"></script>
 </head>
 <body>
 <%@include file="../header2.jsp" %>
@@ -61,32 +62,40 @@ $(document).ready(function(){
 	  		<table class="table">
 		  		<colgroup>
 	                <col width="100" />
-	                <col width="200" />
+	                <col width="300" />
 	                <col width="500" />
 	                <col width="200" />
 	            </colgroup>
-				<tr class="active"><th class="title">No</th><th class="title">주문 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
+				<tr class="active">
+					<th class="title">No</th><th class="title">상품 번호</th><th class="title">상품명</th><th class="title">상품가격</th>
+				</tr>	
 			</table>
 			<table class="table-condensed table-hover table tabletd">
 				<colgroup>
 	                <col width="100" />
-	                <col width="200" />
+	                <col width="300" />
 	                <col width="500" />
 	                <col width="200" />
 	            </colgroup>
 				<tr class="rownum">
-					<td>내용1</td>
+					<td>1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 				</tr>
 				<tr class="rownum">
-					<td>내용2</td>
+					<td>2</td>
 					<td>내용2</td>
 					<td>내용2</td>
 					<td>내용2</td>
 				</tr>
 			</table>
+		</div>
+		<div class="col-md-10"></div>
+			<div class="col-md-1">
+			<div class="btn">
+				<a class="btn btn-default" href="#" role="button">상품 등록</a>
+		  	</div>
 		</div>
 	  </div>
 	<div class="col-md-1 content"></div>

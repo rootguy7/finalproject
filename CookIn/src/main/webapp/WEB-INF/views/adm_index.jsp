@@ -99,10 +99,18 @@
 var barChartData = {
     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     datasets: [
-		{
+		{	
+		    /* fillColor: "rgba(244,235,114,0.5)",
+		    strokeColor: "rgba(220,220,220,1)",
+		    data: [65, 59, 90, 81, 56, 55, 40, 33, 55, 46, 16, 66], */
+		    
+		    label: "My First dataset",
 		    fillColor: "rgba(244,235,114,0.5)",
 		    strokeColor: "rgba(220,220,220,1)",
-		    data: [65, 59, 90, 81, 56, 55, 40, 33, 55, 46, 16, 66]
+            borderWidth: 1,
+            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+            hoverBorderColor: "rgba(255,99,132,1)",
+            data: [65, 59, 90, 81, 56, 55, 40, 33, 55, 46, 16, 66]
 		},
 		{
 		    fillColor: "rgba(71,48,32,0.5)",
