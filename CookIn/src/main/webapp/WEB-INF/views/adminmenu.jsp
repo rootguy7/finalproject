@@ -39,7 +39,7 @@
 </head>
 <body>
 <!-- 	<div class="col-md-3 leftmenu"> -->
-		<table class="table table-condensed">
+		<table class="table">
 		 	<tr class="titlename1"><th>고객 관리</th></tr>
 			<tr><td><a class="con" href="/cook/admin/info">고객 정보</a></td></tr>
 			
