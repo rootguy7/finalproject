@@ -19,10 +19,6 @@
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="/cook/resources/css/bootstrap.min.css"></script>
 <script>
-        $(document).ready(function() {
-            $('a[data-toggle="tab"]').on('hidden.bs.tab', function(e){
-            });
-        });
 </script>
 </head>
 <body>
