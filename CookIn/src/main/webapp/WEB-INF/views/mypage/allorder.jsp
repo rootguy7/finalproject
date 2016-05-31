@@ -40,7 +40,24 @@
 			buttonText: "Select date",
 			dateFormat:"yymmdd", //날짜 출력 포맷 20160501
 		});		
-		$("#datepicker2").datepicker();		
+		$("#datepicker2").datepicker({
+			showOn: "button", // 버튼을 캘린더에 표시함
+			changeYear: true, //년도 변경 가능
+			changeMonth: true, //월 변경 가능
+			prevText: '이전달',
+			nextText: '다음달',  
+			currentText: '오늘',
+			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],  
+	        dayNames: ['일', '월', '화', '수', '목', '금', '토'],  
+	        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],  
+	        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],   
+	        yearSuffix: '년',  
+			buttonImage: "/cook/resources/imgs/calendar.png", //달력 표시 버튼 이미지 경로
+			buttonImageOnly: true, // 버튼에 있는 이미지만 표시
+			buttonText: "Select date",
+			dateFormat:"yymmdd", //날짜 출력 포맷 20160501
+		});		
 	});
 </script>
 </head>
@@ -54,14 +71,14 @@
 				<div class="col-md-6">
 				<div class="panel panel-default" id="dd">
 					<div class="panel-body">
-						기간별조회 
+						<p>기간별조회</p>
 						<button class="btn btn-default" type="submit">1주일</button>
 						<button class="btn btn-default" type="submit">15일</button>
 						<button class="btn btn-default" type="submit">1개월</button>
 							
 						<span>Date:<input type="text" id="datepicker">~<input type="text" id="datepicker2"></span>
 
-						<button class="btn btn-default" type="submit">조회하기</button>
+						<button class="btn btn-default" type="submit">조회</button>
 					</div>
 					</div>
 				<div class="col-md-1"></div>
