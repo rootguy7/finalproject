@@ -41,4 +41,16 @@ public class AdminController {
 	public String detail(){
 		return "admin/bbsdetail";
 	}	
+	@RequestMapping("/admin/notpaid")
+	public String notpaid(){
+		return "admin/notpaid";
+	}	
+	@RequestMapping("/admin/notdelivery")
+	public String notdelivery(){
+		return "admin/notdelivery";
+	}	
+	@RequestMapping("/admin/notanswer")
+	public String notanswer(){
+		return "admin/notanswer";
+	}	
 }
