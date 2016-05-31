@@ -13,10 +13,6 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <style type="text/css">
-/* 	.container>.row>div {
-		border: 1px solid red;
-	} */
-	
 	.item>img{  
 		margin: 0px auto;
 	}
@@ -25,29 +21,6 @@
 	}
 	.container{
 		width: 100%;
-	}
-	
-	/* Log in 글귀 설정 */
-	#myModalLabel{
-		text-align:center;
-		color:rgb(71, 48, 32);
-		font-size:30pt;
-		font-weight: bold;
-	}
-	/* 하단 SIGN IN 위치 DIV 설정 */
-	.bottomColor{
-		background-color: rgb(244, 235, 114);
-		text-align: center;
-		border-radius: 10px;
-		width:20%;
-		margin: 0px auto;
-	}
-	/* 하단 SIGN IN 버튼 설정 */
-	.bottomColor button {
-		background-color: rgb(244, 235, 114);
-		color: white;
-		font-size: 20px;
-		border: 0px;
 	}
 </style>
 <!-- jquery -->
@@ -65,8 +38,6 @@
 <body>
 	<!-- header IMPORT -->
 	<%@ include file="header.jsp" %>
-	<!-- LOGIN 창 IMPORT -->
-	<%@ include file="login/login.jsp" %>
 	  
 				<!-- nav start -->
 				<%@ include file="nav.jsp" %>

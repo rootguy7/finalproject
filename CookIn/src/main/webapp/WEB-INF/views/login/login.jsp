@@ -22,7 +22,7 @@
 						<input type="password" class="form-control" id="userpw">
 					</div>
 					<div class="form-group bottomColor">
-						<button type="submit" data-dismiss="modal">SIGN IN</button>
+						<button type="submit">SIGN IN</button>
 					</div>
 				</form>
 			</div>
