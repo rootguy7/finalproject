@@ -14,14 +14,12 @@
 	height: 200px;
 }
 </style>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="../resources/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment-with-locales.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"></script>
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -77,7 +75,7 @@
 		<div class="col-md-10"></div>
 			<div class="col-md-1">
 			<div class="btn">
-				<a class="btn btn-default" href="#" role="button">수정</a>
+				<a class="btn btn-default" href="/cook/admin/listedit" role="button">수정</a>
 				<a class="btn btn-default" href="#" role="button">삭제</a>
 		  	</div>
 		</div>

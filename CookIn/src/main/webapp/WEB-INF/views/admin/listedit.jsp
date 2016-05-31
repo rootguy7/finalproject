@@ -5,8 +5,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="/cook/resources/css/jquery-ui.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="/cook/resources/js/jquery-ui.min.js"></script>
+<script src="../resources/js/bootstrap.min.js"></script>
 <title>관리자-상품 수정페이지</title>
 <style type="text/css">
 #listimg{
@@ -14,15 +18,24 @@
 	height: 200px;
 }
 </style>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="../resources/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment-with-locales.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"></script>
-<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-
+<script type="text/javascript">
+	$(function(){
+		$("#datepicker").datepicker({
+			dateFormat: 'yy-mm-dd',
+		    prevText: '이전 달',
+		    nextText: '다음 달',
+		    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		    dayNames: ['일','월','화','수','목','금','토'],
+		    dayNamesShort: ['일','월','화','수','목','금','토'],
+		    dayNamesMin: ['일','월','화','수','목','금','토'],
+		    showMonthAfterYear: true,
+		    changeMonth: true,
+		    changeYear: true,
+		    yearSuffix: '년'
+		});		
+	});
+</script>
 </head>
 <body>
 <%@include file="../header2.jsp" %>
@@ -52,14 +65,9 @@
 	            	<th class="active">상품명</th>
 	            	<td><input type="text" class="form-control" id="productname" placeholder="허쉬 자이언트 초콜렛"></td>
 	            </tr>
-	            <tr>
+	            <tr id="date">
 	            	<th class="active">입고 날짜</th>
-	            	<td>
-						<div class="input-append date form_datetime">
-						    <input size="16" type="text" value="" readonly>
-						    <span class="add-on"><i class="icon-th"></i></span>
-						</div>
-					</td>
+	            	<td><input type="text" class="form-control" id="datepicker"></td>
 	            </tr>
 	            <tr>
 	            	<th class="active">제조사</th>
@@ -90,16 +98,5 @@
 	</div>
 </div>
 <%@include file="../footer.jsp" %>
-<script type="text/javascript">
-$(".form_datetime").datetimepicker({
-    format: "dd MM yyyy - hh:ii",
-    autoclose: true,
-    todayBtn: true,
-    pickerPosition: "bottom-left"
-});
-/* 
-http://jsonobject.tistory.com/181
-*/
-</script>
 </body>
 </html>
