@@ -53,7 +53,7 @@
 							<span class="caret"></span>
 					</a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">전체상품</a></li>
+							<li><a href="/cook/all">전체상품</a></li>
 							<li class="divider"></li>
 							<li><a href="#">과자</a></li>
 							<li class="divider"></li>
