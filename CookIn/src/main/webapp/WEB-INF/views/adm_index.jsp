@@ -20,7 +20,20 @@
 	}
 	.contents{
 		margin-top: 20px;
-		width: 260px;
+		width: 280px;
+	}
+	.widgetnum{
+		margin-left: -15px;
+		text-decoration: none;
+	}
+	h3{
+		margin-top: -12px;
+	}
+	.widget-content, .widget-header{
+		text-align: center;
+	}
+	.number{
+		font-size: 50px;
 	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -38,26 +51,26 @@
 		<div class="col-md-8 content">
 		<!-- contents 해야할일 -->
 		<div class="span3 contents">
-      		<div class="widget">
+      		<div class="widget widgetnum">
 			    <div class="widget-header"><h3>미입금</h3></div>
       			<div class="widget-content">
-			      	<span>3</span><span>건</span>	
+			      	<span class="number"><a href="#">3</a></span><span>건</span>	
 	      		</div> 
 	      	</div>
       	</div>
 		<div class="span3 contents">
-      		<div class="widget">
+      		<div class="widget widgetnum">
 	      		<div class="widget-header"><h3>미배송</h3></div>
       			<div class="widget-content">
-		      		<span>7</span><span>건</span>	
+		      		<span class="number"><a href="#">7</a></span></span><span>건</span>	
 		      	</div>
 	      	</div>
      	</div>
 		<div class="span3 contents">
-      		<div class="widget">
+      		<div class="widget widgetnum">
 	      		<div class="widget-header"><h3>미답변</h3></div>
       			<div class="widget-content">
-		      		<span>4</span><span>건</span>	
+		      		<span class="number"><a href="#">4</a></span></span><span>건</span>	
 		      	</div>
 	      	</div>
       	</div>

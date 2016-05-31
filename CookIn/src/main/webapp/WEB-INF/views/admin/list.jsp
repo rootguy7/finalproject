@@ -65,7 +65,7 @@ $(document).ready(function(){
 	                <col width="500" />
 	                <col width="200" />
 	            </colgroup>
-				<tr class="active"><th class="title">index</th><th class="title">주문 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
+				<tr class="active"><th class="title">No</th><th class="title">주문 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
 			</table>
 			<table class="table-condensed table-hover table tabletd">
 				<colgroup>

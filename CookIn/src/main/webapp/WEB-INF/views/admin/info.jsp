@@ -60,16 +60,16 @@ table tr{
 		                <col width="300" />
 		                <col width="300" />
 		            </colgroup>
+					<tr class="active"><th class="title">No</th><th class="title">ID</th><th class="title">이름</th><th class="title">휴대폰 번호</th><th class="title">POINT</th></tr>	
 		        </table>
-				<table class="table-condensed table-hover table tabletd">
+		        <table class="table-condensed table-hover table tabletd">
 					<colgroup>
-		                <col width="100" />
+						<col width="100" />
 		                <col width="200" />
 		                <col width="200" />
 		                <col width="300" />
 		                <col width="300" />
 		            </colgroup>
-					<tr class="active"><th class="title">index</th><th class="title">id</th><th class="title">name</th><th class="title">mobile</th><th class="title">point</th></tr>	
 					<tr class="rownum">
 						<td>내용1</td>
 						<td>내용1</td>
