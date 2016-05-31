@@ -51,11 +51,8 @@
 <body>
 	<div class="header col-md-12">
 		<div class="toolbar">
-			<a href="/cook">HOME/</a><a href="#">LOGIN/</a><a href="join">JOIN/</a>
+			<a href="/cook">HOME/</a><a href="#" data-toggle="modal" data-target="#myModal">LOGIN/</a><a href="join">JOIN/</a>
 			<a href="/cook/mypage">마이페이지/</a><a href="#">장바구니/</a><a href="/cook/qna">FAQ</a>
-				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
-	  Launch demo modal
-	</button>
 		</div>
 		<div class="logo">
 			<a href="/cook"><img src="resources/imgs/logo.png"></a>
