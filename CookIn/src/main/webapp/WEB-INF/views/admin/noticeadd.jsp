@@ -18,17 +18,21 @@
 	text-align: center;
  	padding: 7px 4px;
  	margin: 5px; 
- 	color: black; 
- 	font-size: 10pt; 
+ 	color: rgb(191, 191, 191); 
+ 	font-size: 12pt;
+  	font-weight: bold;
 }
-
 #titleBox {
-	width: 80%;
+	width: 70%;
 }
-
+.bbsTitle {
+	border:1px solid rgb(213, 213, 213);
+	padding: 10px;
+}
 #li1 {
 	list-style-type: none;
 }
+
 </style>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -50,21 +54,24 @@
 			</div>
 			<div class="col-md-1 content"></div>
 			<div class="col-md-8 content">
-				<div>
+				<div class="com-md-12">
 					<span>
 						<h3>글쓰기<small>공지사항</small></h3>
 					</span>
 				</div>
 				<!-- 주요 컨텐츠 시작 -->
 				<form action="../customer/noticeinsert.do" method="post">
-					<div class="col-md-12 content">
-						<span class="bbstit titleName">제목</span>
+					<div class="col-md-12">
+						<div class="col-md-12 bbsTitle">
+						<span class="bbstit titleName">제 목</span>
 						<span>
 							<input type="text" id="titleBox" name="title" value="" class="inputText">
 						</span>
 						<!-- 아이디 값 벨류 히든으로 넘길 자리 -->
 						<input type="hidden" name="name" value="동적으로 아이디" readonly="readonly">
+						</div>
 					</div>
+					<div class="col-md-12">
 					<ul>  
 						<li id="li1">
 								<textarea cols="80" id="contents" name="contents" rows="10"></textarea>
@@ -78,9 +85,12 @@
 								</script>
 						</li>
 					</ul>
-					<br />
-					<button type="submit" class="join">작성</button>
-					<button type="reset" class="back">취소</button>
+					</div>
+				<div class="col-md-9"></div>
+				<div class="col-md-3 bbsBtnGroup">
+					<button type="submit" class="join btn btn-default">작 성</button>
+					<button type="reset" class="back btn btn-default">취 소</button>
+				</div>
 				</form>
 				<!-- 주요 컨텐츠 끗 -->
 			</div>
