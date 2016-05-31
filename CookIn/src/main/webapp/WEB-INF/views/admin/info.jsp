@@ -17,10 +17,8 @@ table tr>th{
 table tr{
     text-align: center;
 }
-.title{ 
-   color: rgb(71,48,32);
-   background-color: rgb(244,235,114);
-   border: 1px solid rgb(71,48,32);
+.tabletd{
+	margin-top: -21px;
 }
 #pagination{/*  페이징 */
 	display: inline-block;
@@ -54,7 +52,7 @@ table tr{
 		  		<span class="titlename">
 					<h3>고객관리<small>회원 정보</small></h3>
 				</span>
-		  		<table class="table table-condensed table-bordered">
+		  		<table class="table">
 			  		<colgroup>
 		                <col width="100" />
 		                <col width="200" />
@@ -62,15 +60,24 @@ table tr{
 		                <col width="300" />
 		                <col width="300" />
 		            </colgroup>
-					<tr><th class="title">index</th><th class="title">id</th><th class="title">name</th><th class="title">mobile</th><th class="title">point</th></tr>	
-					<tr>
+		        </table>
+				<table class="table-condensed table-hover table tabletd">
+					<colgroup>
+		                <col width="100" />
+		                <col width="200" />
+		                <col width="200" />
+		                <col width="300" />
+		                <col width="300" />
+		            </colgroup>
+					<tr class="active"><th class="title">index</th><th class="title">id</th><th class="title">name</th><th class="title">mobile</th><th class="title">point</th></tr>	
+					<tr class="rownum">
 						<td>내용1</td>
 						<td>내용1</td>
 						<td>내용1</td>
 						<td>내용1</td>
 						<td>내용1</td>	
 					</tr>
-					<tr>
+					<tr class="rownum">
 						<td>내용2</td>
 						<td>내용2</td>
 						<td>내용2</td>

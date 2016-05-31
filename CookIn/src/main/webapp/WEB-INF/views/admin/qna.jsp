@@ -46,7 +46,7 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 			</span>
 		</div>
 		<table class="table tabletd">
-				<tr>
+				<tr class="active">
 					<th class="bno">No</th>
 					<th class="btit">Title</th>
 					<th class="btime">작성일</th>
@@ -54,7 +54,7 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 					<th class="bcount">조회수</th>
 				</tr>
 			</table>
-			<table class="table table-hover">
+			<table class="table table-hover table-condensed ">
 				<tr class="rownum">
 					<td class="bno">9</td>
 					<td class="btit">더미타이틀</td>
