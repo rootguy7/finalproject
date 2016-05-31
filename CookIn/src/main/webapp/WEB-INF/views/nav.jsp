@@ -18,9 +18,19 @@
 	color: rgb(71, 48, 32);
 	font-weight: bold;
 }
+.navbar-collapse{
+	background-color: rgb(244, 235, 114);
+}
+.col-md-4{
+	text-align: center;
+}
+.dropdown-menu{
+	margin-left: 7px;
+}
 </style>
 </head>
 <body>
+		
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -32,9 +42,13 @@
 				</button>
 			</div>
 
+			<div class="container">
+				<div class="row">
+			
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
+					<div class="col-md-4">
 				<ul class="nav navbar-nav">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-expanded="false">전체상품보기
@@ -58,16 +72,26 @@
 							<li><a href="#">한잔의 여유</a></li>
 							<li class="divider"></li>
 							<li><a href="#">기타</a></li>
-						</ul></li>
+						</ul></li></ul></div>
+						<div class="col-md-2">
 						<p class="navbar-text"><a href="/cook/best" class="best navbar-link">베스트상품</a></p>
+						</div>
+						<div class="col-md-2">
 						<p class="navbar-text"><a href="/cook/new" class="new navbar-link">신규상품</a></p>
+						</div>
+						<div class="col-md-2">
 						<p class="navbar-text"><a href="/cook/notice" class="notice navbar-link">공지사항</a></p>
+						</div>
+						<div class="col-md-2">
 						<p class="navbar-text"><a href="/cook/qna" class="qna navbar-link">질의응답</a></p>
-				</ul>
+						</div>
+				
 				<!-- 주 메뉴목록 end -->
 			</div>
 			<!-- /.navbar-collapse -->
-		</div>
+			</div> <!--row end  -->
+			</div><!-- container end -->
+			</div>
 		<!-- /.container-fluid -->
 	<!-- 메뉴 구성 끝  -->
 </body>
