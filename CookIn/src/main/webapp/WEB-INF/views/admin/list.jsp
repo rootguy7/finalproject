@@ -94,7 +94,7 @@ $(document).ready(function(){
 		<div class="col-md-10"></div>
 			<div class="col-md-1">
 			<div class="btn">
-				<a class="btn btn-default" href="#" role="button">상품 등록</a>
+				<a class="btn btn-default" href="../admin/listadd" role="button">상품 등록</a>
 		  	</div>
 		</div>
 	  </div>

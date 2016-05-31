@@ -25,6 +25,10 @@ public class AdminController {
 	public String listdetail(){
 		return "admin/listdetail";
 	}
+	@RequestMapping("/admin/listadd")
+	public String listadd(){
+		return "admin/listadd";
+	}
 	@RequestMapping("/admin/order")
 	public String order(){
 		return "admin/order";
