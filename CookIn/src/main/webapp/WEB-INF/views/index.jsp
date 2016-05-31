@@ -22,6 +22,10 @@
 	.container{
 		width: 100%;
 	}
+	#store {
+	text-decoration: none;
+	color: black;
+	}
 </style>
 <!-- jquery -->
 <script
@@ -108,7 +112,12 @@
 				<div><h4>BEST PRODUCT</h4></div>
 				</form>
 			</div>
-			<div class="col-md-4 store"><h4>STORE</h4>
+			<div class="col-md-4 store">
+			<h4>
+			  <a href="/cook/store" id="store"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> STORE <br/>
+			  
+			 <img class="featurette-image img-circle img-responsive pull-right"  src="/cook/resources/imgs/store.PNG"></a>
+			</h4>
 		</div>
 	</div></div>
 	
