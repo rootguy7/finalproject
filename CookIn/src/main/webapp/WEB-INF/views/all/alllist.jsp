@@ -176,10 +176,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/cook/b7detail"><img src="/cook/resources/imgs/ck7.PNG" ></a>
+                            <a href="/cook/a1detail"><img src="/cook/resources/imgs/ck7.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">14,500\</h4>
-                                <h4><a href="/cook/b7detail">마오얌 Bloxx</a>
+                                <h4><a href="/cook/a1detail">마오얌 Bloxx</a>
                                 </h4>
                                 <p>마오얌 Bloxx 박스 </p>
                             </div>
@@ -188,10 +188,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/cook/b8detail"><img src="/cook/resources/imgs/ck8.PNG" ></a>
+                            <a href="/cook/a2detail"><img src="/cook/resources/imgs/ck8.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">22,800\</h4>
-                                <h4><a href="/cook/b8detail">블랙포레스트 젤리 박스</a>
+                                <h4><a href="/cook/a2detail">블랙포레스트 젤리 박스</a>
                                 </h4>
                                 <p>블랙포레스트 젤리 박스(80개입) </p>
                             </div>
@@ -200,10 +200,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/cook/b9detail"><img src="/cook/resources/imgs/ck9.PNG" ></a>
+                            <a href="/cook/a3detail"><img src="/cook/resources/imgs/ck9.PNG" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">1,000\</h4>
-                                <h4><a href="/cook/b9detail">스위스미스 핫코코아 믹스컵</a>
+                                <h4><a href="/cook/a3detail">스위스미스 핫코코아 믹스컵</a>
                                 </h4>
                                 <p>스위스믹스 핫코코아 믹스컵 </p>
                             </div>
