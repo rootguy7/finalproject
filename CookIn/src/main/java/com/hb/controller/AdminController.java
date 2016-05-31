@@ -52,5 +52,9 @@ public class AdminController {
 	@RequestMapping("/admin/notanswer")
 	public String notanswer(){
 		return "admin/notanswer";
-	}	
+	}
+	@RequestMapping("/admin/noticeadd")
+	public String noticeadd(){
+		return "admin/noticeadd";
+	}
 }

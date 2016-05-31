@@ -29,6 +29,10 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 // 			location.href="/Hanbit/customer/boardDetail.do?index="+index;
 			location.href="/cook/admin/bbsdetail";
 		});
+		$('.btnwrite').on('click',function(){
+			alert('클릭');
+			location.href="/cook/admin/noticeadd";
+		});
 	});
 </script>
 </head>
@@ -100,12 +104,12 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 				</tr>
 			</table>
 			<!-- 글쓰기는 필요 없을꺼 같음 -->
-<!-- 			<div class="row">
+ 			<div class="row">
 					<div class="col-md-10"></div>
 					<div class="col-md-2">
-						<button type="button" class="btn btn-default">글쓰기</button>
+						<button type="button" class="btn btn-default btnwrite">글쓰기</button>
 					</div>
-			</div> -->
+			</div>
 			<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-2 sel">
