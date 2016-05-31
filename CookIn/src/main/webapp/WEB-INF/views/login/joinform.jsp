@@ -7,6 +7,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Insert title here</title>
+<!-- jquery -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="/cook/resources/js/jquery-1.12.2.min.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
+<script src="/cook/resources/js/search.js"></script>
+<script src="/cook/resources/js/joinvali.js"></script>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="resources/css/bootstrap.min.css">
 <!-- 부가적인 테마 -->
@@ -45,318 +52,18 @@
 	}
 	
 </style>
-<!-- jquery -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="resources/js/bootstrap.min.js"></script>
-<script src="/cook/resources/js/jquery-1.12.2.min.js"></script>
-<script src="/cook/resources/js/search.js"></script>
+
 <script type="text/javascript">
-// 	$('.carousel').carousel({
-// 		  interval: 2000
-// 		})
-var re_id = /[^a-zA-Z0-9_]/i;//영문+숫자로만 조합. id체크 정규식
-var re_pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,12}$/;//영문 + 최소 1개의 숫자 혹은 특수 문자를 포함하는 정규식
-
-
 		$(document).ready(function(){
+			
+			/* 
 			$(function() {
 				$("#postcodify_search_button").click(
 						function(e){e.preventDefault();
 						})});
 			$("#postcodify_search_button").postcodifyPopUp();
+			 */
 			
-			
-			$(function(){
-                //모달을 전역변수로 선언
-                var modalContents = $(".modal-contents");
-                var modal = $("#defaultModal");
-                 
-                $('.onlyAlphabetAndNumber').keyup(function(event){
-                    if (!(event.keyCode >=37 && event.keyCode<=40)) {
-                        var inputVal = $(this).val();
-                        $(this).val($(this).val().replace(/[^_a-z0-9]/gi,'')); //_(underscore), 영어, 숫자만 가능
-                    }
-                });
-                 
-                $(".onlyHangul").keyup(function(event){
-                    if (!(event.keyCode >=37 && event.keyCode<=40)) {
-                        var inputVal = $(this).val();
-                        $(this).val(inputVal.replace(/[a-z0-9]/gi,''));
-                    }
-                });
-             
-                $(".onlyNumber").keyup(function(event){
-                    if (!(event.keyCode >=37 && event.keyCode<=40)) {
-                        var inputVal = $(this).val();
-                        $(this).val(inputVal.replace(/[^0-9]/gi,''));
-                    }
-                });
-                 
-                //------- 검사하여 상태를 class에 적용
-                $('#id').keyup(function(event){
-                     
-                    var divId = $('#divId');
-                     
-                    if($('#id').val()=="" ||
-                    		$('#id').val().length < 6 || $('#id').val().length > 12 ||
-                    		re_id.test($('#id').val())){
-                        divId.removeClass("has-success");
-                        divId.addClass("has-error");
-                    }else{
-                        divId.removeClass("has-error");
-                        divId.addClass("has-success");
-                    }
-                });
-                 
-                $('#password').keyup(function(event){
-                     
-                    var divPassword = $('#divPassword');
-                     
-                  //공백x, 길이 6~12, 정규식 통과
-                    if($('#password').val()=="" ||
-                    		($('#password').val().length<6 || $('#password').val().length>12) ||
-                    		!(re_pw.test($('#password').val()))){
-                        divPassword.removeClass("has-success");
-                        divPassword.addClass("has-error");
-                    }else{
-                        divPassword.removeClass("has-error");
-                        divPassword.addClass("has-success");
-                    }
-                });
-                 
-                $('#passwordCheck').keyup(function(event){
-                     
-                    var passwordCheck = $('#passwordCheck').val();
-                    var password = $('#password').val();
-                    var divPasswordCheck = $('#divPasswordCheck');
-                     
-                    if((passwordCheck=="") || (password!=passwordCheck)){
-                        divPasswordCheck.removeClass("has-success");
-                        divPasswordCheck.addClass("has-error");
-                    }else{
-                        divPasswordCheck.removeClass("has-error");
-                        divPasswordCheck.addClass("has-success");
-                    }
-                });
-                 
-                $('#name').keyup(function(event){
-                     
-                    var divName = $('#divName');
-                     
-                    if($.trim($('#name').val())==""){
-                        divName.removeClass("has-success");
-                        divName.addClass("has-error");
-                    }else{
-                        divName.removeClass("has-error");
-                        divName.addClass("has-success");
-                    }
-                });
-                 
-//                 $('#nickname').keyup(function(event){
-                     
-//                     var divNickname = $('#divNickname');
-                     
-//                     if($.trim($('#nickname').val())==""){
-//                         divNickname.removeClass("has-success");
-//                         divNickname.addClass("has-error");
-//                     }else{
-//                         divNickname.removeClass("has-error");
-//                         divNickname.addClass("has-success");
-//                     }
-//                 });
-                 
-                $('#email').keyup(function(event){
-                     
-                    var divEmail = $('#divEmail');
-                     
-                    if($.trim($('#email').val())==""){
-                        divEmail.removeClass("has-success");
-                        divEmail.addClass("has-error");
-                    }else{
-                        divEmail.removeClass("has-error");
-                        divEmail.addClass("has-success");
-                    }
-                });
-                 
-                $('#phoneNumber').keyup(function(event){
-                     
-                    var divPhoneNumber = $('#divPhoneNumber');
-                     
-                    if($.trim($('#phoneNumber').val())==""){
-                        divPhoneNumber.removeClass("has-success");
-                        divPhoneNumber.addClass("has-error");
-                    }else{
-                        divPhoneNumber.removeClass("has-error");
-                        divPhoneNumber.addClass("has-success");
-                    }
-                });
-                 
-                 
-                //------- validation 검사
-                $( "form" ).submit(function( event ) {
-                     
-                    var provision = $('#provision');
-                    var memberInfo = $('#memberInfo');
-                    var divId = $('#divId');
-                    var divPassword = $('#divPassword');
-                    var divPasswordCheck = $('#divPasswordCheck');
-                    var divName = $('#divName');
-//                     var divNickname = $('#divNickname');
-                    var divEmail = $('#divEmail');
-                    var divPhoneNumber = $('#divPhoneNumber');
-                     
-                    //회원가입약관
-                    if($('#provisionYn:checked').val()=="N"){
-                        modalContents.text("회원가입약관에 동의하여 주시기 바랍니다."); //모달 메시지 입력
-                        modal.modal('show'); //모달 띄우기
-                         
-                        provision.removeClass("has-success");
-                        provision.addClass("has-error");
-                        $('#provisionYn').focus();
-                        return false;
-                    }else{
-                        provision.removeClass("has-error");
-                        provision.addClass("has-success");
-                    }
-                     
-                    //개인정보취급방침
-                    if($('#memberInfoYn:checked').val()=="N"){
-                        modalContents.text("개인정보취급방침에 동의하여 주시기 바랍니다.");
-                        modal.modal('show');
-                         
-                        memberInfo.removeClass("has-success");
-                        memberInfo.addClass("has-error");
-                        $('#memberInfoYn').focus();
-                        return false;
-                    }else{
-                        memberInfo.removeClass("has-error");
-                        memberInfo.addClass("has-success");
-                    }
-                     
-                    //아이디 검사
-                    //공백x, 정규식 통과, 길이 6~12
-                    if($('#id').val()=="" ||
-                    		$('#id').val().length < 6 || $('#id').val().length > 12 ||
-                    		re_id.test($('#id').val())){
-                        modalContents.text("아이디는 영문 또는 영문 숫자조합, 6~12글자로 입력 해주세요");
-                        modal.modal('show');
-                         
-                        divId.removeClass("has-success");
-                        divId.addClass("has-error");
-                        $('#id').focus();
-                        return false;
-                    }else{
-                        divId.removeClass("has-error");
-                        divId.addClass("has-success");
-                    }
-                     
-                    //패스워드 검사
-                    //공백x, 길이 6~12, 정규식 통과
-                    if($('#password').val()=="" ||
-                    		($('#password').val().length<6 || $('#password').val().length>12) ||
-                    		!(re_pw.test($('#password').val()))){
-                        modalContents.text("패스워드는 6˜12 이내의 영문/숫자조합으로 해주세요");
-                        modal.modal('show');
-                         
-                        divPassword.removeClass("has-success");
-                        divPassword.addClass("has-error");
-                        $('#password').focus();
-                        return false;
-                    }else{
-                        divPassword.removeClass("has-error");
-                        divPassword.addClass("has-success");
-                    }
-                     
-                    //패스워드 확인
-                    if($('#passwordCheck').val()==""){
-                        modalContents.text("패스워드 확인을 입력하여 주시기 바랍니다.");
-                        modal.modal('show');
-                         
-                        divPasswordCheck.removeClass("has-success");
-                        divPasswordCheck.addClass("has-error");
-                        $('#passwordCheck').focus();
-                        return false;
-                    }else{
-                        divPasswordCheck.removeClass("has-error");
-                        divPasswordCheck.addClass("has-success");
-                    }
-                     
-                    //패스워드 비교
-                    if($('#password').val()!=$('#passwordCheck').val() || $('#passwordCheck').val()==""){
-                        modalContents.text("패스워드가 일치하지 않습니다.");
-                        modal.modal('show');
-                         
-                        divPasswordCheck.removeClass("has-success");
-                        divPasswordCheck.addClass("has-error");
-                        $('#passwordCheck').focus();
-                        return false;
-                    }else{
-                        divPasswordCheck.removeClass("has-error");
-                        divPasswordCheck.addClass("has-success");
-                    }
-                     
-                    //이름
-                    if($('#name').val()==""){
-                        modalContents.text("이름을 입력하여 주시기 바랍니다.");
-                        modal.modal('show');
-                         
-                        divName.removeClass("has-success");
-                        divName.addClass("has-error");
-                        $('#name').focus();
-                        return false;
-                    }else{
-                        divName.removeClass("has-error");
-                        divName.addClass("has-success");
-                    }
-                     
-                    //별명
-//                     if($('#nickname').val()==""){
-//                         modalContents.text("별명을 입력하여 주시기 바랍니다.");
-//                         modal.modal('show');
-                         
-//                         divNickname.removeClass("has-success");
-//                         divNickname.addClass("has-error");
-//                         $('#nickname').focus();
-//                         return false;
-//                     }else{
-//                         divNickname.removeClass("has-error");
-//                         divNickname.addClass("has-success");
-//                     }
-                     
-                    //이메일
-                    if($('#email').val()==""){
-                        modalContents.text("이메일을 입력하여 주시기 바랍니다.");
-                        modal.modal('show');
-                         
-                        divEmail.removeClass("has-success");
-                        divEmail.addClass("has-error");
-                        $('#email').focus();
-                        return false;
-                    }else{
-                        divEmail.removeClass("has-error");
-                        divEmail.addClass("has-success");
-                    }
-                     
-                    //휴대폰 번호
-                    if($('#phoneNumber').val()==""){
-                        modalContents.text("휴대폰 번호를 입력하여 주시기 바랍니다.");
-                        modal.modal('show');
-                         
-                        divPhoneNumber.removeClass("has-success");
-                        divPhoneNumber.addClass("has-error");
-                        $('#phoneNumber').focus();
-                        return false;
-                    }else{
-                        divPhoneNumber.removeClass("has-error");
-                        divPhoneNumber.addClass("has-success");
-                    }
-                     
-                 
-                });
-                 
-            });
 		});
              
         
@@ -398,19 +105,15 @@ var re_pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,12}$/;//영문 + 최소 1개�
             <div class="form-group">
                 <label for="provision" class="col-lg-2 control-label">회원가입약관</label>
                 <div class="col-lg-10" id="provision">
-                    <textarea class="form-control" rows="8" style="resize:none">
-약관동의
-                    </textarea>
+                    <textarea class="form-control" rows="8" style="resize:none">약관동의</textarea>
                     <div class="radio">
-                        <label>
-                            <input type="radio" id="provisionYn" name="provisionYn" value="Y" autofocus="autofocus" checked>
-                            동의합니다.
+                    	<label>
+                            <input type="radio" id="provisionYn" name="provisionYn" value="Y" autofocus="autofocus" checked>동의합니다.
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" id="provisionYn" name="provisionYn" value="N">
-                            동의하지 않습니다.
+                            <input type="radio" id="provisionYn" name="provisionYn" value="N">동의하지 않습니다.
                         </label>
                     </div>
                 </div>
@@ -418,19 +121,15 @@ var re_pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,12}$/;//영문 + 최소 1개�
             <div class="form-group">
                 <label for="memberInfo" class="col-lg-2 control-label">개인정보취급방침</label>
                 <div class="col-lg-10" id="memberInfo">
-                    <textarea class="form-control" rows="8" style="resize:none">
-개인정보의 항목 및 수집방법
-                    </textarea>
+                    <textarea class="form-control" rows="8" style="resize:none">개인정보의 항목 및 수집방법</textarea>
                     <div class="radio">
                         <label>
-                            <input type="radio" id="memberInfoYn" name="memberInfoYn" value="Y" checked>
-                            동의합니다.
+                            <input type="radio" id="memberInfoYn" name="memberInfoYn" value="Y" checked>동의합니다.
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" id="memberInfoYn" name="memberInfoYn" value="N">
-                            동의하지 않습니다.
+                            <input type="radio" id="memberInfoYn" name="memberInfoYn" value="N">동의하지 않습니다.
                         </label>
                     </div>
                 </div>
@@ -439,7 +138,6 @@ var re_pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,12}$/;//영문 + 최소 1개�
             <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-            
             
             <div class="form-group" id="divId">
                 <label for="inputId" class="col-lg-3 control-label">아이디</label>
