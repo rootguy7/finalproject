@@ -47,7 +47,7 @@
 					<input type="text" class="form-control3" placeholder="">월
 					<input type="text" class="form-control3" placeholder="">일
 					<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">남
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>남
 </label>
 <label class="radio-inline">
   <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">여
