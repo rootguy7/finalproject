@@ -25,7 +25,7 @@
 	text-align: center;
 }
 .dropdown-menu{
-	margin-left: 7px;
+	margin-left: 8px;
 }
 </style>
 </head>
@@ -44,7 +44,6 @@
 
 			<div class="container">
 				<div class="row">
-			
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">

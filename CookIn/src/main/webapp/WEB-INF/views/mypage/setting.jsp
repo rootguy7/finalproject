@@ -10,7 +10,7 @@
 	background-color: rgb(248,248,248);
 	width: 25%;
 }
-.form-control{
+.form-control1{
 	width: 40%;
 }
 .form-control2{
@@ -35,10 +35,10 @@
 					<td id="tbclr">아이디</td><td>jiyoon1261</td>
 				</tr>
 				<tr>
-					<td id="tbclr">비밀번호</td><td><input type="text" class="form-control" placeholder=""></td>
+					<td id="tbclr">비밀번호</td><td><input type="text" class="form-control1" placeholder=""></td>
 				</tr>
 				<tr>
-					<td id="tbclr">비밀번호확인</td><td><input type="text" class="form-control" placeholder=""></td>
+					<td id="tbclr">비밀번호확인</td><td><input type="text" class="form-control1" placeholder=""></td>
 				</tr>
 				<tr>
 					<td id="tbclr">생일/성별</td>
@@ -54,7 +54,7 @@
 </label></td>
 				</tr>
 				<tr>
-					<td id="tbclr">휴대폰</td><td><input type="text" class="form-control" placeholder=""></td><tr>
+					<td id="tbclr">휴대폰</td><td><input type="text" class="form-control1" placeholder=""></td><tr>
 				</tr>
 				<tr>
 					<td id="tbclr">이메일</td><td><input type="text" class="form-control2" placeholder="">@
