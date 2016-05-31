@@ -45,8 +45,8 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 				<h3>게시물관리<small>질의응답</small></h3>
 			</span>
 		</div>
-		<table class="table tabletd table-condensed ">
-				<tr>
+		<table class="table tabletd">
+				<tr class="active">
 					<th class="bno">No</th>
 					<th class="btit">Title</th>
 					<th class="btime">작성일</th>

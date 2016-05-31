@@ -52,7 +52,7 @@ table tr{
 		  		<span class="titlename">
 					<h3>고객관리<small>회원 정보</small></h3>
 				</span>
-		  		<table class="table table-condensed table-bordered">
+		  		<table class="table">
 			  		<colgroup>
 		                <col width="100" />
 		                <col width="200" />
@@ -69,7 +69,7 @@ table tr{
 		                <col width="300" />
 		                <col width="300" />
 		            </colgroup>
-					<tr><th class="title">index</th><th class="title">id</th><th class="title">name</th><th class="title">mobile</th><th class="title">point</th></tr>	
+					<tr class="active"><th class="title">index</th><th class="title">id</th><th class="title">name</th><th class="title">mobile</th><th class="title">point</th></tr>	
 					<tr class="rownum">
 						<td>내용1</td>
 						<td>내용1</td>

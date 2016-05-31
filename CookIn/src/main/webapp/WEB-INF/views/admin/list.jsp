@@ -58,14 +58,14 @@ $(document).ready(function(){
 	  		<span class="titlename">
 				<h3>상품관리<small>전체 상품 리스트</small></h3>
 			</span>
-	  		<table class="table table-condensed">
+	  		<table class="table">
 		  		<colgroup>
 	                <col width="100" />
 	                <col width="200" />
 	                <col width="500" />
 	                <col width="200" />
 	            </colgroup>
-				<tr><th class="title">index</th><th class="title">주문 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
+				<tr class="active"><th class="title">index</th><th class="title">주문 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
 			</table>
 			<table class="table-condensed table-hover table tabletd">
 				<colgroup>
