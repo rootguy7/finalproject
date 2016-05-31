@@ -35,7 +35,7 @@
 	        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],  
 	        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],   
 	        yearSuffix: '년',  
-			buttonImage: "../imgs/calendar.png", //달력 표시 버튼 이미지 경로
+			buttonImage: "/cook/resources/imgs/calendar.png", //달력 표시 버튼 이미지 경로
 			buttonImageOnly: true, // 버튼에 있는 이미지만 표시
 			buttonText: "Select date",
 			dateFormat:"yymmdd", //날짜 출력 포맷 20160501
