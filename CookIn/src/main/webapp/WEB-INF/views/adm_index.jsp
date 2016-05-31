@@ -54,7 +54,7 @@
       		<div class="widget widgetnum">
 			    <div class="widget-header"><h3>미입금</h3></div>
       			<div class="widget-content">
-			      	<span class="number"><a href="#">3</a></span><span>건</span>	
+			      	<span class="number"><a href="../cook/admin/notpaid">3</a></span><span>건</span>	
 	      		</div> 
 	      	</div>
       	</div>
@@ -62,7 +62,7 @@
       		<div class="widget widgetnum">
 	      		<div class="widget-header"><h3>미배송</h3></div>
       			<div class="widget-content">
-		      		<span class="number"><a href="#">7</a></span></span><span>건</span>	
+		      		<span class="number"><a href="../cook/admin/notdelivery">7</a></span></span><span>건</span>	
 		      	</div>
 	      	</div>
      	</div>
@@ -70,7 +70,7 @@
       		<div class="widget widgetnum">
 	      		<div class="widget-header"><h3>미답변</h3></div>
       			<div class="widget-content">
-		      		<span class="number"><a href="#">4</a></span></span><span>건</span>	
+		      		<span class="number"><a href="../cook/admin/notanswer"">4</a></span></span><span>건</span>	
 		      	</div>
 	      	</div>
       	</div>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>관리자-입금확인 페이지</title>
+<title>관리자-미입금확인 페이지</title>
 <style type="text/css">
 table {
 	border-collapse: collapse;
@@ -44,47 +44,35 @@ table tr{
 	  	<div class="col-md-8 content">
 			<div>
 		  		<span class="titlename">
-					<h3>주문관리<small>입금확인</small></h3>
+					<h3>오늘의 할일<small>미 입금</small></h3>
 				</span>
 		  		<table class="table">
 			  		<colgroup>
 		                <col width="50" />
-		                <col width="50" />
-		                <col width="200" />
+		                <col width="100" />
 		                <col width="500" />
 		                <col width="200" />
+		                <col width="200" />
 		            </colgroup>
-					<tr class="active"><th class="title">Check</th><th class="title">No</th><th class="title">입금 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
+					<tr class="active"><th class="title">No</th><th class="title">주문자명</th><th class="title">상품 정보</th><th class="title">금액</th><th class="datetitle">입금 기한</th></tr>	
 				</table>
 				<table class="table-condensed table-hover table tabletd">
 					<colgroup>
 		              	<col width="50" />
-		                <col width="50" />
-		                <col width="200" />
+		                <col width="100" />
 		                <col width="500" />
 		                <col width="200" />
+		                <col width="200" />
 		            </colgroup>
-					<tr class="rownum">
-						<td>
-							<div class="checkbox">
-							  <label>
-							    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-							  </label>
-							</div>
-						</td>
+					<tr class="rownum">						
+						<td>1</td>
 						<td>내용1</td>
 						<td>내용1</td>
 						<td>내용1</td>
 						<td>내용1</td>
 					</tr>
 					<tr class="rownum">
-						<td>
-							<div class="checkbox">
-							  <label>
-							    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-							  </label>
-							</div>
-						</td>
+						<td>2</td>
 						<td>내용2</td>
 						<td>내용2</td>
 						<td>내용2</td>
@@ -94,10 +82,7 @@ table tr{
 			</div>
 			<div class="col-md-10"></div>
 			<div class="col-md-1">
-			<div class="btn">
-				<a class="btn btn-default" href="#" role="button">배송 승인</a>
-		  	</div>
-		  	</div>
+			</div>
 	  </div>
 		<div class="col-md-1 content"></div>
 		<!-- 페이징 start -->
