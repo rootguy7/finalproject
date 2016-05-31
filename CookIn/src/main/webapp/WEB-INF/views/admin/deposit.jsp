@@ -18,10 +18,8 @@ table tr>th{
 table tr{
     text-align: center;
 }
-.title{ 
-   color: rgb(71,48,32);
-   background-color: rgb(244,235,114);
-   border: 1px solid rgb(71,48,32);
+.tabletd{
+	margin-top: -21px;
 }
 #pagination{/*  페이징 */
 	display: inline-block;
@@ -48,7 +46,7 @@ table tr{
 		  		<span class="titlename">
 					<h3>주문관리<small>입금확인</small></h3>
 				</span>
-		  		<table class="table table-condensed table-bordered">
+		  		<table class="table table-condensed">
 			  		<colgroup>
 		                <col width="50" />
 		                <col width="100" />
@@ -57,7 +55,16 @@ table tr{
 		                <col width="200" />
 		            </colgroup>
 					<tr><th class="title">check</th><th class="title">index</th><th class="title">입금 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
-					<tr>
+				</table>
+				<table class="table-condensed table-hover table tabletd">
+					<colgroup>
+		              	<col width="50" />
+		                <col width="100" />
+		                <col width="200" />
+		                <col width="500" />
+		                <col width="200" />
+		            </colgroup>
+					<tr class="rownum">
 						<td>
 							<div class="checkbox">
 							  <label>
@@ -70,7 +77,7 @@ table tr{
 						<td>내용1</td>
 						<td>내용1</td>
 					</tr>
-					<tr>
+					<tr class="rownum">
 						<td>
 							<div class="checkbox">
 							  <label>

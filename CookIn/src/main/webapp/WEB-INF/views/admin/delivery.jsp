@@ -9,19 +9,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>관리자-배송확인 페이지</title>
 <style type="text/css">
-table {
-	border-collapse: collapse;
-}
 table tr>th{
     text-align: center;
 }
 table tr{
     text-align: center;
 }
-.title{ 
-   color: rgb(71,48,32);
-   background-color: rgb(244,235,114);
-   border: 1px solid rgb(71,48,32);
+.tabletd{
+	margin-top: -21px;
 }
 #pagination{/*  페이징 */
 	display: inline-block;
@@ -30,10 +25,8 @@ table tr{
 </style>
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="../resources/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 <%@include file="../header2.jsp" %>
@@ -48,7 +41,7 @@ table tr{
 	  		<span class="titlename">
 				<h3>주문관리<small>배송확인</small></h3>
 			</span>
-	  		<table class="table table-condensed table-bordered">
+	  		<table class="table table-condensed">
 		  		<colgroup>
 	                <col width="100" />
 	                <col width="200" />
@@ -56,13 +49,21 @@ table tr{
 	                <col width="200" />
 	            </colgroup>
 				<tr><th class="title">index</th><th class="title">배송 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
-				<tr>
+			</table>
+			<table class="table-condensed table-hover table tabletd">
+				<colgroup>
+	                <col width="100" />
+	                <col width="200" />
+	                <col width="500" />
+	                <col width="200" />
+	            </colgroup>
+				<tr class="rownum">
 					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 				</tr>
-				<tr>
+				<tr class="rownum">
 					<td>내용2</td>
 					<td>내용2</td>
 					<td>내용2</td>

@@ -20,7 +20,7 @@
       width: 200px;
       margin-left: 0px;
    }
-   .title{ 
+   .titlename{ 
       color: rgb(71,48,32);
       background-color: rgb(244,235,114);
       border: 1px solid rgb(71,48,32);
@@ -40,18 +40,18 @@
 <body>
 <!-- 	<div class="col-md-3 leftmenu"> -->
 		<table class="table table-condensed">
-		 	<tr class="title"><th>고객 관리</th></tr>
+		 	<tr class="titlename"><th>고객 관리</th></tr>
 			<tr><td><a class="con" href="/cook/admin/info">고객 정보</a></td></tr>
 			
-		 	<tr class="title"><th>상품 관리</th></tr>	
+		 	<tr class="titlename"><th>상품 관리</th></tr>	
 			<tr><td><a class="con" href="/cook/admin/list">전체 상품 리스트</a></td></tr>
 					
-		 	<tr class="title"><th>주문 관리</th></tr>
+		 	<tr class="titlename"><th>주문 관리</th></tr>
 			<tr><td><a class="con" href="/cook/admin/order">주문 확인</a></td></tr>		
 			<tr><td><a class="con" href="/cook/admin/deposit">입금 확인</a></td></tr>	
 			<tr><td><a class="con" href="/cook/admin/delivery">배송 확인</a></td></tr>	
 			
-		 	<tr class="title"><th>게시물 관리</th></tr>
+		 	<tr class="titlename"><th>게시물 관리</th></tr>
 			<tr><td><a class="con" href="/cook/admin/notice">공지사항</a></td></tr>		
 			<tr><td><a class="con" href="/cook/admin/qna">질의응답</a></td></tr>		
 		</table> 

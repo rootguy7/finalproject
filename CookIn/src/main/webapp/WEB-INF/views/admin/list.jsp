@@ -18,22 +18,32 @@ table tr>th{
 table tr{
     text-align: center;
 }
-.title{ 
-   color: rgb(71,48,32);
-   background-color: rgb(244,235,114);
-   border: 1px solid rgb(71,48,32);
+.tabletd{
+	margin-top: -21px;
 }
 #pagination{/*  페이징 */
 	display: inline-block;
 	text-align: center;
 }
 </style>
+<script type="text/javascript">
+function getRow(rowValue) {
+	var rowIndex = rowValue.rowIndex;
+	return rowIndex;
+}
+$(document).ready(function(){
+	$('.rownum').on('click', function() {
+		var ridx=getRow(this);
+	    var index = $('.rownum:eq('+(ridx)+')>td:eq(0)').text();
+		alert('클릭한 No : '+index);
+		location.href="/cook/admin/bbsdetail";
+	});
+});
+</script>
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="../resources/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 <%@include file="../header2.jsp" %>
@@ -48,7 +58,7 @@ table tr{
 	  		<span class="titlename">
 				<h3>상품관리<small>전체 상품 리스트</small></h3>
 			</span>
-	  		<table class="table table-condensed table-bordered">
+	  		<table class="table table-condensed">
 		  		<colgroup>
 	                <col width="100" />
 	                <col width="200" />
@@ -56,13 +66,21 @@ table tr{
 	                <col width="200" />
 	            </colgroup>
 				<tr><th class="title">index</th><th class="title">주문 날짜</th><th class="title">상품 정보</th><th class="title">주문자명</th></tr>	
-				<tr>
+			</table>
+			<table class="table-condensed table-hover table tabletd">
+				<colgroup>
+	                <col width="100" />
+	                <col width="200" />
+	                <col width="500" />
+	                <col width="200" />
+	            </colgroup>
+				<tr class="rownum">
 					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 					<td>내용1</td>
 				</tr>
-				<tr>
+				<tr class="rownum">
 					<td>내용2</td>
 					<td>내용2</td>
 					<td>내용2</td>
