@@ -5,8 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui"/>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="/cook/resources/css/jquery-ui.css"/>
+<script type="text/javascript" src="/cook/resources/js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="/cook/resources/js/jquery-ui.min.js"></script>
 <title>Insert title here</title>
 <style type="text/css">
 	h3{
@@ -21,7 +22,24 @@
 </style>
 <script type="text/javascript">
 	$(function(){
-		$("#datepicker").datepicker();		
+		$("#datepicker").datepicker({
+			showOn: "button", // 버튼을 캘린더에 표시함
+			changeYear: true, //년도 변경 가능
+			changeMonth: true, //월 변경 가능
+			prevText: '이전달',
+			nextText: '다음달',  
+			currentText: '오늘',
+			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],  
+	        dayNames: ['일', '월', '화', '수', '목', '금', '토'],  
+	        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],  
+	        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],   
+	        yearSuffix: '년',  
+			buttonImage: "../imgs/calendar.png", //달력 표시 버튼 이미지 경로
+			buttonImageOnly: true, // 버튼에 있는 이미지만 표시
+			buttonText: "Select date",
+			dateFormat:"yymmdd", //날짜 출력 포맷 20160501
+		});		
 		$("#datepicker2").datepicker();		
 	});
 </script>
