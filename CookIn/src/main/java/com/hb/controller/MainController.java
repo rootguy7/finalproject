@@ -11,5 +11,8 @@ public class MainController {
 		return "index";
 	}
 	  
-	
+	@RequestMapping("/store")
+	public String store(){
+		return "store/storelist";
+	}
 }
