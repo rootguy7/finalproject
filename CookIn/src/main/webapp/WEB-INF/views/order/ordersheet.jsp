@@ -71,6 +71,7 @@
 <body>
 
 	<%@ include file="../header.jsp"%>
+	<%@ include file="../nav.jsp" %>
 	<!-- Navigation -->
 
 
