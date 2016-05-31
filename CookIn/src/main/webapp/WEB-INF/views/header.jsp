@@ -74,7 +74,7 @@
 	<div class="header col-md-12">
 		<div class="toolbar">
 			<a href="/cook">HOME/</a><a href="#" data-toggle="modal" data-target="#myModal">LOGIN/</a><a href="join">JOIN/</a>
-			<a href="/cook/mypage">마이페이지/</a><a href="#">장바구니/</a><a href="/cook/qna">FAQ</a>
+			<a href="/cook/mypage">마이페이지/</a><a href="/cook/cart">장바구니/</a><a href="/cook/qna">FAQ</a>
 		</div>
 		<div class="logo">
 			<a href="/cook"><img src="resources/imgs/logo.png"></a>
