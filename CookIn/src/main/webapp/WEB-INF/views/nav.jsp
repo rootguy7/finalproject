@@ -42,8 +42,7 @@
 				</button>
 			</div>
 
-			<div class="container">
-				<div class="row">
+		
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
@@ -88,8 +87,6 @@
 				<!-- 주 메뉴목록 end -->
 			</div>
 			<!-- /.navbar-collapse -->
-			</div> <!--row end  -->
-			</div><!-- container end -->
 			</div>
 		<!-- /.container-fluid -->
 	<!-- 메뉴 구성 끝  -->
