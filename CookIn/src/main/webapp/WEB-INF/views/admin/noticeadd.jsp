@@ -14,25 +14,18 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <style type="text/css">
 
-/* 게시판 제목 "제목" 글귀 설정 */
 .titleName{
 	text-align: center;
- 	color: rgb(191, 191, 191); 
- 	font-size: 12pt;
- 	margin-right: 10px; 
+ 	padding: 7px 4px;
+ 	margin: 5px; 
+ 	color: black; 
+ 	font-size: 10pt; 
 }
-/* 게시판 제목 div 안의 input textbox 설정 */
+
 #titleBox {
 	width: 80%;
 }
-/* 게시판 제목 div 설정 */
-.noticeTitle{
-	border: 1px solid rgb(213, 213, 213);
-}
-/* 게시판 제목 div>div의 여백 설정 */
-#titleMargin{
-	margin: 5px 5px;
-}
+
 #li1 {
 	list-style-type: none;
 }
@@ -64,17 +57,15 @@
 				</div>
 				<!-- 주요 컨텐츠 시작 -->
 				<form action="../customer/noticeinsert.do" method="post">
-					<div class="col-md-12 noticeTitle">
-						<div id="titleMargin">
-							<span class="bbstit titleName">제 목</span>
-							<span>
-								<input type="text" id="titleBox" name="title" value="" class="inputText">
-							</span>
-							<!-- 아이디 값 벨류 히든으로 넘길 자리 -->
-							<input type="hidden" name="name" value="동적으로 아이디" readonly="readonly">
-						</div>
+					<div class="col-md-12 content">
+						<span class="bbstit titleName">제목</span>
+						<span>
+							<input type="text" id="titleBox" name="title" value="" class="inputText">
+						</span>
+						<!-- 아이디 값 벨류 히든으로 넘길 자리 -->
+						<input type="hidden" name="name" value="동적으로 아이디" readonly="readonly">
 					</div>
-					<ul>
+					<ul>  
 						<li id="li1">
 								<textarea cols="80" id="contents" name="contents" rows="10"></textarea>
 								<script	type="text/javascript">
@@ -88,17 +79,14 @@
 						</li>
 					</ul>
 					<br />
-					<div class="btn-toolbar bbsBtnGroup" role="toolbar" aria-label="...">
-						<button type="submit" class="join btn btn-default">작성</button>
-						<button type="reset" class="back btn btn-default">취소</button>
-					</div>
+					<button type="submit" class="join">작성</button>
+					<button type="reset" class="back">취소</button>
 				</form>
 				<!-- 주요 컨텐츠 끗 -->
 			</div>
 			<div class="col-md-1 content"></div>
 		</div>
 	</div>
-	<p/>
 	<%@include file="../footer.jsp"%>
 </body>
 </html>

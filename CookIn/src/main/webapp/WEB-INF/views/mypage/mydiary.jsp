@@ -36,6 +36,8 @@
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
+			<div class="col-md-1"></div>
+				<div class="col-md-6">
 				<div class="panel panel-default" id="dd">
 					<div class="panel-body">
 						기간별조회 
@@ -44,7 +46,6 @@
 						<button class="btn btn-default" type="submit">1개월</button>
 							
 						<span>Date:<input type="text" id="datepicker3">~<input type="text" id="datepicker4"></span>
-
 						<button class="btn btn-default" type="submit">조회하기</button>
 					</div>
 				</div>
