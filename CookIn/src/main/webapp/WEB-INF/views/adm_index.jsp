@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="/cook/resources/css/base-admin-responsive.css">
 <link rel="stylesheet" href="/cook/resources/css/bootstrap-responsive.min.css">
 <link rel="stylesheet" href="/cook/resources/css/style.css">
+<link rel="stylesheet" href="/cook/resources/css/barchart_1.css">
 <link rel="stylesheet" href="/cook/resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <style>
@@ -35,6 +36,9 @@
 	.number{
 		font-size: 50px;
 	}
+	.number1{	
+		color: rgb(71,48,32);
+	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/cook/resources/js/bootstrap.min.js"></script>
@@ -54,7 +58,7 @@
       		<div class="widget widgetnum">
 			    <div class="widget-header"><h3>미입금</h3></div>
       			<div class="widget-content">
-			      	<span class="number"><a href="../cook/admin/notpaid">3</a></span><span>건</span>	
+			      	<span class="number"><a class="number1" href="../cook/admin/notpaid">3</a></span><span>건</span>	
 	      		</div> 
 	      	</div>
       	</div>
@@ -62,7 +66,7 @@
       		<div class="widget widgetnum">
 	      		<div class="widget-header"><h3>미배송</h3></div>
       			<div class="widget-content">
-		      		<span class="number"><a href="../cook/admin/notdelivery">7</a></span></span><span>건</span>	
+		      		<span class="number"><a class="number1"  href="../cook/admin/notdelivery">7</a></span><span>건</span>	
 		      	</div>
 	      	</div>
      	</div>
@@ -70,7 +74,7 @@
       		<div class="widget widgetnum">
 	      		<div class="widget-header"><h3>미답변</h3></div>
       			<div class="widget-content">
-		      		<span class="number"><a href="../cook/admin/notanswer"">4</a></span></span><span>건</span>	
+		      		<span class="number"><a class="number1"  href="../cook/admin/notanswer"">4</a></span><span>건</span>	
 		      	</div>
 	      	</div>
       	</div>
@@ -81,7 +85,8 @@
 	                <h3>월별 판매 그래프</h3>
 	            </div>
 	            <div class="widget-content">
-	                <canvas id="bar-chart" class="chart-holder" width="800" height="250"></canvas>
+	                <%-- <canvas id="bar-chart" class="chart-holder" width="800" height="250"></canvas> --%>
+	                <div id="bar-example" style="height: 250px;"></div>
 	            </div>
 	        </div>
 		</div>
@@ -96,21 +101,13 @@
 <script src="/cook/resources/js/faq.js"></script>
 <script src="/cook/resources/js/bar.js"></script>
 <script type="text/javascript">
-var barChartData = {
+/* var barChartData = {
     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     datasets: [
 		{	
-		    /* fillColor: "rgba(244,235,114,0.5)",
-		    strokeColor: "rgba(220,220,220,1)",
-		    data: [65, 59, 90, 81, 56, 55, 40, 33, 55, 46, 16, 66], */
-		    
-		    label: "My First dataset",
 		    fillColor: "rgba(244,235,114,0.5)",
 		    strokeColor: "rgba(220,220,220,1)",
-            borderWidth: 1,
-            hoverBackgroundColor: "rgba(255,99,132,0.4)",
-            hoverBorderColor: "rgba(255,99,132,1)",
-            data: [65, 59, 90, 81, 56, 55, 40, 33, 55, 46, 16, 66]
+		    data: [65, 59, 90, 81, 56, 55, 40, 33, 55, 46, 16, 66]
 		},
 		{
 		    fillColor: "rgba(71,48,32,0.5)",
@@ -120,7 +117,33 @@ var barChartData = {
 	]
 
 }
-var myLine = new Chart(document.getElementById("bar-chart").getContext("2d")).Bar(barChartData);
+var myLine = new Chart(document.getElementById("bar-chart").getContext("2d")).Bar(barChartData); */
+$.getScript('http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',function(){
+	$.getScript('http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.0/morris.min.js',function(){
+		Morris.Bar({
+	         element: 'bar-example',
+	         data: [
+	            {y: 'Jan 2016', a: 10, b: 100},
+	            {y: 'Feb 2016', a: 75,  b: 65},
+	            {y: 'Mar 2016', a: 50,  b: 40},
+	            {y: 'Apr 2016', a: 75,  b: 65},
+	            {y: 'May 2016', a: 50,  b: 40},
+	            {y: 'Jun 2016', a: 75,  b: 65},
+	            {y: 'July 2016', a: 75,  b: 60},
+	            {y: 'Aug 2016', a: 80,  b: 65},
+	            {y: 'Sep 2016', a: 40,  b: 70},
+	            {y: 'Oct 2016', a: 15,  b: 55},
+	            {y: 'Nov 2016', a: 30,  b: 80},
+	            {y: 'Dec 2016', a: 25,  b: 65}
+	         ],
+	         xkey: 'y',
+	         ykeys: ['a', 'b'],
+	         labels: ['2015년', '2016년'],
+	         barColors: ['rgb(244,135,114)','rgb(71,48,32)']
+		});
+	});
+});
+	 
 </script>
 </body>
 </html>
