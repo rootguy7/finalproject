@@ -64,15 +64,9 @@ table tr{
 		            </colgroup>
 					<tr class="rownum">						
 						<td>1</td>
-						<td>내용1</td>
-						<td>내용1</td>
-						<td>내용1</td>
-					</tr>
-					<tr class="rownum">
-						<td>2</td>
-						<td>내용2</td>
-						<td>내용2</td>
-						<td>내용2</td>
+						<td>김주형</td>
+						<td>오이도 주댕[199105-31]</td>
+						<td>15,000원</td>
 					</tr>
 				</table>
 			</div>

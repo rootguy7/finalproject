@@ -21,6 +21,9 @@ table tr{
 .tabletd{
 	margin-top: -21px;
 }
+.limit{
+	color: red;
+}
 #pagination{/*  페이징 */
 	display: inline-block;
 	text-align: center;
@@ -66,17 +69,17 @@ table tr{
 		            </colgroup>
 					<tr class="rownum">						
 						<td>1</td>
-						<td>내용1</td>
-						<td>내용1</td>
-						<td>내용1</td>
-						<td>내용1</td>
+						<td>이윤아</td>
+						<td>하리보젤리</td>
+						<td>3,000</td>
+						<td class="limit">2016.06.10</td>
 					</tr>
 					<tr class="rownum">
 						<td>2</td>
-						<td>내용2</td>
-						<td>내용2</td>
-						<td>내용2</td>
-						<td>내용2</td>
+						<td>박지윤</td>
+						<td>풋젤리</td>
+						<td>1,400</td>
+						<td class="limit">2016.05.31</td>
 					</tr>
 				</table>
 			</div>
