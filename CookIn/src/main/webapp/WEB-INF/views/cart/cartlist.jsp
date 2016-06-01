@@ -49,6 +49,7 @@
 
 
             <div class="col-md-12"> <!-- col-md- start -->
+            <br/>
            		<h2>장바구니</h2> 
 				<hr/>
 				
