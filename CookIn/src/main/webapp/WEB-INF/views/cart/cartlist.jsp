@@ -47,9 +47,8 @@
     <div class="container"> <!-- container start -->
         <div class="row">	
 
-            <div class="col-md-2"></div>	
 
-            <div class="col-md-8"> <!-- col-md- start -->
+            <div class="col-md-12"> <!-- col-md- start -->
            		<h2>장바구니</h2> 
 				<hr/>
 				
@@ -115,9 +114,8 @@
 				<button type="button" class="btn btn-default" onclick="location.href='/cook/ordersheet'">선택상품주문</button>
 				</div>
 				<br/><br/>
+            </div>
             </div> <!-- col-md- end -->
-
-	       <div class="col-md-2"></div>	
 
 	   	   
 	   	</div>	

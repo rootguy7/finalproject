@@ -38,9 +38,8 @@
     <div class="container"> <!-- container start -->
         <div class="row">	
 
-            <div class="col-md-2"></div>	
 
-            <div class="col-md-8"> <!-- col-md- start -->
+            <div class="col-md-12"> <!-- col-md- start -->
            		<h2>주문 완료</h2> 
 				<hr/>
 				
@@ -111,7 +110,6 @@
 				<br/><br/>
             </div> <!-- col-md- end -->
 
-	       <div class="col-md-2"></div>	
 
 	   	   
 	   	</div>	

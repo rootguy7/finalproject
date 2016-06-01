@@ -65,9 +65,8 @@ function initialize() {
     <div class="container"> <!-- container start -->
         <div class="row">	
 
-            <div class="col-md-2"></div>	
 
-            <div class="col-md-8"> <!-- col-md- start -->
+            <div class="col-md-12"> <!-- col-md- start -->
             	<h3>찾아오는 길 </h3>
             	<hr>
             	 <div id="map_canvas"style="width:100%; height:250px;"></div> 
@@ -87,7 +86,6 @@ function initialize() {
 				<br/>
             </div> <!-- col-md- end -->
 
-	       <div class="col-md-2"></div>	
 
 	   	   
 	   	</div>	
