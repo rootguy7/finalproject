@@ -30,23 +30,17 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="resources/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-	$('.carousel').carousel({
-		  interval: 2000
-		})
-</script>
+
 </head>
 <body>
 	<%@ include file="../header.jsp" %>
-	  
-				<%-- 	<!-- nav start -->
-				<%@ include file="nav.jsp" %> --%>
-	
+	<%@ include file="../nav.jsp" %> 	  
+			
 	<div class="container">
 		<div class="row rowmain">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
-			<h1>질의응답 게시판</h1>
+			<h2>질의응답</h2>
 			<table class="table tabletd">
 				<tr>
 					<th class="bno">No</th>
