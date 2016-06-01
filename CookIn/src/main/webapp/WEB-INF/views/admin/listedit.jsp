@@ -85,6 +85,12 @@
 	            	<th class="active">판매가</th>
 	            	<td><input type="text" class="form-control" id="price2" placeholder="3,500원"></td>
 	            </tr>
+	            <tr>
+	            	<th colspan="3" class="active">상세 내용</th>
+	            </tr>
+	            <tr>
+	            	<td colspan="3"><textarea class="form-control" rows="10" placeholder="제품 상세 내용을 입력하세요."></textarea></td>
+	            </tr>
 			</table>
 		</div>
 		<div class="col-md-10"></div>

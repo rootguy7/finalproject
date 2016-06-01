@@ -57,7 +57,8 @@
 	            </colgroup>
 	            <tr>
 	            	<th class="active">상품 대표사진</th>
-	            	<td><input type="file"id="photo"></td>
+	            	<td><input type="file"id="InputFile">
+	            	<p class="help-block">파일 선택 도움말 꺄르륵 왕십리음악대장 오이도짠짜라 까치산꾀꼬리 흑석동우럭</p></td>
 	            </tr>
 	            <tr>
 	            	<th class="active">상품 번호</th>
@@ -86,6 +87,12 @@
 	            <tr>
 	            	<th class="active">판매가</th>
 	            	<td><input type="text" class="form-control" id="price2" placeholder="소비자가격*0.8"></td>
+	            </tr>
+	            <tr>
+	            	<th colspan="3" class="active">상세 내용</th>
+	            </tr>
+	            <tr>
+	            	<td colspan="3"><textarea class="form-control" rows="10" placeholder="제품 상세 내용을 입력하세요."></textarea></td>
 	            </tr>
 			</table>
 		</div>
