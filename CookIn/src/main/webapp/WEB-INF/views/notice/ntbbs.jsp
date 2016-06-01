@@ -30,7 +30,23 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="resources/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
+	var rowIndex = rowValue.rowIndex;
+	return rowIndex;
+}
 
+	$(document).ready(function(){
+		$('.rownum').on('click', function() {
+			var ridx=getRow(this);
+		    var index = $('.rownum:eq('+(ridx)+')>td:eq(0)').text();
+			alert('클릭한 No : '+index);
+// 			location.href="/Hanbit/customer/boardDetail.do?index="+index;
+			location.href="/cook/ntdetail";
+		});
+		
+	});
+</script>
 </head>
 <body>
 	<%@ include file="../header.jsp" %>
@@ -51,42 +67,42 @@
 				</tr>
 			</table>
 			<table class="table table-hover">
-				<tr>
+				<tr class="rownum">
 					<td class="bno">10</td>
 					<td class="btit">더미타이틀</td>
 					<td class="btime">더미 시간</td>
 					<td class="bname">더미 작성자</td>
 					<td class="bcount">5</td>
 				</tr>
-				<tr>
+				<tr class="rownum">
 					<td class="bno">10</td>
 					<td class="btit">더미타이틀</td>
 					<td class="btime">더미 시간</td>
 					<td class="bname">더미 작성자</td>
 					<td class="bcount">5</td>
 				</tr>
-				<tr>
+				<tr class="rownum">
 					<td class="bno">10</td>
 					<td class="btit">더미타이틀</td>
 					<td class="btime">더미 시간</td>
 					<td class="bname">더미 작성자</td>
 					<td class="bcount">5</td>
 				</tr>
-				<tr>
+				<tr class="rownum">
 					<td class="bno">10</td>
 					<td class="btit">더미타이틀</td>
 					<td class="btime">더미 시간</td>
 					<td class="bname">더미 작성자</td>
 					<td class="bcount">5</td>
 				</tr>
-				<tr>
+				<tr class="rownum">
 					<td class="bno">10</td>
 					<td class="btit">더미타이틀</td>
 					<td class="btime">더미 시간</td>
 					<td class="bname">더미 작성자</td>
 					<td class="bcount">5</td>
 				</tr>
-				<tr>
+				<tr class="rownum">
 					<td class="bno">10</td>
 					<td class="btit">더미타이틀</td>
 					<td class="btime">더미 시간</td>
@@ -94,12 +110,13 @@
 					<td class="bcount">5</td>
 				</tr>
 			</table>
-			<div class="row">
-					<div class="col-md-10"></div>
-					<div class="col-md-2">
-						<button type="button" class="btn btn-default">글쓰기</button>
-					</div>
-			</div>
+			<!-- 글쓰기 필요 없을듯 싶음 -->
+<!-- 			<div class="row"> -->
+<!-- 					<div class="col-md-10"></div> -->
+<!-- 					<div class="col-md-2"> -->
+<!-- 						<button type="button" class="btn btn-default">글쓰기</button> -->
+<!-- 					</div> -->
+<!-- 			</div> -->
 			<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-2 sel">

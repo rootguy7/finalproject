@@ -12,4 +12,9 @@ public class NoticeController {
 		
 		return "notice/ntbbs";
 	}
+	@RequestMapping("/ntdetail")
+	public String noticeDetail() {
+		
+		return "notice/ntdetail";
+	}
 }

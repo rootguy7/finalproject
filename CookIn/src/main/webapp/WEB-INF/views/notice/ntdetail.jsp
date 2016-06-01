@@ -7,11 +7,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>관리자-공지사항 페이지</title>
-<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
-<link rel="stylesheet" href="../resources/css/commbbs.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<style type="text/css">
+<title>Insert title here</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/css/commbbs.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<style>
+/* 	.container>.row>div {
+		border: 1px solid red;
+	} */
+	
+	.item>img{
+		margin: 0px auto;
+	}
+	.container{
+		width:100%;
+	}
 	#commentParentText{
 		width: 90%;
 	}
@@ -21,34 +34,24 @@
 	.mcenter{
 		width: 60%;
 	}
-/* 	tr, td{ */
-/* 		border: solid 1px red; */
-/* 	} */
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="../resources/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
+<!-- jquery -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="resources/js/bootstrap.min.js"></script>
 
-	});
-</script>
 </head>
 <body>
-<%@include file="../header2.jsp" %>
-<div class="container-fluid">
-	<div class="row">
-	  	<div class="col-md-2">
-			<%@ include file="../adminmenu.jsp" %>
-		</div>
-	  <div class="col-md-1 content"></div>
-	  <div class="col-md-8 content">
-	  <!-- 컨텐츠 시작-->
-	  	<div>
-	  		<span class="titlename">
-				<h3>게시물관리<small>뭐라고 해야할까</small></h3>
-			</span>
-		</div>
-		<div><!-- 주요 컨텐츠 내용 시작 -->
+	<%@ include file="../header.jsp" %>
+	<%@ include file="../nav.jsp" %>  
+			
+	<div class="container">
+		<div class="row rowmain">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+			<h2>공지사항</h2>
+			<div><!-- 주요 컨텐츠 내용 시작 -->
 		         <table class="table table-condensed tablemain">
             <thead>
                <tr>
@@ -81,9 +84,6 @@
                   <td>
                      <span id="btnlayout">
 		           	    <button type="button" id="list" class="btn btn-default">목록</button>
-                        <a href='#'>
-                        <button type="button" id="modify" class="btn btn-default">수정</button></a>
-                        <button type="button" id="del" class="btn btn-default">삭제</button>
                      </span>
                   </td>
                </tr>
@@ -112,11 +112,13 @@
          </table>      
          </form>
 		</div><!-- 주요 컨텐츠 내용 끗 -->
-		<!-- 컨텐츠 끗 -->
-	  </div>
-	  <div class="col-md-1 content"></div>
-	</div>
-</div>
-<%@include file="../footer.jsp" %>
+			</div><!-- col-md-8 end -->
+			<div class="col-md-2"></div>
+		</div><!-- row div end -->
+		
+	</div><!-- container div end -->
+	
+	
+	<%@ include file="../footer.jsp" %>
 </body>
 </html>

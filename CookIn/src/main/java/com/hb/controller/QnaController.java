@@ -12,4 +12,14 @@ public class QnaController {
 		
 		return "qna/qnabbs";
 	}
+	@RequestMapping("/qnadetail")
+	public String qnaDetail() {
+		
+		return "qna/qnadetail";
+	}
+	@RequestMapping("/addqna")
+	public String qnaAdd() {
+		
+		return "qna/addqna";
+	}
 }
