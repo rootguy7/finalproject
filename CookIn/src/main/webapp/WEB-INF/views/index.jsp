@@ -26,6 +26,9 @@
 	text-decoration: none;
 	color: black;
 	}
+	.plus{
+	color: rgb(71, 48, 32);
+	}
 </style>
 <!-- jquery -->
 <script
@@ -100,7 +103,15 @@
 		<!-- row div end -->
 		<div class="row contents">
 			<div class="col-md-4 notice">
-				<h4>NEWS&NOTICE</h4>
+				<div class="col-md-12">
+				<div class="text-left"><h4>NEWS&NOTICE  <a href="/cook/notice" class="plus"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></h4>  </div>
+				<br/>
+				<table class="table table-hover">
+					<tr><td>No</td><td>title</td><td>작성자</td></tr>
+					<tr><td>10</td><td>더미테이블</td><td>더미 작성자</td></tr>
+					<tr><td>10</td><td>더미테이블</td><td>더미 작성자</td></tr>
+				</table>
+				</div>
 			</div>
 			<div class="col-md-4">
 				<form class="navbar-form" role="search" action="#"
