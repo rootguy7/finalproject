@@ -34,7 +34,7 @@
 	}
 
 	#titleBox {
-		width: 70%;
+		width: 60%;
 	}
 
 	.bbsTitle {
@@ -49,6 +49,10 @@
 	}
 	.tfwrite{
 		padding-left: 0px;
+	}
+	.bbstit{
+		margin-left: 25px;
+		margin-right: 25px;
 	}
 </style>
 <!-- jquery -->
@@ -80,6 +84,10 @@
 								<span class="bbstit titleName">제 목</span> 
 								<span> 
 									<input type="text" id="titleBox" name="title" value="" class="inputText">
+								</span>
+								<span class="bbstit titleName">비밀번호</span> 
+								<span> 
+									<input type="password" id="pwBox" name="title" value="" class="inputText">
 								</span>
 								<!-- 아이디 값 벨류 히든으로 넘길 자리 -->
 								<input type="hidden" name="name" value="동적으로 아이디" readonly="readonly">
