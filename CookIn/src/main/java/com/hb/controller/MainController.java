@@ -10,6 +10,11 @@ public class MainController {
 	public String home(){
 		return "index";
 	}
+	
+	@RequestMapping("/2")
+	public String home2(){
+		return "index2";
+	}
 	  
 	@RequestMapping("/store")
 	public String store(){
