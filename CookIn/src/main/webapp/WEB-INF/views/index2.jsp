@@ -42,14 +42,68 @@
 	    padding-right: 10px;
 	    padding-left: 10px;
 	    color: #d17581;
-	}		
+	}	
+	/* 툴바 */
+	.con{
+		width: 98%;
+	}
+	.header{
+		background-color: rgb(254,209,54);
+		text-align: right;
+		width: 100%;
+	}
+	.header>a{
+		color: white;
+	}
+	/* Log in 글귀 설정 */
+#myModalLabel{
+	text-align:center;
+	color:rgb(71, 48, 32);
+	font-size:30pt;
+	font-weight: bold;
+}
+/* 하단 SIGN IN 위치 DIV 설정 */
+.bottomColor{
+	background-color: rgb(244, 235, 114);
+	text-align: center;
+	border-radius: 10px;
+	width:20%;
+	margin: 0px auto;
+}
+/* 하단 SIGN IN 버튼 설정 */
+.bottomColor button {
+	background-color: rgb(244, 235, 114);
+	color: white;
+	font-size: 20px;
+	border: 0px;
+}
 </style>
+<!-- jquery -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="/cook/resources/js/bootstrap.min.js"></script>
 </head>
 
 <body id="page-top" class="index">
 
+<!-- 툴바 -->
+    	<div class="container con">
+    	<div class="col-md-12 header ">
+			<a href="/cook/2">HOME/</a>
+			<a href="#" data-toggle="modal" data-target="#myModal">LOGIN/</a>
+			<a href="join">JOIN/</a>
+			<a href="/cook/mypage">마이페이지/</a>
+			<a href="/cook/cart">장바구니/</a>
+			<a href="/cook/qna">FAQ</a>
+		</div>
+		</div>
+  <!-- LOGIN 창 IMPORT -->
+	<%@ include file="login/login.jsp" %>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" >
+	
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
