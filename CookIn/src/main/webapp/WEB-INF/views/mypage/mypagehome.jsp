@@ -29,8 +29,15 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+		<div class="col-md-12">
+			  <div>
+	  		<span class="titlename">
+	  		<br/>
 				<h2>MY PAGE</h2>
+			</span>
+		</div>
+		</div>
+			<div class="col-md-12">
 				<ul id="myTab" class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active"><a data-target="#home"
 						id="home-tab" role="tab" data-toggle="tab" aria-controls="home"
