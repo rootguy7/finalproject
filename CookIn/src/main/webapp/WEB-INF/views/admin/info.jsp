@@ -71,18 +71,18 @@ table tr{
 		                <col width="300" />
 		            </colgroup>
 					<tr class="rownum">
-						<td>내용1</td>
-						<td>내용1</td>
-						<td>내용1</td>
-						<td>내용1</td>
-						<td>내용1</td>	
+						<td>1</td>
+						<td>qweasd_147</td>
+						<td>김주형</td>
+						<td>010-1111-2222</td>
+						<td>2,000점</td>	
 					</tr>
 					<tr class="rownum">
-						<td>내용2</td>
-						<td>내용2</td>
-						<td>내용2</td>
-						<td>내용2</td>
-						<td>내용2</td>
+						<td>2</td>
+						<td>rootguy7</td>
+						<td>진연성</td>
+						<td>010-3333-4444</td>
+						<td>4,100점</td>
 					</tr>
 				</table>
 			</div>

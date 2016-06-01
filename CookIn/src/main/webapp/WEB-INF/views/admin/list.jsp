@@ -79,15 +79,15 @@ $(document).ready(function(){
 	            </colgroup>
 				<tr class="rownum">
 					<td>1</td>
-					<td>내용1</td>
-					<td>내용1</td>
-					<td>내용1</td>
+					<td>1622-09</td>
+					<td>허쉬 자이언트 초콜릿</td>
+					<td>3,500원</td>
 				</tr>
 				<tr class="rownum">
 					<td>2</td>
-					<td>내용2</td>
-					<td>내용2</td>
-					<td>내용2</td>
+					<td>1622-10</td>
+					<td>하리보 젤리</td>
+					<td>3,000원</td>
 				</tr>
 			</table>
 		</div>
