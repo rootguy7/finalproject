@@ -120,8 +120,39 @@
 						<input type="text" class="form-control" placeholder="Search">
 					</div>
 					<button type="submit" class="btn btn-active">검색</button>
-				<div><h4>BEST PRODUCT</h4></div>
 				</form>
+				<div><h4>BEST PRODUCT</h4></div>
+				       <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="/cook/resources/imgs/best1.PNG">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="/cook/resources/imgs/best2.PNG" >
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="/cook/resources/imgs/best3.PNG" >
+                                </div>
+                            </div>
+                            <a class="left carousel-control2" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left2"></span>
+                            </a>
+                            <a class="right carousel-control2" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right2"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+				
 			</div>
 			<div class="col-md-4 store">
 			<h4>
