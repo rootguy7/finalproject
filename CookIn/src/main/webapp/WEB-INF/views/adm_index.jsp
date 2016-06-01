@@ -39,6 +39,9 @@
 	.number1{	
 		color: rgb(71,48,32);
 	}
+	.number1:hover{
+		color:rgb(244,135,114);
+	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/cook/resources/js/bootstrap.min.js"></script>
