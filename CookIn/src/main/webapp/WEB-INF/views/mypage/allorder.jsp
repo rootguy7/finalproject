@@ -19,6 +19,9 @@
 	#datepicker,#datepicker2{
 		width: 80px;
 	}
+	#jj{
+		text-align: center;
+	}
 </style>
 <script type="text/javascript">
 	$(function(){
@@ -67,11 +70,8 @@
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
-				<div class="col-md-1"></div>
-				<div class="col-md-6">
-				<div class="panel panel-default" id="dd">
-					<div class="panel-body">
-						<p>기간별조회</p>
+				<div class="col-md-12" id="jj">
+						기간별조회
 						<button class="btn btn-default" type="submit">1주일</button>
 						<button class="btn btn-default" type="submit">15일</button>
 						<button class="btn btn-default" type="submit">1개월</button>
@@ -79,9 +79,6 @@
 						<span>Date:<input type="text" id="datepicker">~<input type="text" id="datepicker2"></span>
 
 						<button class="btn btn-default" type="submit">조회</button>
-					</div>
-					</div>
-				<div class="col-md-1"></div>
 				</div>
 				<div class="col-md-2"></div>
 			</div>

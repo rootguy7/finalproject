@@ -22,6 +22,9 @@
 		h3{
 		text-align: center;
 	}
+	#kk{
+		text-align: center;
+	}
 </style>
 <script type="text/javascript">
 $(function(){
@@ -66,28 +69,24 @@ $(function(){
 </head>
 <body>
 <h3>내가쓴글</h3>
-<div class="container">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
-			<div class="col-md-1"></div>
-				<div class="col-md-6">
-				<div class="panel panel-default" id="dd">
-					<div class="panel-body">
-						<p>기간별조회</p>
+				<div class="col-md-12" id="kk">
+						기간별조회
 						<button class="btn btn-default" type="submit">1주일</button>
 						<button class="btn btn-default" type="submit">15일</button>
 						<button class="btn btn-default" type="submit">1개월</button>
 							
 						<span>Date:<input type="text" id="datepicker3">~<input type="text" id="datepicker4"></span>
+
 						<button class="btn btn-default" type="submit">조회</button>
-					</div>
 				</div>
 				<div class="col-md-2"></div>
 			</div>
 		</div>
 	</div>
-</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2"></div>
