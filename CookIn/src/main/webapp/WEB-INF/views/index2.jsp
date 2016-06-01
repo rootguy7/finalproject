@@ -493,8 +493,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">FAQ</h2>
+                    <h3 class="section-subheading text-muted">가장많이 묻는 질문</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -503,24 +503,24 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="service-heading">장바구니에 담아놓았던 상품이 사라졌어요.</h4>
+                    <p class="text-muted">비로그인 상태에서 장바구니를 담는것은 창을 닫으면 삭제되는 일시적인 것으로 로그인 후 사용하시면 추후 상품확인이 가능합니다</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="service-heading">제가 원하는 상품을 어떻게 찾나요?</h4>
+                    <p class="text-muted">All-전체상품보기의 검색창에 원하시는 상품의 이름이나 종류를 선택한 후 상품의 키워드를 검색하여 원하시는 상품을 찾을 수 있습니다.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="service-heading">개인정보수정은 어디에서 가능한가요?</h4>
+                    <p class="text-muted">로그인 이후 상단의 마이페이지-나의 설정에서 비밀번호,휴대폰번호,이메일 등 개인정보를 자유롭게 수정하실수 있습니다. </p>
                 </div>
             </div>
         </div>
