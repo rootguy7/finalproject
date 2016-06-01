@@ -27,6 +27,7 @@
    }
    .con{	
    	  font-size: 12px;	
+   	  color:rgb(71,48,32);
    }
 </style>
 <script type="text/javascript">
