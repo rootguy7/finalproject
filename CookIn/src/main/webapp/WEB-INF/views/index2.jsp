@@ -43,7 +43,7 @@
 	    padding-left: 10px;
 	    color: #d17581;
 	}	
-	/* 툴바 */
+/* /* 	/* 툴바 */
 	.con{
 		width: 98%;
 	}
@@ -76,7 +76,8 @@
 	color: white;
 	font-size: 20px;
 	border: 0px;
-}
+} */ */
+
 </style>
 <!-- jquery -->
 <script
@@ -87,7 +88,7 @@
 
 <body id="page-top" class="index">
 
-<!-- 툴바 -->
+<!--  툴바
     	<div class="container con">
     	<div class="col-md-12 header ">
 			<a href="/cook/2">HOME/</a>
@@ -97,13 +98,15 @@
 			<a href="/cook/cart">장바구니/</a>
 			<a href="/cook/qna">FAQ</a>
 		</div>
-		</div>
+		</div> -->
   <!-- LOGIN 창 IMPORT -->
 	<%@ include file="login/login.jsp" %>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" >
-	
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="headerbar">
+	</div>
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -116,7 +119,6 @@
                 <a class="navbar-brand page-scroll" href="#page-top">Dalcom Cook IN</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
@@ -129,13 +131,34 @@
                         <a class="page-scroll" href="#best">BEST</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#new">NEW</a>
+                        <a class="page-scroll" href="#portfolio">NEW</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#notice">NOTICE</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="/cook/2"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="join"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/mypage"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/qna"><span class="glyphicon glyphicon-question-sign" aria-hidden="true">   </span></a>
                     </li>
                 </ul>
             </div>
@@ -346,27 +369,27 @@
     
   <!--Best Section end-->
     <!-- New Section -->
-<section id="new" class="bg-light-gray">
+<section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">NEW product</h2>
+                    <h3 class="section-subheading text-muted">새로운 상품을 구경해 보세요</h3>
                 </div>
             </div>
-            <div class="row">
+            <div class="row"> 
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+                            </div> 
+                        </div> 
+                        <center><img src="/cook/resources/imgs/newmain1.PNG" class="img-responsive"></center>
                     </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
+                    <div class="portfolio-caption">    
+                        <h4>우마이봉 4종</h4>
+                        <p class="text-muted">2,700\</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -376,11 +399,12 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                        
+                         <center><img src="/cook/resources/imgs/newmain2.PNG" class="img-responsive" ></center>
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>바이올란타 3종</h4>
+                        <p class="text-muted">2,500\</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -390,11 +414,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
+                         <center><img src="/cook/resources/imgs/newmain3.PNG" class="img-responsive" ></center>
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>블랙포레스트 젤리 박스</h4>
+                        <p class="text-muted">22,800\</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -404,11 +428,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
+                         <center><img src="/cook/resources/imgs/newmain4.PNG" class="img-responsive" ></center>
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>스위스미스 핫코코아 믹스컵</h4>
+                        <p class="text-muted">1,000\</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -418,30 +442,396 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/escape.png" class="img-responsive" alt="">
+                         <center><img src="/cook/resources/imgs/newmain5.PNG" class="img-responsive" ></center>
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>피오렐라 초코 비스켓</h4>
+                        <p class="text-muted">1,100\</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
+                        <div class="portfolio-hover"> 
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
+                         <center><img src="/cook/resources/imgs/newmain6.PNG" class="img-responsive" ></center>
+                    </a> 
                     <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>마오얌 Bloxx</h4>
+                        <p class="text-muted">14,500\</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+ <!-- new detail -->
+
+    <!-- detail 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+       <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>우마이봉 4종</h2>
+                            <p class="item-intro text-muted">2,700\</p>
+                             <hr class="featurette-divider">
+							        <div class="featurette" id="about">
+							            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1" src="/cook/resources/imgs/b4d1.PNG">
+							            <h2 class="featurette-heading">NO.1
+							                <span class="text-muted">멘타이</span>
+							            </h2>
+							            <p class="lead">명태맛 우마이봉 매콤한 맛이 일품인 맛</p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							
+							        <!-- Second Featurette -->
+							        <div class="featurette" id="services">
+							            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/cook/resources/imgs/b4d2.PNG">
+							            <h2 class="featurette-heading">NO.2
+							                <span class="text-muted">초코</span>
+							            </h2>
+							            <p class="lead">초코맛 우마이봉 바삭바삭함에 달콤함을 더해서 맛이 두배로~ </p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							
+							        <!-- Third Featurette -->
+							        <div class="featurette" id="contact">
+							            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1"src="/cook/resources/imgs/b4d3.PNG">
+							            <h2 class="featurette-heading">NO.3
+							                <span class="text-muted">치즈</span>
+							            </h2>
+							            <p class="lead">치즈향이 솔솔 맛과 풍미 모두 좋은 치즈맛</p>
+							        </div>
+							         <hr class="featurette-divider">
+							         
+							         <!-- four Featurette -->
+							        <div class="featurette" id="services">
+							            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/cook/resources/imgs/b4d4.PNG">
+							            <h2 class="featurette-heading">NO.4
+							                <span class="text-muted">콘포타지</span>
+							            </h2>
+							            <p class="lead">고소한 콘스프맛 </p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+								</div>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close cookie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--detail 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>바이올란타 3종</h2>
+                            <p class="item-intro text-muted">2,500\</p>
+								     <hr class="featurette-divider">
+								        <!-- First Featurette -->
+								        <div class="featurette" id="about">
+								            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1" src="/cook/resources/imgs/b6d1.PNG">
+								            <h2 class="featurette-heading">NO.1
+								                <span class="text-muted">다크 코코아비스킷</span>
+								            </h2>
+								            <p class="lead">바이올란타 다크 코코아비스킷 필드 위드 헤이즐넛 크림 꽉찬 헤이즐넛 크림과 과자의 조화</p>
+								        </div>
+								
+								        <hr class="featurette-divider">
+								
+								        <!-- Second Featurette -->
+								        <div class="featurette" id="services">
+								            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/cook/resources/imgs/b6d2.PNG">
+								            <h2 class="featurette-heading">NO.2
+								                <span class="text-muted">쿠키 위드 풀45 모카크림</span>
+								            </h2>
+								            <p class="lead">사브레보다는 조금 크고 초코 과자와 모카 크림맛의 조화</p>
+								        </div>
+								
+								        <hr class="featurette-divider">
+								
+								        <!-- Third Featurette -->
+								        <div class="featurette" id="contact">
+								            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1"src="/cook/resources/imgs/b6d3.PNG">
+								            <h2 class="featurette-heading">NO.3
+								                <span class="text-muted">쿠키 위드 풀45 코코아크림</span>
+								            </h2>
+								            <p class="lead">풍부한 크림의 맛</p>
+								        </div>
+								
+								        <hr class="featurette-divider">
+								</div>
+								    <!-- /.container -->
+								    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close cookie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- detail 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>블랙포레스트 젤리 박스</h2>
+                            <p class="item-intro text-muted">22,800\</p>
+                            	 <hr class="featurette-divider">
+							
+							        <!-- First Featurette -->
+							        <div class="featurette" id="about">
+							            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1" src="/cook/resources/imgs/a2d1.png">
+							            <h2 class="featurette-heading">NO.1
+							                <span class="text-muted">블랙 포레스트</span>
+							            </h2>
+							            <p class="lead">상큼한 과일맛 젤리가 다양하게 그리고 대용량으로 ! </p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							
+							        <!-- Second Featurette -->
+							        <div class="featurette" id="services">
+							            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/cook/resources/imgs/a2d2.png">
+							            <h2 class="featurette-heading">NO.2
+							                <span class="text-muted">후르츠 메들리</span>
+							            </h2>
+							            <p class="lead">사과, 체리, 포도, 레몬 4가지의 맛 </p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							
+							        <!-- Third Featurette -->
+							        <div class="featurette" id="contact">
+							            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1"src="/cook/resources/imgs/a2d3.png">
+							            <h2 class="featurette-heading">NO.3
+							                <span class="text-muted">과일모양</span>
+							            </h2>
+							            <p class="lead">다양하게 골라먹는 맛!</p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							</div>
+							    <!-- /.container -->
+							    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close cookie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- detail 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>스위스미스 핫코코아 믹스컵</h2>
+                            <p class="item-intro text-muted">1,000\</p>
+                             <hr class="featurette-divider">
+							        <!-- First Featurette -->
+							        <div class="featurette" id="about">
+							            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1" src="/cook/resources/imgs/a3d1.png">
+							            <h2 class="featurette-heading">NO.1
+							                <span class="text-muted">스위스미스 코코아 믹스컵</span>
+							            </h2>
+							            <p class="lead">지금 아니면 맛볼수 없는맛~</p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							
+							        <!-- Second Featurette -->
+							        <div class="featurette" id="services">
+							            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/cook/resources/imgs/a3d2.png">
+							            <h2 class="featurette-heading">NO.2
+							                <span class="text-muted">달달한 맛</span>
+							            </h2>
+							            <p class="lead">달달한 맛이 일품인 스위스미스 마시멜로우 코코아! </p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							
+							        <!-- Third Featurette -->
+							        <div class="featurette" id="contact">
+							            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1"src="/cook/resources/imgs/a3d3.png">
+							            <h2 class="featurette-heading">NO.3
+							                <span class="text-muted">제조법</span>
+							            </h2>
+							            <p class="lead">스위스미스 핫 코코아를 맛나게 먹는법 잘 읽어보시고 즐거운 티타임 보내세요~</p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							</div>
+							    <!-- /.container -->
+							    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close cookie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- detail 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>피오렐라 초코 비스켓</h2>
+                            <p class="item-intro text-muted">1,100\</p>
+                             <hr class="featurette-divider">
+							        <!-- First Featurette -->
+							        <div class="featurette" id="about">
+							            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1" src="/cook/resources/imgs/b5d1.PNG">
+							            <h2 class="featurette-heading">NO.1
+							                <span class="text-muted">초코 & 비스켓</span>
+							            </h2>
+							            <p class="lead">초코와 비스켓의 만남!</p> 
+							        </div>
+							
+							        <hr class="featurette-divider">
+							
+							        <!-- Second Featurette -->
+							        <div class="featurette" id="services">
+							            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/cook/resources/imgs/b5d2.PNG">
+							            <h2 class="featurette-heading">NO.2
+							                <span class="text-muted">모양</span>
+							            </h2>
+							            <p class="lead">고급스러운 자전거 모양의 과자!</p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							
+							        <!-- Third Featurette -->
+							        <div class="featurette" id="contact">
+							            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1"src="/cook/resources/imgs/b5d3.PNG">
+							            <h2 class="featurette-heading">NO.3
+							                <span class="text-muted">두가지 맛</span>
+							            </h2>
+							            <p class="lead">초코와 비스켓이 한쪽 씩! 함께 먹으면 더욱 맛있어요</p>
+							        </div>
+							
+							        <hr class="featurette-divider">
+							</div>
+							    <!-- /.container -->
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close cookie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- detail 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>마오얌 Bloxx</h2>
+                            <p class="item-intro text-muted">14,500\</p>
+                            <hr class="featurette-divider">
+						        <!-- First Featurette -->
+						        <div class="featurette" id="about">
+						            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1" src="/cook/resources/imgs/a1d1.png">
+						            <h2 class="featurette-heading">NO.1
+						                <span class="text-muted">마오암 사우어</span>
+						            </h2>
+						            <p class="lead">하리보 마이쭈맛!</p>
+						        </div>
+						
+						        <hr class="featurette-divider">
+						
+						        <!-- Second Featurette -->
+						        <div class="featurette" id="services">
+						            <img class="featurette-image img-circle img-responsive pull-left" id="curcleb1"src="/cook/resources/imgs/a1d2.png">
+						            <h2 class="featurette-heading">NO.2
+						                <span class="text-muted">한통에 50개입!</span>
+						            </h2>
+						            <p class="lead">초특급 인기상품 입니다. 마오암 사우어와 함께 인기 좋습니다.</p>
+						        </div>
+						
+						        <hr class="featurette-divider">
+						
+						        <!-- Third Featurette -->
+						        <div class="featurette" id="contact">
+						            <img class="featurette-image img-circle img-responsive pull-right" id="curcleb1"src="/cook/resources/imgs/a1d3.png">
+						            <h2 class="featurette-heading">NO.3
+						                <span class="text-muted">5종류 5낱개씩!</span>
+						            </h2>
+						            <p class="lead">어린이 어른용 간식으로 좋습니다.</p>
+						        </div>
+						
+						        <hr class="featurette-divider">
+						</div>
+						    <!-- /.container -->
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close cookie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     
   <!-- New Section end -->
     <!-- Notice Section -->
@@ -566,7 +956,7 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">제가 원하는 상품을 어떻게 찾나요?</h4>
-                    <p class="text-muted">All-전체상품보기의 검색창에 원하시는 상품의 이름이나 종류를 선택한 후 상품의 키워드를 검색하여 원하시는 상품을 찾을 수 있습니다.</p>
+                    <p class="text-muted">All-전체상품보기의 검색창에 원하는 상품의 이름이나 종류를 선택한 후 상품의 키워드를 검색하여 원하는 상품을 찾을 수 있습니다.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -574,7 +964,7 @@
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">개인정보수정은 어디에서 가능한가요?</h4>
-                    <p class="text-muted">로그인 이후 상단의 마이페이지-나의 설정에서 비밀번호,휴대폰번호,이메일 등 개인정보를 자유롭게 수정하실수 있습니다. </p>
+                    <p class="text-muted">로그인 이후 상단의 마이페이지-나의 설정에서 비밀번호,휴대폰번호,이메일 등 개인정보를 자유롭게 수정할 수 있습니다. </p>
                 </div>
             </div>
         </div>
@@ -608,175 +998,7 @@
         </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <p>
-                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                            <ul class="list-inline">
-                                <li>Date: July 2014</li>
-                                <li>Client: Round Icons</li>
-                                <li>Category: Graphic Design</li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Heading</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                            <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                            <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
-                            <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
-                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
-                            <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
-                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
-                            <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. Itâs a beautiful template thatâs designed with the Bootstrap framework in mind.</p>
-                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- jQuery -->
     <script src="/cook/resources/js/jquery.js"></script>
