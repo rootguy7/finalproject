@@ -24,11 +24,11 @@
 	.container{
 		width:100%;
 	}
-	#postNumber{
+	#sample6_postcode{
 		width: 68%;
 		display: inline-block;
 	}
-	#postcodify_search_button{
+	#postSearch{
 		width: 30%;
 		display: inline-block;
 	}
@@ -214,9 +214,9 @@
             <div class="form-group" id="divPostNumber">
                 <label for="inputPostNumber" class="col-lg-3 control-label">우편 번호</label>
                 <div class="col-lg-9">
-                    <span><input type="text" name="postNum" class="form-control onlyNumber postcodify_postcode5" id="sample6_postcode" data-rule-required="true" placeholder="주소 검색 시, 자동 입력 됩니다." >
+                   	<input type="text" name="postNum" class="form-control onlyNumber postcodify_postcode5" id="sample6_postcode" data-rule-required="true" placeholder="주소 검색 시, 자동 입력 됩니다." >
                     <!-- 주소 검색 버튼 -->
-                	<button type="button" class="btn btn-default" onclick="sample6_execDaumPostcode()">우편번호검색</button></span>
+                	<button type="button" id="postSearch" class="btn btn-default" onclick="sample6_execDaumPostcode()">주소 검색</button>
                 </div>
             </div>
             <div class="form-group" id="divmainaddr">
