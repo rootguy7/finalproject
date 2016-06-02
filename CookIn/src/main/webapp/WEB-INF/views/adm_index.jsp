@@ -40,10 +40,10 @@
 		font-size: 50px;
 	}
 	.number1{	
-		color: rgb(71,48,32);
+		color: #3162C7;
 	}
 	.number1:hover{
-		color:rgb(244,135,114);
+		color:#8C8C8C;
 	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -52,14 +52,9 @@
 <body>
 <%@include file="header2.jsp" %>
 
-
-<div class="container-fluid">
+<div class="container-fluid"><br/>
 	<div class="row">
-		<!-- admin 메뉴 -->
-	  	<div class="col-md-2">
-			<%@ include file="adminmenu.jsp" %>
-		</div>
-		<div class="col-md-1 content"></div>
+		<div class="col-md-2 content"></div>
 		<div class="col-md-8 content">
 		<!-- contents 해야할일 -->
 		<div class="span3 contents">
@@ -99,7 +94,7 @@
 	        </div>
 		</div>
 		</div>
-		<div class="col-md-1 content"></div>
+		<div class="col-md-2 content"></div>
 	</div>
 </div>
 <%@include file="footer.jsp" %>
@@ -147,7 +142,7 @@ $.getScript('http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'
 	         xkey: 'y',
 	         ykeys: ['a', 'b'],
 	         labels: ['2015년', '2016년'],
-	         barColors: ['rgb(244,135,114)','rgb(71,48,32)']
+	         barColors: ['#3162C7','#8C8C8C']
 		});
 	});
 });

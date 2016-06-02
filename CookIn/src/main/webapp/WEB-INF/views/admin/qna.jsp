@@ -33,12 +33,9 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 </head>
 <body>
 <%@include file="../header2.jsp" %>
-<div class="container-fluid">
+<div class="container-fluid"><br/>
 	<div class="row">
-	  	<div class="col-md-2">
-			<%@ include file="../adminmenu.jsp" %>
-		</div>
-	  <div class="col-md-1 content"></div>
+	  <div class="col-md-2 content"></div>
 	  <div class="col-md-8 content">
 	  	<div>
 	  		<span class="titlename">
@@ -127,7 +124,7 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 					<div class="col-md-3"></div>
 				</div>
 	  </div>
-	  <div class="col-md-1 content"></div>
+	  <div class="col-md-2 content"></div>
 	</div>
 </div>
 <%@include file="../footer.jsp" %>

@@ -44,9 +44,9 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 </script>
 </head>
 <body>
-	<%@ include file="../header.jsp" %>
 			
 	<div class="container">
+	<%@ include file="../header.jsp" %>
 		<div class="row">
 		<br/><br/><br/>
 			<div class="col-md-2"></div>

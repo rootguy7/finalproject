@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Dalcom Cook IN</a>
+                <a class="navbar-brand page-scroll" href="../admin">Dalcom Cook IN</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -41,19 +41,25 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" id="toplist" href="/cook/all">ALL</a>
+                        <a class="page-scroll" id="toplist" href="/cook/admin/info">고객정보</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/cook/best">BEST</a>
+                        <a class="page-scroll" href="/cook/admin/list">전체상품</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/cook/new">NEW</a>
+                        <a class="page-scroll" href="/cook/admin/order">주문확인</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/cook/notice">NOTICE</a>
+                        <a class="page-scroll" href="/cook/admin/deposit">입금확인</a>
                     </li>
                     <li>
-                        <a class="page-scroll"  href="/cook/qna">FAQ</a>
+                        <a class="page-scroll"  href="/cook/admin/delivery">배송확인</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll"  href="/cook/admin/notice">공지사항</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll"  href="/cook/admin/qna">질의응답</a>
                     </li>
                 </ul>
                 

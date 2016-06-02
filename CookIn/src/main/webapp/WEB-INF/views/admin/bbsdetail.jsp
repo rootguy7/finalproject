@@ -35,12 +35,10 @@
 </head>
 <body>
 <%@include file="../header2.jsp" %>
-<div class="container-fluid">
+<div class="container-fluid"><br/>
 	<div class="row">
-	  	<div class="col-md-2">
-			<%@ include file="../adminmenu.jsp" %>
-		</div>
-	  <div class="col-md-1 content"></div>
+	  	
+	  <div class="col-md-2 content"></div>
 	  <div class="col-md-8 content">
 	  <!-- 컨텐츠 시작-->
 	  	<div>
@@ -114,7 +112,7 @@
 		</div><!-- 주요 컨텐츠 내용 끗 -->
 		<!-- 컨텐츠 끗 -->
 	  </div>
-	  <div class="col-md-1 content"></div>
+	  <div class="col-md-2 content"></div>
 	</div>
 </div>
 <%@include file="../footer.jsp" %>

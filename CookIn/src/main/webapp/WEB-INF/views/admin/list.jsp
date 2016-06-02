@@ -48,12 +48,9 @@ $(document).ready(function(){
 </head>
 <body>
 <%@include file="../header2.jsp" %>
-<div class="container-fluid">
+<div class="container-fluid"><br/>
 	<div class="row">
-	  	<div class="col-md-2">
-			<%@ include file="../adminmenu.jsp" %>
-		</div>
-		<div class="col-md-1 content"></div>
+		<div class="col-md-2 content"></div>
 	  <div class="col-md-8 content">
 		<div>
 	  		<span class="titlename">
@@ -98,7 +95,7 @@ $(document).ready(function(){
 		  	</div>
 		</div>
 	  </div>
-	<div class="col-md-1 content"></div>
+	<div class="col-md-2 content"></div>
 	<!-- 페이징 start -->
 	  <div class="col-md-10" id="pagination">
 			<ul class="pagination">

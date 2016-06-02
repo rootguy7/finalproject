@@ -136,8 +136,8 @@ span{
 </style>
 </head>
 <body>
-
-<div class="container_12">
+<%@include file="../header2.jsp" %>
+<div class="container_12"><br/>
 
 	<!-- 헤더 & 네비 -->
 	<!-- content start -->
@@ -174,8 +174,8 @@ span{
 	</div>
 		
 	<!-- content end -->
-	<!-- 어사이드 -->
-	<!-- 푸터 -->
+
+<%@include file="../footer.jsp" %>
 </div>
 </body>
 </html>
