@@ -44,7 +44,6 @@
 </head>
 <body>
 	<%@ include file="../header.jsp" %>
-	<%@ include file="../nav.jsp" %>  
 			
 	<div class="container">
 		<div class="row rowmain">
@@ -122,6 +121,5 @@
 	</div><!-- container div end -->
 	
 	
-	<%@ include file="../footer.jsp" %>
 </body>
 </html>
