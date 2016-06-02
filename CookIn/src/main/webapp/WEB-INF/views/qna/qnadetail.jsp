@@ -46,7 +46,8 @@
 	<%@ include file="../header.jsp" %>
 			
 	<div class="container">
-		<div class="row rowmain">
+	<br/><br/><br/>
+		<div class="row ">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 			<h2>질의응답</h2>

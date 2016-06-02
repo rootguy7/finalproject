@@ -76,6 +76,7 @@
 	<div class="container">
 		<!-- row div end -->
 				<div class="row">
+				<br/><br/><br/>
 					<!-- 사이드 장바구니 -->
 						<div class="col-md-1">  
 							 <div id="right_section">  
@@ -86,6 +87,7 @@
 					<!--사이드 제외 content start -->
 						<!-- Navigation -->
     <div class="col-md-10">
+    <br/>
            <div class="row">
             <div class="col-md-7">
                 <img class="detailcookies" src="/cook/resources/imgs/ck1.PNG">

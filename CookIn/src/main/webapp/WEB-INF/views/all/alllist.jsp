@@ -86,7 +86,7 @@
     <div class="container">
 
         <div class="row">
-
+			<br/><br/><br/>
             <div class="col-md-1"> <!-- 장바구니 -->
 							 <div id="right_section">  
 							     <div><a href="#"><img src="/cook/resources/imgs/side1.PNG" class="jangbaguni"></a></div>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="col-md-10"> <!-- list -->
-
+			<br/>
 					<h3>전체상품</h3>
 					<hr/>
 					신상품 | 상품명 | 낮은가격 | 높은가격 | 인기상품 | 조회수
