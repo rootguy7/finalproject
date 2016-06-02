@@ -158,7 +158,7 @@
                         <a class="page-scroll" href="/cook/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/cook/qna"><span class="glyphicon glyphicon-question-sign" aria-hidden="true">   </span></a>
+                        <a class="page-scroll" href="/cook/store"><span class="glyphicon glyphicon-map-marker" aria-hidden="true">   </span></a>
                     </li>
                 </ul>
             </div>
@@ -292,10 +292,12 @@
                             </div>  
                         </li> 
                         <li class="timeline-inverted">
+                        <a href="/cook/all">
                             <div class="timeline-image">    
                                <h4>All<br/>
                                product<br/>Go !</h4>
                             </div>
+                        </a>
                         </li>
                     </ul>
                 </div>
@@ -363,6 +365,9 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+            <button type="button" class="btn btn-primary" onclick="location.href='/cook/best'"> Best Go <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+			</div>
         </div>
     </section>
 
@@ -464,6 +469,9 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+            <button type="button" class="btn btn-primary" onclick="location.href='/cook/new'"> New Go <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+			</div>
         </div>
     </section>
 
@@ -839,96 +847,57 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">Notice</h2>
+                    <h3 class="section-subheading text-muted">공지사항을 확인하세요</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/escape.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <table class="table table-striped">
+				<tr>
+					<th class="bno">No</th>
+					<th class="btit">Title</th>
+					<th class="btime">작성일</th>
+					<th class="bname">작성자</th>
+					<th class="bcount">조회수</th> 
+				</tr>
+				<tr class="rownum">
+					<td class="bno">10</td>
+					<td class="btit">더미타이틀</td>
+					<td class="btime">더미 시간</td>
+					<td class="bname">더미 작성자</td>
+					<td class="bcount">5</td>
+				</tr>
+				<tr class="rownum">
+					<td class="bno">10</td>
+					<td class="btit">더미타이틀</td>
+					<td class="btime">더미 시간</td>
+					<td class="bname">더미 작성자</td>
+					<td class="bcount">5</td>
+				</tr>
+				<tr class="rownum">
+					<td class="bno">10</td>
+					<td class="btit">더미타이틀</td>
+					<td class="btime">더미 시간</td>
+					<td class="bname">더미 작성자</td>
+					<td class="bcount">5</td>
+				</tr>
+				<tr class="rownum">
+					<td class="bno">10</td>
+					<td class="btit">더미타이틀</td>
+					<td class="btime">더미 시간</td>
+					<td class="bname">더미 작성자</td>
+					<td class="bcount">5</td>
+				</tr>
+			</table>
+			</div>
+			<div class="col-md-1"></div>
             </div>
+            <br/>
+            <div class="text-center">
+             <button type="button" class="btn btn-primary" onclick="location.href='/cook/notice'">Notice Go <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+     	   </div>
         </div>
     </section>
     <!-- Notice Section end -->
@@ -967,6 +936,10 @@
                     <p class="text-muted">로그인 이후 상단의 마이페이지-나의 설정에서 비밀번호,휴대폰번호,이메일 등 개인정보를 자유롭게 수정할 수 있습니다. </p>
                 </div>
             </div>
+            <br/>
+            <div class="text-center">
+            <button type="button" class="btn btn-primary" onclick="location.href='/cook/qna'">FAQ Go <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+			</div>
         </div>
     </section>
  <!-- FAQ Section end-->
