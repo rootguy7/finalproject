@@ -19,6 +19,9 @@
 		margin: 0px;
 		padding: 0px;
 	}
+	.container-fluid{
+		margin-top:50px;
+	}
 	.contents{
 		margin-top: 20px;
 		width: 280px;
