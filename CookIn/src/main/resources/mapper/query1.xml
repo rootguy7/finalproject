@@ -3,8 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="guest">
-
+<mapper namespace="buy">
+	<select id="selectPcart" resultType="com.hb.model.CartVo" parameterType="String">
+  		select cart_idx, id, serial_num, ea, eaPrice, cart_date from TB_CART, TB_PRODUCT where TB_CART.serial_num = TB_PRODUCT.serial_num
+  	</select>
 	
 </mapper>
 

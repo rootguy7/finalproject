@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,6 +67,7 @@
 					</td>
 					<td>상품 정보</td><td>수량</td><td>상품금액</td><td>배송비</td>
 				</tr>
+				<c:forEach items="${buyList }" var="cartVO">
 				<tr>
 					<td>
 					<div class="checkbox">
@@ -75,6 +78,7 @@
 					</td>
 					<td>헬로키티 흰색</td><td>1개</td><td>8,900원</td><td>2,500원</td>
 				</tr>
+				</c:forEach>
 				</table>  
 				
 				</div>

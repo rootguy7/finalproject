@@ -3,14 +3,15 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<!-- dataSource 초기화 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://133.130.97.26/HanBit_Final" />
 		<property name="username" value="scott" />
 		<property name="password" value="tiger" />
 	</bean>
 
+	<!-- mybatis 초기화 -->
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath:/mapper/**/*.xml" />
@@ -20,5 +21,9 @@
 		<constructor-arg ref="sqlSessionFactoryBean" />
 	</bean>
 
+	<!-- GuestDaoImp 초기화. id는 그냥 interface이름 씀 -->
+	<bean id="buyDao" class="com.hb.model.BuyDaoImp">
+		<property name="sqlSession" ref="sqlSession"></property>
+	</bean>
 
 </beans>

@@ -22,9 +22,6 @@
 	.item>img{
 		margin: 0px auto;
 	}
-	.container{
-		width:100%;
-	}
 	#commentParentText{
 		width: 90%;
 	}

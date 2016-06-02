@@ -22,7 +22,7 @@
 	.item>img{
 		margin: 0px auto;
 	}
-	.container{
+	.mcont{
 		width:100%;
 	}
 	#commentParentText{
@@ -45,7 +45,7 @@
 <body>
 	<%@ include file="../header.jsp" %>
 			
-	<div class="container">
+	<div class="container mcont">
 	<br/><br/><br/>
 		<div class="row ">
 			<div class="col-md-2"></div>

@@ -5,14 +5,10 @@
 
 <configuration>
 
-<!-- 	<typeAliases>
-		<typeAlias alias="vo" type="com.hb.model.GuestVo"/>
-	</typeAliases>
-
 	<mappers>
 		<mapper resource="mapper/query1.xml"/>	
 		<mapper resource="mapper/query2.xml"/>	
-	</mappers> -->
+	</mappers>
 
 </configuration>
 
