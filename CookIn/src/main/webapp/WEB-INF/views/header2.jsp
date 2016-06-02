@@ -20,7 +20,6 @@
 	<%@ include file="login/login.jsp" %>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" >
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="headerbar">
 	</div>
@@ -63,7 +62,6 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-    </nav>
 
 </body>
 </html>

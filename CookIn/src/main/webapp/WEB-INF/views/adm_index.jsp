@@ -51,6 +51,8 @@
 </head>
 <body>
 <%@include file="header2.jsp" %>
+
+
 <div class="container-fluid">
 	<div class="row">
 		<!-- admin 메뉴 -->
