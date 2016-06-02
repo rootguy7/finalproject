@@ -68,11 +68,11 @@
 		                <col width="200" />
 		            </colgroup>
 		            <thead>
-					<tr><th class="title">날짜</th><th class="title">적립내역</th><th class="title">적립금</th></tr>
+					<tr><th class="title">날짜</th><th class="title">포인트 적립내역</th><th class="title">포인트</th></tr>
 					</thead>
 					<tbody>
 					<tr>
-						<td>2016-05-29</td><td>물품구입에 대한 적립금입니다^^</td><td>230원</td>
+						<td>2016-05-29</td><td>물품구입에 대한 적립포인트입니다^^</td><td>230점</td>
 					</tr>
 					</tbody>
 				</table>
