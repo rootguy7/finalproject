@@ -50,7 +50,6 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 </head>
 <body>
 	<%@ include file="../header.jsp" %>
-	<%@ include file="../nav.jsp" %>  
 			
 	<div class="container">
 		<div class="row rowmain">

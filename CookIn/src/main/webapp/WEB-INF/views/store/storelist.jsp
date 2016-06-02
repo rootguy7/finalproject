@@ -57,7 +57,6 @@ function initialize() {
 <body onload="initialize()">
 
 	<%@ include file="../header.jsp"%>
-	<%@ include file="../nav.jsp"%>
 	<!-- Navigation -->
 
 
@@ -67,6 +66,7 @@ function initialize() {
 
 
             <div class="col-md-12"> <!-- col-md- start -->
+            <br/><br/><br/>
             	<h3>찾아오는 길 </h3>
             	<hr>
             	 <div id="map_canvas"style="width:100%; height:250px;"></div> 
@@ -91,7 +91,6 @@ function initialize() {
 	   	</div>	
 	</div>	   	<!-- container end -->
 
-	<%@ include file="../footer.jsp"%>
 	<!-- container div end -->
 </body>
 </html>

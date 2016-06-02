@@ -25,7 +25,6 @@
 	<%@ include file="../header.jsp" %>
 	  
 				 	<!-- nav start -->
-				<%@ include file="../nav.jsp" %>
 
 	<div class="container">
 		<div class="row">

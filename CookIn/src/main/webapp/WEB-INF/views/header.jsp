@@ -4,64 +4,6 @@
 <html>
 <head>
 <style type="text/css">
-.header {
-	width: 100%;
-}
-
-.toolbar {
-	background-color: rgb(71, 48, 32);
-	text-align: right;
-}
-
-.toolbar>a {
-	color: white;
-}
-
-.logo {
-	height: 130px;
-	background-color: rgb(244, 235, 114);
-	text-align: center;
-}
-
-.topmenu {
-	background-color: rgb(244, 235, 114);
-	height: 30px;
-	text-align: center;
-}
-
-.topmenu>a {
-	color: rgb(71, 48, 32);
-	font-weight: bold;
-}
-.btn{
-	background-color: rgb(244, 235, 114);
-	font-weight: bold;
-}
-.dropdown-menu{
-	margin-left: 120px;
-}
-/* Log in 글귀 설정 */
-#myModalLabel{
-	text-align:center;
-	color:rgb(71, 48, 32);
-	font-size:30pt;
-	font-weight: bold;
-}
-/* 하단 SIGN IN 위치 DIV 설정 */
-.bottomColor{
-	background-color: rgb(244, 235, 114);
-	text-align: center;
-	border-radius: 10px;
-	width:20%;
-	margin: 0px auto;
-}
-/* 하단 SIGN IN 버튼 설정 */
-.bottomColor button {
-	background-color: rgb(244, 235, 114);
-	color: white;
-	font-size: 20px;
-	border: 0px;
-}
 
 </style>
 <!-- jquery -->
@@ -71,17 +13,76 @@
 <script src="/cook/resources/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="header col-md-12">
-		<div class="toolbar">
-			<a href="/cook">HOME/</a><a href="#" data-toggle="modal" data-target="#myModal">LOGIN/</a><a href="join">JOIN/</a>
-			<a href="/cook/mypage">마이페이지/</a><a href="/cook/cart">장바구니/</a><a href="/cook/qna">FAQ</a>
-		</div>
-		<div class="logo">
-			<a href="/cook"><img src="resources/imgs/logo.png"></a>
-		</div>
-	</div>
-	
-	<!-- LOGIN 창 IMPORT -->
+	<body id="page-top" class="index">
+
+
+  <!-- LOGIN 창 IMPORT -->
 	<%@ include file="login/login.jsp" %>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" >
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="headerbar">
+	</div>
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Dalcom Cook IN</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/all">ALL</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/best">BEST</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/new">NEW</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/notice">NOTICE</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/qna">FAQ</a>
+                    </li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="/cook/2"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="join"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/mypage"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/cook/store"><span class="glyphicon glyphicon-map-marker" aria-hidden="true">   </span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
 </body>
 </html>
