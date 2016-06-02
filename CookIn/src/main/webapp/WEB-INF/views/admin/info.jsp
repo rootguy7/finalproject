@@ -85,6 +85,29 @@ table tr{
 			</div>
 	  	</div>
 	  	<div class="col-md-2 content"></div>
+	  	<!-- 검색 start  -->
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-1 sel">
+				<select class="form-control">
+					<option>ID</option>
+					<option>이름</option>
+					<option>휴대폰번호</option>
+					<option>POINT</option>
+				</select>
+			</div>
+			<div class="col-md-3">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search for..."/> 
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">검색</button>
+					</span>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		<!-- 검색 end  -->
+	
 	<!-- 페이징 start -->
 	  <div class="col-md-12" id="pagination">
 			<ul class="pagination">
