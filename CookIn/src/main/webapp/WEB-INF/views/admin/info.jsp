@@ -86,7 +86,7 @@ table tr{
 	  	</div>
 	  	<div class="col-md-2 content"></div>
 	<!-- 페이징 start -->
-	  <div class="col-md-10" id="pagination">
+	  <div class="col-md-12" id="pagination">
 			<ul class="pagination">
 			    <li>
 			      <a href="#" aria-label="Previous">
