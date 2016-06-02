@@ -98,7 +98,7 @@
                 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="/cook/2"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                        <a class="page-scroll" href="/cook/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span></a>
