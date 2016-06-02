@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <title>회원가입 페이지</title>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script type="text/javascript" src="/cook/resources/js/jquery-1.12.2.min.js"></script>
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/cook/resources/css/bootstrap.min.css">
 <!-- 부가적인 테마 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<style>
+<style> 
 	.item>img{
 		margin: 0px auto;
 	}

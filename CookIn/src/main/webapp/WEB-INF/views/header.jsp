@@ -12,7 +12,7 @@
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="/cook/resources/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body> 
 	<body id="page-top" class="index">
 
 

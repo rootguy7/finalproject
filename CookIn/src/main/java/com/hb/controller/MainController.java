@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 
-	@RequestMapping("/")
+	@RequestMapping("/2")
 	public String home(){
 		return "index";
 	}
 	
-	@RequestMapping("/2")
+	@RequestMapping("/")
 	public String home2(){
 		return "index2";
 	}

@@ -14,7 +14,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <title>마이페이지 메인 화면</title>
 <!-- jquery -->
-<script
+<script 
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="/cook/resources/css/bootstrap.min.css"></script>

@@ -17,7 +17,7 @@
 /* 	.container>.row>div {
 		border: 1px solid red;
 	} */
-	
+	 
 	.item>img{
 		margin: 0px auto;
 	}

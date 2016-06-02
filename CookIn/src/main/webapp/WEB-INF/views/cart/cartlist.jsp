@@ -24,7 +24,7 @@
 #crtb3{
 	background-color:rgb(248,248,248);
 	text-align: right;
-	font-weight: bold;
+	font-weight: bold; 
 }
 </style>
 <!-- jquery -->

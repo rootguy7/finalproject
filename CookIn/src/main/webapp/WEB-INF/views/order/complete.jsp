@@ -16,7 +16,7 @@
 #tbclr{	 	/* table td  */
 	background-color: rgb(248,248,248);
 	width: 25%;
-}
+} 
 </style>
 <!-- jquery -->
 <script
