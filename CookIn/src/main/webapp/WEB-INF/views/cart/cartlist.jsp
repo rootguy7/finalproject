@@ -67,7 +67,7 @@
 					</td>
 					<td>상품 정보</td><td>수량</td><td>상품금액</td><td>배송비</td>
 				</tr>
-				<c:forEach items="${buyList }" var="cartVO">
+				<c:forEach items="${buyList }" var="cartVo">
 				<tr>
 					<td>
 					<div class="checkbox">
@@ -76,7 +76,7 @@
 					  </label>
 					</div>
 					</td>
-					<td>헬로키티 흰색</td><td>1개</td><td>8,900원</td><td>2,500원</td>
+					<td>${cartVo.p_name }</td><td>${cartVo.p_name }</td><td>${cartVo.eaPrice }</td><td>2,500원</td>
 				</tr>
 				</c:forEach>
 				</table>  

@@ -5,6 +5,7 @@ import java.sql.Date;
 public class CartVo {
 
 	private int cart_idx;
+	private String p_name;
 	private String id;
 	private int serial_num;
 	private int ea;
@@ -16,7 +17,7 @@ public class CartVo {
 	
 	public CartVo() {}
 
-	public CartVo(int cart_idx, String id, int serial_num, int ea, int eaPrice, Date cart_date) {
+	public CartVo(int cart_idx, String p_name, String id, int serial_num, int ea, int eaPrice, Date cart_date) {
 		this.cart_idx = cart_idx;
 		this.id = id;
 		this.serial_num = serial_num;
@@ -29,6 +30,9 @@ public class CartVo {
 		return cart_idx;
 	}
 
+	public String getP_name() {
+		return p_name;
+	}
 	public String getId() {
 		return id;
 	}
@@ -54,7 +58,9 @@ public class CartVo {
 	public void setCart_idx(int cart_idx) {
 		this.cart_idx = cart_idx;
 	}
-
+	public void setP_name(String p_name) {
+		this.p_name = p_name;
+	}
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -80,8 +86,10 @@ public class CartVo {
 
 	@Override
 	public String toString() {
-		return "CartVo [cart_idx=" + cart_idx + ", id=" + id + ", serial_num=" + serial_num + ", ea=" + ea
-				+ ", eaPrice=" + eaPrice + ", cart_date=" + cart_date + "]";
+		return "CartVo [cart_idx=" + cart_idx + ", p_name=" + p_name + ", id=" + id + ", serial_num=" + serial_num
+				+ ", ea=" + ea + ", eaPrice=" + eaPrice + ", cart_date=" + cart_date + "]";
 	}
+
+	
 	
 }

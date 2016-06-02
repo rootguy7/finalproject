@@ -5,7 +5,7 @@
 
 <mapper namespace="buy">
 	<select id="selectPcart" resultType="com.hb.model.CartVo" parameterType="String">
-  		select cart_idx, id, serial_num, ea, eaPrice, cart_date from TB_CART, TB_PRODUCT where TB_CART.serial_num = TB_PRODUCT.serial_num
+  		select cart_idx, `name` p_name, id, TB_PRODUCT.serial_num, ea, price eaPrice, cart_date from TB_CART, TB_PRODUCT where TB_CART.serial_num = TB_PRODUCT.serial_num and id=#{id}
   	</select>
 	
 </mapper>
