@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="../admin">Dalcom Cook IN</a>
+                <a class="navbar-brand page-scroll" href="/cook/admin">Dalcom Cook IN</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
