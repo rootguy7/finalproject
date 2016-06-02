@@ -52,6 +52,9 @@
 		margin-left: 25px;
 		margin-right: 25px;
 	}
+	.mcont{
+ 		width: 100%;
+ 	}
 </style>
 <!-- jquery -->
 <script
@@ -70,7 +73,7 @@
 <body>
 	<%@ include file="../header.jsp" %>
 			
-	<div class="container">
+	<div class="container mcont">
 	<br/><br/><br/>
 		<div class="row ">
 			<div class="col-md-2"></div>
