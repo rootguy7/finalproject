@@ -72,11 +72,10 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 }
 
 	$(document).ready(function(){
-		$('.rownum').on('click', function() {
+		$('.rownum2').on('click', function() {
 			var ridx=getRow(this);
-		    var index = $('.rownum:eq('+(ridx)+')>td:eq(0)').text();
-			alert('클릭한 No : '+index);
-			location.href="/cook/";
+		    var index = $('.rownum2:eq('+(ridx)+')>td:eq(0)').text();
+			location.href="/cook/mypage/writedetail";
 		});
 		
 	});
@@ -108,10 +107,10 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 			<div class="col-md-8">
 				<table class="table table-hover">
 				<thead>
-					<tr><th>번호</th><th>문의종류</th><th>내용</th><th>문의날짜</th><th>상태</th></tr>
+					<tr><th>번호</th><th>문의종류</th><th>제목</th><th>문의날짜</th><th>상태</th></tr>
 					</thead>
 					<tbody>
-					<tr class="rownum">
+					<tr class="rownum2">
 						<th>1</th><td>배송문의</td><td>언제쯤 배송되나요?</td><td>2016-05-30</td><td>답변완료</td>
 					</tr>
 					</tbody>

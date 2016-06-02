@@ -19,6 +19,12 @@ public class MyController {
 		return "mypage/allorder";
 	}
 	
+	@RequestMapping("/mypage/orderdetail") //주문내역상세
+	public String MypageOrderDetail() {
+		
+		return "mypage/orderdetail";
+	}
+	
 	@RequestMapping("/mypage/point") //내포인트
 	public String MypagePoint() {
 		
@@ -29,6 +35,12 @@ public class MyController {
 	public String MypageDiary() {
 		
 		return "mypage/mydiary";
+	}
+	
+	@RequestMapping("/mypage/writedetail") //내가쓴글
+	public String MypageDiaryDetail() {
+		
+		return "mypage/writedetail";
 	}
 	
 	

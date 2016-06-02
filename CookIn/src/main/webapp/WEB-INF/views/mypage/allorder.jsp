@@ -62,6 +62,20 @@
 			dateFormat:"yymmdd", //날짜 출력 포맷 20160501
 		});		
 	});
+	
+	function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
+		var rowIndex = rowValue.rowIndex;
+		return rowIndex;
+	}
+
+		$(document).ready(function(){
+			$('.rownum').on('click', function() {
+				var ridx=getRow(this);
+			    var index = $('.rownum:eq('+(ridx)+')>td:eq(0)').text();
+				location.href="/cook/mypage/orderdetail";
+			});
+			
+		});
 </script>
 </head>
 <body>
@@ -93,10 +107,10 @@
 					<tr><th>번호</th><th>주문일자</th><th>상품명</th><th>결제금액</th><th>배송현황</th></tr>
 					</thead>
 					<tbody>
-					<tr>
+					<tr class="rownum">
 						<th>1</th><td>2016-05-29</td><td>허쉬초콜렛</td><td>5,000원</td><td>배송준비중</td>
 					</tr>
-					<tr>
+					<tr class="rownum">
 						<th>2</th><td>2016-05-30</td><td>하리보젤리</td><td>7,000원</td><td>배송완료</td>
 					</tr>
 					</tbody>
