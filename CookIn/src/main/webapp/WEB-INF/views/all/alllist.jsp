@@ -253,7 +253,6 @@
 
     </div>
     <!-- /.container -->
-	<%@ include file="../footer.jsp"%>
 	<!-- container div end -->
 </body>
 </html>

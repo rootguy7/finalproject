@@ -48,7 +48,7 @@
 
 
             <div class="col-md-12"> <!-- col-md- start -->
-            <br/>
+            <br/><br/><br/>
            		<h2>장바구니</h2> 
 				<hr/>
 				
@@ -121,7 +121,6 @@
 	   	</div>	
 	</div>	   	<!-- container end -->
 
-	<%@ include file="../footer.jsp"%>
 	<!-- container div end -->
 </body>
 </html>

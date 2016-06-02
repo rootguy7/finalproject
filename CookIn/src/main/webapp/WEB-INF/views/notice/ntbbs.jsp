@@ -17,13 +17,8 @@
 /* 	.container>.row>div {
 		border: 1px solid red;
 	} */
+
 	
-	.item>img{
-		margin: 0px auto;
-	}
-	.container{
-		width:100%;
-	}
 </style>
 <!-- jquery -->
 <script
@@ -52,7 +47,8 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 	<%@ include file="../header.jsp" %>
 			
 	<div class="container">
-		<div class="row rowmain">
+		<div class="row">
+		<br/><br/><br/>
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 			<h2>공지사항</h2>
@@ -146,6 +142,5 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 	</div><!-- container div end -->
 	
 	
-	<%@ include file="../footer.jsp" %>
 </body>
 </html>

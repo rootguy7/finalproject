@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="resources/css/bootstrap.min.css">
-<link rel="stylesheet" href="resources/css/commbbs.css">
+<link rel="stylesheet" href="resources/css/commbbs.css">  
 <!-- 부가적인 테마 -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -21,9 +21,7 @@
 	.item>img{
 		margin: 0px auto;
 	}
-	.container{
-		width:100%;
-	}
+	
 </style>
 <!-- jquery -->
 <script
@@ -56,7 +54,8 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 	<%@ include file="../header.jsp" %>
 			
 	<div class="container">
-		<div class="row rowmain">
+		<div class="row ">
+		<br/><br/><br/>
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 			<h2>질의응답</h2>
@@ -149,6 +148,5 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 	</div><!-- container div end -->
 	
 	
-	<%@ include file="../footer.jsp" %>
 </body>
 </html>

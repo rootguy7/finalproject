@@ -21,9 +21,7 @@
 	.item>img{
 		margin: 0px auto;
 	}
-	.container{
-		width:100%;
-	}
+
 	#sample6_postcode{
 		width: 68%;
 		display: inline-block;
@@ -289,6 +287,5 @@
 	</div><!-- container div end -->
 	
 	
-	<%@ include file="../footer.jsp" %>
 </body>
 </html>

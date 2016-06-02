@@ -71,7 +71,6 @@
 <body>
 
 	<%@ include file="../header.jsp"%>
-	<%@ include file="../nav.jsp" %>
 	<!-- Navigation -->
 
 
@@ -81,6 +80,7 @@
 
 
             <div class="col-md-12"> <!-- col-md- start -->
+            <br/><br/><br/>
 				<h2>주문/ 결제</h2> 
 				<hr/>
 				<table class="table table-striped">
@@ -229,7 +229,6 @@
 	   	</div>	
 	</div>	   	<!-- container end -->
 
-	<%@ include file="../footer.jsp"%>
 	<!-- container div end -->
 </body>
 </html>

@@ -31,7 +31,7 @@
 		<div class="col-md-12">
 			  <div>
 	  		<span class="titlename">
-	  		<br/>
+	  		<br/><br/><br/>
 				<h2>MY PAGE</h2>
 			</span>
 		</div>
@@ -72,6 +72,5 @@
 			</div>
 		</div>
 	</div>
-		<%@ include file="../footer.jsp" %>
 </body>
 </html>
