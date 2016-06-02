@@ -9,5 +9,6 @@ public interface BuyDao {
 	static final Logger logger = LoggerFactory.getLogger(BuyDao.class);
 	
 	List<CartVo> selectPcart(String id) throws Exception;
+	UserVo selOneUser(String id) throws Exception;
 	
 }

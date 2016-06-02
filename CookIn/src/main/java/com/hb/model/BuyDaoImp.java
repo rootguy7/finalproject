@@ -14,7 +14,13 @@ public class BuyDaoImp implements BuyDao{
 	
 	@Override
 	public List<CartVo> selectPcart(String id) throws Exception {
-		return sqlSession.selectOne("buy.selectPcart", id);
+		return sqlSession.selectList("buy.selectPcart", id);
+	}
+
+	@Override
+	public UserVo selOneUser(String id) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("buy.selOneUser", id);
 	}
 
 }

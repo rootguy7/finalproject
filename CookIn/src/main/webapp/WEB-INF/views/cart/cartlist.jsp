@@ -76,7 +76,7 @@
 					  </label>
 					</div>
 					</td>
-					<td>${cartVo.p_name }</td><td>${cartVo.p_name }</td><td>${cartVo.eaPrice }</td><td>2,500원</td>
+					<td>${cartVo.p_name }</td><td>${cartVo.ea }</td><td>${cartVo.eaPrice }</td><td>2,500원</td>
 				</tr>
 				</c:forEach>
 				</table>  
@@ -89,7 +89,7 @@
 				 <h4>구매 혜택</h4>
 				<table class="table">
 				<tr>
-					<td id="tbclr">포인트</td><td>100점</td>
+					<td id="tbclr">포인트</td><td>${userOne.point }점</td>
 				</tr>
 				</table>
 				</div>
