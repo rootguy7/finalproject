@@ -48,11 +48,11 @@
 									<span class="sr-only">50% Complete</span>
 								</div>
 							</div>
-							<p>포인트 : 6,515</p>
+							<p>포인트 : ${userOne.point }</p>
 				    <p> > 총 보유 포인트
-				    <span class="label label-warning">6,575</span> 
+				    <span class="label label-warning">${userOne.point }</span> 
 				    <p> > 사용가능 포인트 
-				     <span class="label label-warning">6,575</span>  
+				     <span class="label label-warning">${userOne.point }</span>  
 				    <p> > 사용된 포인트
 				     <span class="label label-warning">0</span> 
 				  </div>

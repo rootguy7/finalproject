@@ -1,7 +1,13 @@
 package com.hb.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.hb.model.BuyDao;
+import com.hb.model.UserDao;
+import com.hb.model.UserVo;
 
 @Controller
 public class MyController {
@@ -25,8 +31,21 @@ public class MyController {
 		return "mypage/orderdetail";
 	}
 	
+	@Autowired
+	private UserDao userDao;
+	
 	@RequestMapping("/mypage/point") //내포인트
-	public String MypagePoint() {
+	public String MypagePoint(Model model) {
+		
+		String id = "joohyung";
+		UserVo userOne = null;
+		try {
+			userOne = userDao.selectOne(id);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		
+		model.addAttribute("userOne", userOne);
 		
 		return "mypage/point";
 	}

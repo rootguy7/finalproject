@@ -19,7 +19,6 @@ public class BuyDaoImp implements BuyDao{
 
 	@Override
 	public UserVo selOneUser(String id) throws Exception {
-		// TODO Auto-generated method stub
 		return sqlSession.selectOne("buy.selOneUser", id);
 	}
 

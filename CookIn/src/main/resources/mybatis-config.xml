@@ -8,6 +8,7 @@
 	<mappers>
 		<mapper resource="mapper/query1.xml"/>	
 		<mapper resource="mapper/query2.xml"/>	
+		<mapper resource="mapper/query3.xml"/>	
 	</mappers>
 
 </configuration>

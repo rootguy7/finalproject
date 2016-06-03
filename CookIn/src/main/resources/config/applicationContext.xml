@@ -25,5 +25,9 @@
 	<bean id="buyDao" class="com.hb.model.BuyDaoImp">
 		<property name="sqlSession" ref="sqlSession"></property>
 	</bean>
+	
+	<bean id="userDao" class="com.hb.model.UserDaoImp">
+		<property name="sqlSession" ref="sqlSession"></property>
+	</bean>
 
 </beans>
