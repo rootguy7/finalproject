@@ -37,13 +37,6 @@ public class MyController {
 		return "mypage/mydiary";
 	}
 	
-	@RequestMapping("/mypage/writedetail") //내가쓴글
-	public String MypageDiaryDetail() {
-		
-		return "mypage/writedetail";
-	}
-	
-	
 	@RequestMapping("/mypage/setting") //나의설정
 	public String MypageSetting() {
 		
