@@ -35,7 +35,19 @@
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="/cook/resources/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-   
+   $(document).ready(function(){
+	   $(".chkAll").click(function(){
+	        //클릭되었으면
+	        if($(".chkAll").prop("checked")){
+	            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 true로 정의
+	            $(".chkitm").prop("checked",true);
+	            //클릭이 안되있으면
+	        }else{
+	            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 false로 정의
+	            $(".chkitm").prop("checked",false);
+	        }
+	    })
+   });
 </script>
 </head>
 <body>
@@ -61,7 +73,7 @@
 					<td>
 					<div class="checkbox">
 					  <label>
-					    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+					    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="..." class="chkAll">
 					  </label>
 					</div>
 					</td>
@@ -72,7 +84,7 @@
 					<td>
 					<div class="checkbox">
 					  <label>
-					    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+					    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="..." class="chkitm">
 					  </label>
 					</div>
 					</td>
@@ -80,8 +92,18 @@
 				</tr>
 				</c:forEach>
 				</table>  
-				
 				</div>
+				
+				<c:set var="totalSum" value="0"/>
+				<c:set var="totalEa" value="0"/>
+				<c:set var="delCh" value="2500"/>
+				<c:forEach items="${buyList }" var="tot">
+					<c:set var="totalSum" value="${tot.ea*tot.eaPrice+totalSum }"/>	
+					<c:set var="totalEa" value="${tot.ea+totalEa }"/>	
+				</c:forEach>
+				
+				
+				<c:set var="resPoint" value="${totalSum*0.01 }"/>
 				</div>
 				<br/>
 				<div class="row">	
@@ -89,7 +111,7 @@
 				 <h4>구매 혜택</h4>
 				<table class="table">
 				<tr>
-					<td id="tbclr">포인트</td><td>${userOne.point }점</td>
+					<td id="tbclr">포인트</td><td>${resPoint }</td>
 				</tr>
 				</table>
 				</div>
@@ -99,16 +121,16 @@
 					<td id="crtb2" colspan="2">결제 예정금액</td>
 				</tr>
 				<tr>
-					<td>상품가격(총2개)</td><td>12,500원</td>
+					<td>상품가격(총 ${totalEa }개)</td><td>${totalSum}원</td>
 				</tr>
 				<tr>
-					<td>할인금액</td><td>1,000원</td>
+					<td>할인금액 (보유 포인트)</td><td>${userOne.point }원</td>
 				</tr>
 				<tr>
 					<td>배송비</td><td>2,500원</td>
 				</tr>
 				<tr>
-					<td id="crtb3" colspan="2">14,000원</td>
+					<td id="crtb3" colspan="2">${totalSum+delCh }원</td>
 				</tr>
 				</table>
 				</div>
