@@ -55,7 +55,11 @@ function sum(){
 	
 	$('.ttea').text("상품가격(총 "+totEa+"개)");
 	$('.tteap').text(totEaP+"원");
-	$('#crtb3').text('${delCh}'+totEaP+'원');
+	if(totEaP==0)
+		$('#crtb3').text(0*1+'원');
+	else
+		$('#crtb3').text('${delCh}'*1+totEaP+'원');
+	$('.resPoint').text(totEaP*0.01);
 }
    $(document).ready(function(){
 	   $('.chkitm').change(function() {
@@ -67,10 +71,12 @@ function sum(){
 	        if($(".chkAll").prop("checked")){
 	            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 true로 정의
 	            $(".chkitm").prop("checked",true);
+	            sum();
 	        //눌렀을때 체크 되어 있지 않다면
 	        }else{
 	            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 false로 정의
 	            $(".chkitm").prop("checked",false);
+	            sum();
 	        }
 	    })
 	    
@@ -129,7 +135,6 @@ function sum(){
 				</c:forEach>
 				
 				
-				<c:set var="resPoint" value="${totalSum*0.01 }"/>
 				</div>
 				<br/>
 				<div class="row">	
@@ -137,7 +142,7 @@ function sum(){
 				 <h4>구매 혜택</h4>
 				<table class="table">
 				<tr>
-					<td id="tbclr">포인트</td><td>${resPoint }</td>
+					<td id="tbclr">포인트</td><td class="resPoint"></td>
 				</tr>
 				</table>
 				</div>
@@ -148,7 +153,7 @@ function sum(){
 				</tr>
 				<tr>
 <%-- 					<td>상품가격(총 ${totalEa }개)</td><td>${totalSum}원</td> --%>
-					<td class="ttea">상품가격(총 ${totalEa }개)</td><td class="tteap">${totalSum}원</td>
+					<td class="ttea">상품가격(총 ${totalEa }개)</td><td class="tteap">0원</td>
 				</tr>
 				<tr>
 					<td>할인금액 (보유 포인트)</td><td>${userOne.point }원</td>
@@ -157,7 +162,7 @@ function sum(){
 					<td>배송비</td><td>${delCh }원</td>
 				</tr>
 				<tr>
-					<td id="crtb3" colspan="2">${totalSum+delCh }원</td>
+					<td id="crtb3" colspan="2">0원</td>
 				</tr>
 				</table>
 				</div>
