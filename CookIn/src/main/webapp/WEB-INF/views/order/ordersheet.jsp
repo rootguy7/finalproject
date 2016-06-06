@@ -19,7 +19,15 @@
 	background-color: rgb(248,248,248);
 	width: 25%;
 } 
+.mr{
+	margin-bottom: 100px; 
+}
 </style>
+
+<c:set var="delCh" value="2500"/> <!-- 배송비. 어디다 선언할 때가 없어서 일단 씀. 나중에 수정 할 생각 -->
+<c:set var="totalSum" value="0"/> <!-- 총 금액-배송비 -->
+<c:set var="totalEa" value="0"/> <!-- 구매 상품 갯수 -->
+
 <!-- jquery -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -68,6 +76,17 @@
             }
         }).open();
     }
+    
+    $(document).ready(function(){
+    	
+        /* 오로지 숫자만 입력 받아야 하는분 처리 */
+        $(".onlyNumber").keyup(function(event){
+            if (!(event.keyCode >=37 && event.keyCode<=40)) {
+                var inputVal = $(this).val();
+                $(this).val(inputVal.replace(/[^0-9]/gi,''));
+            }
+        });
+    });
 </script>
 </head>
 <body>
@@ -78,7 +97,7 @@
 
     <!-- Page Content -->
     <div class="container"> <!-- container start -->
-        <div class="row">	
+        <div class="row mr">	
 
 
             <div class="col-md-12"> <!-- col-md- start -->
@@ -97,6 +116,7 @@
 				</table>
 				<br/>
 				<h3>구매자 정보</h3> 
+				<form class="form-inline" action="/cook/immpay" method="post">
 				<table class="table">
 				<tr>
 					<td id="tbclr" >이름</td><td>손지현</td>
@@ -107,11 +127,10 @@
 				<tr>
 					<td id="tbclr">휴대폰 번호</td>
 					<td>
-						<form class="form-inline">
+						
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control" id="exampleInputName2" >
+						    <input type="text" class="form-control onlyNumber" name="buymobile" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요.">
 						  </div>
-						</form>
 					 </td>
 				</tr>
 				</table>
@@ -121,65 +140,57 @@
 				<tr>
 					<td id="tbclr">이름</td>
 					<td>
-						<form class="form-inline">
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control" id="exampleInputName2" >
+						    <input type="text" class="form-control" id="exampleInputName2" name="recname" >
 						  </div>
-						</form>
 					 </td>
 				</tr>
 				<tr>
 					<td id="tbclr">휴대폰</td>
 						<td>
-						<form class="form-inline">
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control" id="exampleInputName2" >
+						    <input type="text" class="form-control onlyNumber" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요." name="recmobile">
 						  </div>
-						</form>
 					 </td>
 				</tr>
 				<tr>
 					<td id="tbclr">배송주소</td>
 					<td>
-					<form class="form-inline, col-xs-3" >
-						  <div class="form-group form-group-sm" >
-						    <input type="text" class="form-control" id="sample6_postcode" placeholder="우편번호" >
-						  </div>
-						</form>
+						<div class="col-xs-3">
+						<div class="form-group form-group-sm" >
+						<input type="text" class="form-control onlyNumber" id="sample6_postcode" placeholder="우편번호" name="recpost" >
+						</div>
+						</div>
 					<button type="button" class="btn btn-default"  onclick="sample6_execDaumPostcode()">우편번호 찾기</button>
-						<form class="form-inline, col-xs-15" >
+					<div class="col-xs-15">
 						  <div class="form-group form-group-sm" >
-						    <input type="text" class="form-control" id="sample6_address" placeholder="주소를 입력해주세요" >
+						    <input type="text" class="form-control" id="sample6_address" placeholder="주소를 입력해주세요" name="recmainaddr">
 						  </div>
-						</form>
-						<form class="form-inline">
+						</div>
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control" id="sample6_address2" placeholder="상세주소" >
+						    <input type="text" class="form-control" id="sample6_address2" placeholder="상세주소" name="recsubaddr">
 						  </div>
-						</form>
 					</td>
 				</tr>
 				<tr>
 					<td id="tbclr">추가 연락처</td>	
 					<td>
-						<form class="form-inline">
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control" id="exampleInputName2" >
+						    <input type="text" class="form-control onlyNumber" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요." name="recspphone">
 						  </div>
-						</form>
 					 </td>
 				</tr>
 				<tr>
 					<td id="tbclr">배송 시 요청사항</td>
 					<td>
-					<select class="form-control  ">
+					<select class="form-control" name="reqcomm">
 						  <option>배송시 요청사항을 선택해 주세요.</option>
 						  <option>배송 전 연락 바랍니다.</option>
 						  <option>집 앞에 놔 주세요.</option>
 						  <option>경비실에 맡겨 주세요.</option>
 						  <option>택배함에 놔 주세요.</option>
 					</select>
-					<input type="text" class="form-control " placeholder="기타내용을 입력해 주세요.">
+					<input type="text" class="form-control " placeholder="기타내용을 입력해 주세요." name="reqspcomm">
 					</td>
 				</tr>
 				</table>
@@ -197,40 +208,51 @@
 				</table>
 				<br/>
 				<h3>결제정보</h3> 
+				
+				<c:forEach items="${buyList }" var="tot">
+					<c:set var="totalSum" value="${tot.ea*tot.eaPrice+totalSum }"/>	
+					<c:set var="totalEa" value="${tot.ea+totalEa }"/>	
+				</c:forEach>
+				
 				<table class="table">
 				<tr>
-					<td id="tbclr">총 상품가격</td><td>8,900원</td>
+					<td id="tbclr">총 상품가격</td><td>${totalSum }원</td>
 				</tr>
 				<tr>
-					<td id="tbclr">배송비</td><td>2,500원</td>
+					<td id="tbclr">배송비</td><td>${delCh }원</td>
 				</tr>
 				<tr>
-					<td id="tbclr">총 결제금액</td><td>11,400원</td>
+					<td id="tbclr">총 결제금액</td><td>${totalSum+delCh }원</td>
 				</tr>
 				<tr>
 					<td id="tbclr">결제방법</td>
 					<td>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions"  value="option1">신용/체크카드
+						  <input type="radio" name="inlineRadioOptions"  value="card">신용/체크카드
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions" value="option2"> 휴대폰
+						  <input type="radio" name="inlineRadioOptions" value="phone"> 휴대폰
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions"  value="option3"> 무통장입금
+						  <input type="radio" name="inlineRadioOptions"  value="bankbook"> 무통장입금
 						</label>
 				  </td>
 				</tr>
 				</table>
+				<c:forEach items="${buyList }" var="list">
+					<input type="hidden" name="cart_idx" value="${list.cart_idx }"/>
+				</c:forEach>
 				<div class="text-center">
-				<button type="button" class="btn btn-default" onclick="location.href='/cook/complete'">바로 결제하기</button>
+				<button type="submit" class="btn btn-default" >바로 결제하기</button><!-- onclick="location.href='/cook/complete'" -->
 				</div>
+				</form>
+				</div> <!-- col-md- end -->
 				<br/><br/>
-            </div> <!-- col-md- end -->
+            </div>
 
 
 	   	   
-	   	</div>	
+	   		
 	</div>	   	<!-- container end -->
 
 	<!-- container div end -->

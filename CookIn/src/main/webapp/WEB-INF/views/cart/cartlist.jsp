@@ -46,6 +46,8 @@ function sum(){
 		if($(this).prop("checked")){
 			var ea=0;
 			var eap=0;
+			
+			/* 문자열을 숫자로 바꾸기 위해서 *1(곱하기 1)했음 */
 			ea=($(this).parent().parent().parent().siblings('.pea').text())*1;
 			eap=(($(this).parent().parent().parent().siblings('.peap').text())*1)*ea;
 			totEa+=ea;
@@ -133,7 +135,7 @@ function sum(){
 					  </label>
 					</div>
 					</td>
-					<td class="pname">${cartVo.p_name }</td><td class="pea">${cartVo.ea }</td><td class="peap">${cartVo.eaPrice }</td><td>2,500원</td>
+					<td class="pname">${cartVo.p_name }</td><td class="pea">${cartVo.ea }</td><td class="peap">${cartVo.eaPrice }</td><td>${delCh }원</td>
 				</tr>
 				</c:forEach>
 				</table>  
