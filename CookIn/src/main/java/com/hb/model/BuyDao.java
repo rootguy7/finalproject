@@ -10,5 +10,6 @@ public interface BuyDao {
 	
 	List<CartVo> selectPcart(String id) throws Exception;
 	UserVo selOneUser(String id) throws Exception;
+	CartVo selectPcartOne(int cart_idx) throws Exception;
 	
 }

@@ -61,6 +61,8 @@ function sum(){
 		$('#crtb3').text('${delCh}'*1+totEaP+'원');
 	$('.resPoint').text(totEaP*0.01);
 }
+
+
    $(document).ready(function(){
 	   $('.chkitm').change(function() {
 		   sum();
@@ -80,7 +82,15 @@ function sum(){
 	        }
 	    })
 	    
-	    
+	    $('form').submit(function(){
+	    	
+	    	
+	    	if($("input:checkbox[name=chkitm]:checked").length==0){
+				alert('선택된 상품이 없습니다.');	    		
+		    	return false;
+	    	}
+	    		
+	    });
    });
 </script>
 </head>
@@ -101,7 +111,8 @@ function sum(){
 				<hr/>
 				
 				<div class="row">	
-				 <div class="col-md-12">
+				<div class="col-md-12">
+				<form action="/cook/cartli" method="post">
 				<table class="table table-striped">
 				<tr>
 					<td>
@@ -118,7 +129,7 @@ function sum(){
 					<td>
 					<div class="checkbox">
 					  <label>
-					  <input type="checkbox" id="blankCheckbox" value="option1" aria-label="..." class="chkitm" />
+					  <input type="checkbox" id="blankCheckbox" name="chkitm" aria-label="..." class="chkitm" value="${cartVo.cart_idx }"/>
 					  </label>
 					</div>
 					</td>
@@ -169,7 +180,8 @@ function sum(){
 			
 				<div class="text-center">
 				<button type="button" class="btn btn-default" >선택상품삭제</button>
-				<button type="button" class="btn btn-default" onclick="location.href='/cook/ordersheet'">선택상품주문</button>
+				<button type="submit" class="btn btn-default">선택상품주문</button>
+				</form>
 				</div>
 				<br/><br/>
             </div>

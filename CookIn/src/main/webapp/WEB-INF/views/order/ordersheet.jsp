@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,9 +89,11 @@
 				<tr>
 					<td>구매정보</td><td>상품가격</td><td>개수</td><td>주문금액</td>
 				</tr>
+				<c:forEach items="${buyList }" var="cartVo">
 				<tr>
-					<td>헬로키티 흰색</td><td>8,900원</td><td>1개</td><td>8,900원</td>
+					<td>${cartVo.p_name }</td><td>${cartVo.eaPrice }원</td><td>${cartVo.ea }개</td><td>${cartVo.ea*cartVo.eaPrice }원</td>
 				</tr>
+				</c:forEach>
 				</table>
 				<br/>
 				<h3>구매자 정보</h3> 

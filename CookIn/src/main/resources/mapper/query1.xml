@@ -10,6 +10,9 @@
 	<select id="selOneUser" resultType="com.hb.model.UserVo" parameterType="String">
 		SELECT id, `name`, post, main_addr, sub_addr, sex, phone, mobile, email, `point`, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num and TB_USER.id=#{id};
 	</select>
+	<select id="selectPcartOne" resultType="com.hb.model.CartVo" parameterType="int">
+		select cart_idx, `name` p_name, id, TB_PRODUCT.serial_num, ea, price eaPrice, cart_date from TB_CART, TB_PRODUCT where TB_CART.serial_num = TB_PRODUCT.serial_num and cart_idx=#{value}
+	</select>
 </mapper>
 
 

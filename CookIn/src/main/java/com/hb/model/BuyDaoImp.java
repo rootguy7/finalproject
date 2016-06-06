@@ -22,4 +22,9 @@ public class BuyDaoImp implements BuyDao{
 		return sqlSession.selectOne("buy.selOneUser", id);
 	}
 
+	@Override
+	public CartVo selectPcartOne(int cart_idx) throws Exception {
+		return sqlSession.selectOne("buy.selectPcartOne", cart_idx);
+	}
+
 }

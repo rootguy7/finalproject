@@ -19,6 +19,7 @@ public class CartVo {
 
 	public CartVo(int cart_idx, String p_name, String id, int serial_num, int ea, int eaPrice, Date cart_date) {
 		this.cart_idx = cart_idx;
+		this.p_name = p_name;
 		this.id = id;
 		this.serial_num = serial_num;
 		this.ea = ea;
