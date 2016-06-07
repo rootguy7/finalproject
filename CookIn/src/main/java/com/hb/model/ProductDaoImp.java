@@ -16,5 +16,4 @@ public class ProductDaoImp implements ProductDao{
 	public List<ProductVo> selectProList() throws Exception {
 		return sqlSession.selectList("info.selectProList");
 	}
-
 }

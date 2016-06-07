@@ -74,12 +74,12 @@ $(document).ready(function(){
 	                <col width="500" />
 	                <col width="200" />
 	            </colgroup>
-	            <c:forEach items="list" var="var">
+	            <c:forEach items="${list}" var="var">
 					<tr class="rownum">
 						<td>1</td>
-						<td>${var.serial_num }</td>
-						<td>${var.name }</td>
-						<td>${var.price }</td>
+						<td>${var.serial_num}</td>
+						<td>${var.name}</td>
+						<td>${var.price}</td>
 					</tr>
 				</c:forEach>
 			</table>
