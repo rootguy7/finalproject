@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,15 +81,29 @@ $(document).ready(function(){
 		    var postString = "";       // post방식으로 처리하기 위한 파라미터들
 		    postString   = "id=" + $('#userid').val();
 		    postString += "&pw=" + $('#userpw').val();
-			
+			alert(postString);
 		    $.ajax({                          // 이부분부터 비동기통신을 하게 된다. 위에서 설정한 값들을 입력후
 		        type: "POST",
 		        url: url,
 		        data: postString,
-		        success: function() {  //성공시 이 함수를 호출한다.
-// 		            setTimeout('parent.stopLayer('+msg+')',2500); 
-		       	alert("성공");
-		       },
+// 		        cache: false,
+// 		        async: false,
+		        dataType: "text",
+		        success: function(response) {
+		        	alert(response);
+		        	alert("sdfsdfsdf");
+		            if(response==1)
+		            {
+		             alert("로그인 해줄게요. 기다리세요.")
+		            }
+		            else
+		            {
+		             alert("아이디 또는 비번이 틀렸습니다. 다시 입력하세요.")
+		             return false;
+		            } 
+		            
+		            alert("아짱나");
+		           },
 		       error: function (jqXHR, textStatus, errorThrown) {
 	               alert("ERROR" + textStatus + " : " + errorThrown);
 	  	       }

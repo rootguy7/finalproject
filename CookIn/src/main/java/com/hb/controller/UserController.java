@@ -11,6 +11,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hb.model.BuyDao;
@@ -41,17 +44,16 @@ public class UserController {
 	}
 	
 		
-	@RequestMapping("/login")
-	public ModelAndView main(HttpServletRequest request ) {
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	@ResponseBody
+	 public int login(@RequestParam(value = "id", required = false) String id, @RequestParam(value = "pw", required = false) String password){
 		
-		HttpSession session = request.getSession();
-		ModelAndView mav = new ModelAndView();
 		
 		
 		Map<String, String> map = new HashMap<String, String>();
 		
-		String id = Util.nullCheck(request.getParameter("id"), "");
-		String password = Util.nullCheck(request.getParameter("pw"), "");
+//		String id = Util.nullCheck(request.getParameter("id"), "");
+//		String password = Util.nullCheck(request.getParameter("pw"), "");
 		System.out.println(id);
 		System.out.println(password);
 		
@@ -66,22 +68,28 @@ public class UserController {
 		if (loginValue == 1)
 		{
 			logger.info("로그인성공");
-			mav.addObject("loginValue", loginValue);
+//			mav.addObject("loginValue", loginValue);
 //			mav.setViewName("/");
 			
 //			나중에 해당 유저의 포인트와 기타등등을 불러오기 위함
-//			userVo = userDao.getUserInfo(id);
-			
+
+//			try {
+//				userVo = userDao.getUserInfo(id);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//			mav.addObject("id",id);
 //			session.setAttribute("userId", userVo.getId());
 //			session.setAttribute("userPassword", userVo.getPassword());
+			
 		}
 		else
 		{
 			logger.info("로그인실패");
-			mav.setViewName("user/loginForm");
 		}
 		
-		return mav; 
+		System.out.println(loginValue);
+		return loginValue; 
 		
 	}
 	

@@ -13,5 +13,5 @@ static final Logger logger = LoggerFactory.getLogger(UserDao.class);
 	UserVo selectOne(String id) throws Exception;
 	List<UserVo> selectUserInfo() throws Exception;
 	int getLoginResult(Map<String, String> map) throws Exception;
-	UserVo getUserInfo(String id);
+	UserVo getUserInfo(String id) throws Exception;
 }
