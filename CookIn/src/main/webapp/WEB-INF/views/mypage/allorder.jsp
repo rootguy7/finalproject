@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,12 +108,11 @@
 					<tr><th>번호</th><th>주문일자</th><th>상품명</th><th>결제금액</th><th>배송현황</th></tr>
 					</thead>
 					<tbody>
+					<c:forEach items="${orderlist }" var="userVo">
 					<tr class="rownum">
-						<th>1</th><td>2016-05-29</td><td>허쉬초콜렛</td><td>5,000원</td><td>배송준비중</td>
+						<th>1</th><td>${userVo.req_date }</td><td>허쉬초콜렛</td><td>5,000원</td><td>배송준비중</td>
 					</tr>
-					<tr class="rownum">
-						<th>2</th><td>2016-05-30</td><td>하리보젤리</td><td>7,000원</td><td>배송완료</td>
-					</tr>
+					</c:forEach>
 					</tbody>
 				</table>
 			</div>

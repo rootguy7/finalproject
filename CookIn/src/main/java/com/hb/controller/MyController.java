@@ -1,17 +1,22 @@
 package com.hb.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.hb.model.BuyDao;
+import com.hb.model.CartVo;
 import com.hb.model.UserDao;
 import com.hb.model.UserVo;
 
 @Controller
 public class MyController {
 
+	@Autowired
+	private UserDao userDao;
 	
 	@RequestMapping("/mypage")
 	public String MypageDefault() { //마이페이지 메인
@@ -20,7 +25,18 @@ public class MyController {
 	}
 	
 	@RequestMapping("/mypage/allorder") //전체주문내역
-	public String MypageOrder() {
+	public String MypageOrder(Model model) {
+		String id = "joohyung";
+		List<UserVo> list = null;
+		try {
+			 list = userDao.selectOrder(id);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		model.addAttribute("orderlist", list);
+		
 		
 		return "mypage/allorder";
 	}
@@ -31,8 +47,6 @@ public class MyController {
 		return "mypage/orderdetail";
 	}
 	
-	@Autowired
-	private UserDao userDao;
 	
 	@RequestMapping("/mypage/point") //내포인트
 	public String MypagePoint(Model model) {

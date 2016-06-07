@@ -14,8 +14,8 @@ public class UserDaoImp implements UserDao{
 	
 
 	@Override
-	public List<UserVo> selectAll(String id) throws Exception {
-		return sqlSession.selectList("user.selectAll",id);
+	public List<UserVo> selectOrder(String id) throws Exception {
+		return sqlSession.selectList("user.selectOrder",id);
 	}
 
 	@Override
