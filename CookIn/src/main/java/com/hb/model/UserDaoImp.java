@@ -22,5 +22,9 @@ public class UserDaoImp implements UserDao{
 	public UserVo selectOne(String id) throws Exception {
 		return sqlSession.selectOne("user.selectOne", id);
 	}
+	
+	public List<UserVo> selectUserInfo() throws Exception{
+		return sqlSession.selectList("info.selectUserInfo");
+	}
 
 }

@@ -1,16 +1,36 @@
 package com.hb.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.hb.model.UserDao;
+import com.hb.model.UserVo;
 
 @Controller
 public class AdminController {
+	
+	@Autowired
+	private UserDao dao;
+	
 	@RequestMapping("/admin")
 	public String index(){
 		return "adm_index";
 	}
 	@RequestMapping("/admin/info")
-	public String info(){
+	public String info(Model model){
+		List<UserVo> list=null;
+		try {
+			list = dao.selectUserInfo();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		model.addAttribute("list", list);
+		
 		return "admin/info";
 	}
 	@RequestMapping("/admin/list")
