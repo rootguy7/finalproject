@@ -51,7 +51,7 @@ public class MyController {
 	@RequestMapping("/mypage/point") //내포인트
 	public String MypagePoint(Model model) {
 		
-		String id = "jiyooni";
+		String id = "joohyung";
 		UserVo userOne = null;
 		try {
 			userOne = userDao.selectOne(id);

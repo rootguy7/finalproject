@@ -11,7 +11,9 @@
         and TB_USER.id=#{id}
   	</select>
 	<select id="selectOne" resultType="com.hb.model.UserVo" parameterType="String">
-		SELECT id, `name`, post, main_addr, sub_addr, sex, phone, mobile, email, `point`, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num and TB_USER.id=#{id}
+		SELECT TB_PM.pm, TB_PM.pm_num, TB_USER.point, TB_BUY.req_date
+		FROM TB_PM, TB_USER, TB_BUY
+		WHERE TB_PM.pm_num=TB_USER.pm_num and TB_USER.id=TB_BUY.id and TB_USER.id=#{id}
 	</select>
 </mapper>
 

@@ -40,7 +40,7 @@
 			<div class="col-md-6">
 				<div class="panel panel-default" id="aa">
 				 <div class="panel-body">
-				    <p>${userone.id }</p>
+				    <p>김우빈</p>
 				    <p>회원등급 : ${userone.pm}/Level${userone.pm_num }</p>
 							<div class="progress">
 								 <div class="progress-bar progress-bar-warning progress-bar-striped active" 
