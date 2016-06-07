@@ -32,4 +32,16 @@ public class BuyDaoImp implements BuyDao{
 		sqlSession.insert("buy.insertBuyOne", bvo);
 	}
 
+	@Override
+	public void delCartOne(int cart_idx) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int selMaxbuynum() throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("buy.selMaxbuynum");
+	}
+
 }

@@ -41,7 +41,16 @@ public class OrderController {
 		// State_num(배송상태), Pay_option은 일단 소스상에 정보를 넣어둠
 
 		String id = "joohyung";
-
+		int buynum=0;
+		try {
+			buynum = (buyDao.selMaxbuynum())+1;
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		if(buynum==0) buynum=10000;
+		
+		
 		String buymobile = req.getParameter("buymobile"); // 구매자 폰번호
 
 		String recname = req.getParameter("recname"); // 받는이 이름
@@ -53,16 +62,6 @@ public class OrderController {
 		String reqcomm = req.getParameter("reqcomm"); // 받는이 요청사항
 		String reqspcomm = req.getParameter("reqspcomm"); // 받는이 추가요청사항. 널값 허용
 		String[] cart_idx = req.getParameterValues("cart_idx");
-
-		logger.debug("buymobile : " + buymobile);
-		logger.debug("recname : " + recname);
-		logger.debug("recmobile : " + recmobile);
-		logger.debug("recpost : " + recpost);
-		logger.debug("recmainaddr : " + recmainaddr);
-		logger.debug("recsubaddr : " + recsubaddr);
-		logger.debug("recspphone : " + recspphone);
-		logger.debug("reqcomm : " + reqcomm);
-		logger.debug("reqspcomm : " + reqspcomm);
 
 		BuyVo bvo = new BuyVo();
 		bvo.setId(id);
@@ -79,17 +78,17 @@ public class OrderController {
 		bvo.setComment(reqcomm);
 		bvo.setAdd_comment(reqspcomm);
 		bvo.setPay_option("무통장");
-
+		bvo.setBuynum(buynum);
 		
 		CartVo cvo = new CartVo();
 		for (String str : cart_idx) {
-			logger.debug("cart_idx : " + str);
 			try {
 				cvo = buyDao.selectPcartOne(Integer.parseInt(str));
 				bvo.setSerial_num(cvo.getSerial_num());
 				bvo.setEa(cvo.getEa());
 				logger.debug("bvo" + bvo);
-				buyDao.insertBuyOne(bvo);
+				buyDao.insertBuyOne(bvo);//TB_Buy에 등록
+				buyDao.delCartOne(Integer.parseInt(str));//장바구니에서 삭제. //아직 구현 안함
 			}catch (Exception e) {e.printStackTrace();}
 		}
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
- 
+
 public interface BuyDao {
 	static final Logger logger = LoggerFactory.getLogger(BuyDao.class);
 	
@@ -12,4 +12,6 @@ public interface BuyDao {
 	UserVo selOneUser(String id) throws Exception;
 	CartVo selectPcartOne(int cart_idx) throws Exception;
 	void insertBuyOne(BuyVo bvo) throws Exception;
+	void delCartOne(int cart_idx) throws Exception;
+	int selMaxbuynum() throws Exception;
 }

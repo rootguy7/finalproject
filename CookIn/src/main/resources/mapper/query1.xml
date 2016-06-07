@@ -14,8 +14,11 @@
 		select cart_idx, `name` p_name, id, TB_PRODUCT.serial_num, ea, price eaPrice, cart_date from TB_CART, TB_PRODUCT where TB_CART.serial_num = TB_PRODUCT.serial_num and cart_idx=#{value}
 	</select>
 	<insert id="insertBuyOne" parameterType="com.hb.model.BuyVo">
-		insert into TB_BUY(id, serial_num, ea, state_num, rec_name, phone, post, main_addr, sub_addr, se_phone, comment, add_comment, pay_option) values(#{id}, #{serial_num}, #{ea}, #{state_num}, #{rec_name}, #{phone}, #{post}, #{main_addr}, #{sub_addr}, #{se_phone}, #{comment}, #{add_comment}, #{pay_option})
+		insert into TB_BUY(id, serial_num, ea, state_num, rec_name, phone, post, main_addr, sub_addr, se_phone, comment, add_comment, pay_option, buynum) values(#{id}, #{serial_num}, #{ea}, #{state_num}, #{rec_name}, #{phone}, #{post}, #{main_addr}, #{sub_addr}, #{se_phone}, #{comment}, #{add_comment}, #{pay_option}, #{buynum})
 	</insert>
+	<select id="selMaxbuynum" resultType="int">
+		select max(buynum) from TB_BUY
+	</select>
 </mapper>
 
 
