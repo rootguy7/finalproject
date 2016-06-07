@@ -11,6 +11,9 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="/cook/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+</script>
 </head>
 <body> 
 	<body id="page-top" class="index">
