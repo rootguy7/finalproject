@@ -37,7 +37,7 @@ public class MyController {
 	@RequestMapping("/mypage/point") //내포인트
 	public String MypagePoint(Model model) {
 		
-		String id = "joohyung";
+		String id = "jiyooni";
 		UserVo userOne = null;
 		try {
 			userOne = userDao.selectOne(id);
@@ -45,7 +45,7 @@ public class MyController {
 			e1.printStackTrace();
 		}
 		
-		model.addAttribute("userOne", userOne);
+		model.addAttribute("userone", userOne);
 		
 		return "mypage/point";
 	}

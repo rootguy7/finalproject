@@ -5,10 +5,10 @@
 
 <mapper namespace="user">
 	<select id="selectAll" resultType="com.hb.model.UserVo">
-		SELECT id, password, name, post, main_addr, sub_addr, sex, phone, mobile, email, point, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num and TB_USER.id=#{id};
+		SELECT id, password, name, post, main_addr, sub_addr, sex, phone, mobile, email, point, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num
   	</select>
 	<select id="selectOne" resultType="com.hb.model.UserVo" parameterType="String">
-		SELECT id, name, post, main_addr, sub_addr, sex, phone, mobile, email, point, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num and TB_USER.id=#{id};
+		SELECT id, `name`, post, main_addr, sub_addr, sex, phone, mobile, email, `point`, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num and TB_USER.id=#{id}
 	</select>
 </mapper>
 
