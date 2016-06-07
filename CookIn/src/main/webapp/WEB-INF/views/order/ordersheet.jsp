@@ -86,6 +86,24 @@
                 $(this).val(inputVal.replace(/[^0-9]/gi,''));
             }
         });
+        
+        $(".chkbasic").click(function(){
+	        //눌렀을때 체크 되어 있다면
+	        if($(".chkbasic").prop("checked")){
+	        	alert('체크됨');
+	        	$('.recname').val('${userOne.name}');
+	        	$('.recmobile').val('${userOne.mobile}');
+	        	$('.recpost').val('${userOne.post}');
+	        	$('.recmainaddr').val('${userOne.main_addr}');
+	        	$('.recsubaddr').val('${userOne.sub_addr}');
+	        }else{
+	        	$('.recname').val('');
+	        	$('.recmobile').val('');
+	        	$('.recpost').val('');
+	        	$('.recmainaddr').val('');
+	        	$('.recsubaddr').val('');
+	        }
+	    })
     });
 </script>
 </head>
@@ -119,18 +137,19 @@
 				<form class="form-inline" action="/cook/immpay" method="post">
 				<table class="table">
 				<tr>
-					<td id="tbclr" >이름</td><td>손지현</td>
+					<td id="tbclr" >이름</td><td>${userOne.name }</td>
 				</tr>
 				<tr>
-					<td id="tbclr">이메일</td><td>hello@world</td>
+					<td id="tbclr">이메일</td><td>${userOne.email }</td>
 				</tr>
 				<tr>
 					<td id="tbclr">휴대폰 번호</td>
 					<td>
 						
-						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control onlyNumber" name="buymobile" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요.">
-						  </div>
+<!-- 						  <div class="form-group form-group-sm"> -->
+<!-- 						    <input type="text" class="form-control onlyNumber" name="buymobile" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요."> -->
+<!-- 						  </div> -->
+							${userOne.mobile }
 					 </td>
 				</tr>
 				</table>
@@ -141,7 +160,7 @@
 					<td id="tbclr">이름</td>
 					<td>
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control" id="exampleInputName2" name="recname" >
+						    <input type="text" class="form-control recname" id="exampleInputName2" name="recname" >
 						  </div>
 					 </td>
 				</tr>
@@ -149,7 +168,7 @@
 					<td id="tbclr">휴대폰</td>
 						<td>
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control onlyNumber" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요." name="recmobile">
+						    <input type="text" class="form-control onlyNumber recmobile" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요." name="recmobile">
 						  </div>
 					 </td>
 				</tr>
@@ -158,17 +177,17 @@
 					<td>
 						<div class="col-xs-3">
 						<div class="form-group form-group-sm" >
-						<input type="text" class="form-control onlyNumber" id="sample6_postcode" placeholder="우편번호" name="recpost" >
+						<input type="text" class="form-control onlyNumber recpost" id="sample6_postcode" placeholder="우편번호" name="recpost" >
 						</div>
 						</div>
 					<button type="button" class="btn btn-default"  onclick="sample6_execDaumPostcode()">우편번호 찾기</button>
 					<div class="col-xs-15">
 						  <div class="form-group form-group-sm" >
-						    <input type="text" class="form-control" id="sample6_address" placeholder="주소를 입력해주세요" name="recmainaddr">
+						    <input type="text" class="form-control recmainaddr" id="sample6_address" placeholder="주소를 입력해주세요" name="recmainaddr">
 						  </div>
 						</div>
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control" id="sample6_address2" placeholder="상세주소" name="recsubaddr">
+						    <input type="text" class="form-control recsubaddr" id="sample6_address2" placeholder="상세주소" name="recsubaddr">
 						  </div>
 					</td>
 				</tr>
@@ -196,7 +215,7 @@
 				</table>
 				<div class="checkbox">
 				    <label>
-				      <input type="checkbox"> 기본 배송지로 설정 
+				      <input type="checkbox" class="chkbasic"> 기본 배송지로 설정 
 				    </label>
 				  </div>
 				<br/>

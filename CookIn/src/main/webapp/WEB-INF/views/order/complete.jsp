@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +39,14 @@
     <div class="container"> <!-- container start -->
         <div class="row">	
 
-
+			<c:set var="totalSum" value="0"/>	
+			<c:set var="totalEa" value="0" /><!--  -->
+			<c:set var="delCh" value="2500"/><!-- 배송료 -->
+				
+			<c:forEach items="${buyList }" var="tot">
+					<c:set var="totalSum" value="${tot.ea*tot.eaPrice+totalSum }"/>	
+					<c:set var="totalEa" value="${tot.ea+totalEa }"/>	
+			</c:forEach>
             <div class="col-md-12"> <!-- col-md- start -->
               <br/><br/><br/>
            		<h2>주문 완료</h2> 
@@ -48,11 +57,13 @@
 				<tr>
 					<td>구입상품 명</td><td>상품가격</td><td>개수</td><td>주문금액</td>
 				</tr>
+				<c:forEach items="${buyList }" var="buyVo">
+					<tr>
+						<td>${buyVo.pname }</td><td>${buyVo.eaPrice }원</td><td>${buyVo.ea }개</td><td>${buyVo.eaPrice*buyVo.ea }원</td>
+					</tr>
+				</c:forEach>
 				<tr>
-					<td>헬로키티 흰색</td><td>8,900원</td><td>1개</td><td>8,900원</td>
-				</tr>
-				<tr>
-					<td colspan="4">결제금액 : 8,900원 + 배송료 2,500원 = 11,400원</td>
+					<td colspan="4">결제금액 : ${totalSum }원 + 배송료 ${delCh }원 = ${totalSum+delCh }원</td>
 				</tr>
 				</table>
 				<h3>결제 방법</h3> 
@@ -65,25 +76,25 @@
 				<h3>주문자 정보</h3> 
 				<table class="table">
 				<tr>
-					<td id="tbclr">이름</td><td>손지현</td>
+					<td id="tbclr">이름</td><td>${userOne.name }</td>
 				</tr>
 				<tr>
-					<td id="tbclr">E-mail</td><td>hello@world</td>
+					<td id="tbclr">E-mail</td><td>${userOne.email }</td>
 				</tr>
 				<tr>
-					<td id="tbclr">연락처</td><td>010-0000-0000</td>
+					<td id="tbclr">연락처</td><td>${userOne.mobile }</td>
 				</tr>
 				</table>
 				<h3>배송지 정보</h3> 
 				<table class="table">
 				<tr>
-					<td id="tbclr">이름</td><td>손지현</td>
+					<td id="tbclr">이름</td><td>${buyList[0].rec_name }</td>
 				</tr>
 				<tr>
-					<td id="tbclr">연락처</td><td>010-0000-0000</td>
+					<td id="tbclr">연락처</td><td>${buyList[0].phone }</td>
 				</tr>
 				<tr>
-					<td id="tbclr">주소</td><td>서울시 서대문구 동동동 </td>
+					<td id="tbclr">주소</td><td>${buyList[0].main_addr } </td>
 				</tr>
 				<tr>
 					<td id="tbclr">주문메세지</td>

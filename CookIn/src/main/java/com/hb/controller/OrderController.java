@@ -1,6 +1,9 @@
 
 package com.hb.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.hb.model.BuyDao;
+import com.hb.model.BuyEPVo;
 import com.hb.model.BuyVo;
 import com.hb.model.CartVo;
 import com.hb.model.UserVo;
@@ -44,8 +48,9 @@ public class OrderController {
 		int buynum=0;
 		try {
 			buynum = (buyDao.selMaxbuynum())+1;
+		} catch(NullPointerException e){
+			logger.debug("기존 운송번호 없음. 새로운 번호 부여");
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		if(buynum==0) buynum=10000;
@@ -64,6 +69,9 @@ public class OrderController {
 		String[] cart_idx = req.getParameterValues("cart_idx");
 
 		BuyVo bvo = new BuyVo();
+		UserVo userOne = null;
+		List<BuyEPVo> buyList = new ArrayList<BuyEPVo>(); 
+		
 		bvo.setId(id);
 		// sn pass. 밑에서 정보 얻어와서 입력후 쿼리 날릴꺼
 		// ea pass. 밑에서 정보 얻어와서 입력후 쿼리 날릴꺼
@@ -83,25 +91,24 @@ public class OrderController {
 		CartVo cvo = new CartVo();
 		for (String str : cart_idx) {
 			try {
+				logger.debug("bvo" + bvo);
 				cvo = buyDao.selectPcartOne(Integer.parseInt(str));
 				bvo.setSerial_num(cvo.getSerial_num());
 				bvo.setEa(cvo.getEa());
-				logger.debug("bvo" + bvo);
-				buyDao.insertBuyOne(bvo);//TB_Buy에 등록
-				buyDao.delCartOne(Integer.parseInt(str));//장바구니에서 삭제. //아직 구현 안함
+				buyList.add(new BuyEPVo(bvo, cvo.getP_name(), cvo.getEaPrice()));//리스트에 등록
+				buyDao.insertBuyOne(bvo);//DB TB_Buy에 등록
+				buyDao.delCartOne(Integer.parseInt(str));//DB 장바구니에서 삭제. //아직 구현 안함
 			}catch (Exception e) {e.printStackTrace();}
 		}
 
-		UserVo userOne = null;
+		
 		try {
 			userOne = buyDao.selOneUser(id);
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} catch (Exception e) {e.printStackTrace();}
+		
 		
 		model.addAttribute("userOne", userOne);
+		model.addAttribute("buyList", buyList);
 		return "order/complete";
 	}
 

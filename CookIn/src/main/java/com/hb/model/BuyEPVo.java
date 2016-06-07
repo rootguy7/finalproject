@@ -2,8 +2,8 @@ package com.hb.model;
 
 import java.sql.Date;
 
-public class BuyVo{
-	//TB_BUY 테이블에 쓸꺼
+public class BuyEPVo{
+	//BuyVo+개당 가격이 있는 vo
 	
 	private int index;
 	private String id;
@@ -30,12 +30,17 @@ public class BuyVo{
 	 * 운송장 번호
 	 */
 	private int buynum;
+	private int eaPrice;
+	private String pname;//상품명
 	
-	public BuyVo() {}
+	public BuyEPVo() {}
 
-	public BuyVo(int index, String id, int serial_num, int ea, int state_num, Date req_date, String rec_name,
+	
+	
+
+	public BuyEPVo(int index, String id, int serial_num, int ea, int state_num, Date req_date, String rec_name,
 			int phone, int post, String main_addr, String sub_addr, int se_phone, String comment, String add_comment,
-			String pay_option, int buynum) {
+			String pay_option, int buynum, int eaPrice, String pname) {
 		this.index = index;
 		this.id = id;
 		this.serial_num = serial_num;
@@ -52,25 +57,32 @@ public class BuyVo{
 		this.add_comment = add_comment;
 		this.pay_option = pay_option;
 		this.buynum = buynum;
+		this.eaPrice = eaPrice;
+		this.pname = pname;
 	}
-	
-	public BuyVo(BuyVo vo){
-		this.index = vo.index;
-		this.id = vo.id;
-		this.serial_num = vo.serial_num;
-		this.ea = vo.ea;
-		this.state_num = vo.state_num;
-		this.req_date = vo.req_date;
-		this.rec_name = vo.rec_name;
-		this.phone = vo.phone;
-		this.post = vo.post;
-		this.main_addr = vo.main_addr;
-		this.sub_addr = vo.sub_addr;
-		this.se_phone = vo.se_phone;
-		this.comment = vo.comment;
-		this.add_comment = vo.add_comment;
-		this.pay_option = vo.pay_option;
-		this.buynum = vo.buynum;
+
+
+
+
+	public BuyEPVo(BuyVo vo, String pname, int eaPrice){
+		this.index = vo.getIndex();
+		this.id = vo.getId();
+		this.serial_num = vo.getSerial_num();
+		this.ea = vo.getEa();
+		this.state_num = vo.getState_num();
+		this.req_date = vo.getReq_date();
+		this.rec_name = vo.getRec_name();
+		this.phone = vo.getPhone();
+		this.post = vo.getPost();
+		this.main_addr = vo.getMain_addr();
+		this.sub_addr = vo.getSub_addr();
+		this.se_phone = vo.getSe_phone();
+		this.comment = vo.getComment();
+		this.add_comment = vo.getAdd_comment();
+		this.pay_option = vo.getPay_option();
+		this.buynum = vo.getBuynum();
+		this.eaPrice = eaPrice;
+		this.pname = pname;
 	}
 
 		
@@ -202,13 +214,41 @@ public class BuyVo{
 		this.buynum = buynum;
 	}
 
-	@Override
-	public String toString() {
-		return "BuyVo [index=" + index + ", id=" + id + ", serial_num=" + serial_num + ", ea=" + ea + ", state_num="
-				+ state_num + ", req_date=" + req_date + ", rec_name=" + rec_name + ", phone=" + phone + ", post="
-				+ post + ", main_addr=" + main_addr + ", sub_addr=" + sub_addr + ", se_phone=" + se_phone + ", comment="
-				+ comment + ", add_comment=" + add_comment + ", pay_option=" + pay_option + ", buynum=" + buynum + "]";
+	/**
+	 * @return the eaPrice
+	 */
+	public int getEaPrice() {
+		return eaPrice;
+	}
+
+	/**
+	 * @param eaPrice the eaPrice to set
+	 */
+	public void setEaPrice(int eaPrice) {
+		this.eaPrice = eaPrice;
 	}
 	
-	
+	/**
+	 * @return the pname
+	 */
+	public String getPname() {
+		return pname;
+	}
+
+
+	/**
+	 * @param pname the pname to set
+	 */
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+
+	@Override
+	public String toString() {
+		return "BuyEPVo [index=" + index + ", id=" + id + ", serial_num=" + serial_num + ", ea=" + ea + ", state_num="
+				+ state_num + ", req_date=" + req_date + ", rec_name=" + rec_name + ", phone=" + phone + ", post="
+				+ post + ", main_addr=" + main_addr + ", sub_addr=" + sub_addr + ", se_phone=" + se_phone + ", comment="
+				+ comment + ", add_comment=" + add_comment + ", pay_option=" + pay_option + ", buynum=" + buynum
+				+ ", eaPrice=" + eaPrice + ", pname=" + pname + "]";
+	}
 }

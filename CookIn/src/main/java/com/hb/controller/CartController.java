@@ -53,20 +53,32 @@ public class CartController {
 		//그 갯수 만큼 selec 쿼리를 날리고 그 값을 List에 add 시킴
 		//프론트에서 유효성 검사 했지만 혹시 몰라서 한번더 유효성 검사 함
 		
-		String[] listidx = req.getParameterValues("chkitm");
+		//id 세션 검사 해야하지만 일단 임시로 넣음
+		String id = "joohyung";
+		
+		String[] listidx = req.getParameterValues("chkitm");//input 체크박스에 체크된값의 value를 받아옴 
 		List<CartVo> clist = new ArrayList<CartVo>();
 		
 		
-		if(!("".equals(listidx) || listidx == null)){
+		if(!("".equals(listidx) || listidx == null)){//유효성 검사. 프론트에서 했지만 혹시 몰라서 한번더 유효성 검사
 			for (String str : listidx) {
 				logger.debug("받아들인 index : "+str);
 				try {
-					clist.add(buyDao.selectPcartOne(Integer.parseInt(str)));
+					clist.add(buyDao.selectPcartOne(Integer.parseInt(str)));//vo 하나를 뽑아내고 add시키는걸 반복함
 				}catch (Exception e) {e.printStackTrace();}
 			}
+			
 		}
 		
+		UserVo userOne = null;
+		
+		try {
+			userOne = buyDao.selOneUser(id);
+		} catch (Exception e) {e.printStackTrace();}
+		
+		model.addAttribute("userOne", userOne);
 		model.addAttribute("buyList", clist);
+		
 		return "order/ordersheet";
 	}
 
