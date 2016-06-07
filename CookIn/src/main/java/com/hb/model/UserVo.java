@@ -11,7 +11,16 @@ public class UserVo {
 	private String email;
 	private int point;
 	private String pm_num;
+	private String password;
 	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public UserVo() {}
 
 	public UserVo(String id, String name, int post, String main_addr, String sub_addr, String phone, String mobile,

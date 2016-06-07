@@ -1,8 +1,10 @@
 package com.hb.model;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
+
 
 public class UserDaoImp implements UserDao{
 
@@ -25,6 +27,16 @@ public class UserDaoImp implements UserDao{
 	
 	public List<UserVo> selectUserInfo() throws Exception{
 		return sqlSession.selectList("info.selectUserInfo");
+	}
+	
+	@Override
+	public int getLoginResult(Map<String, String> map) {
+		return (Integer) sqlSession.selectOne("user.getLoginResult", map);
+	}
+
+	@Override
+	public UserVo getUserInfo(String id) {
+		return (UserVo) sqlSession.selectOne("user.getUserInfo",id);
 	}
 
 }

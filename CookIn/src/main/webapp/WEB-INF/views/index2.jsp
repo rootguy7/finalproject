@@ -91,10 +91,10 @@ $(document).ready(function(){
 		       },
 		       error: function (jqXHR, textStatus, errorThrown) {
 	               alert("ERROR" + textStatus + " : " + errorThrown);
-	           }
-		   
-		    }); //ajax end
-
+	  	       }
+		       
+		       
+	    }); //ajax end
 	}); //click end
 }); //ready end
 </script>

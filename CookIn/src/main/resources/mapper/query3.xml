@@ -15,6 +15,11 @@
 		FROM TB_PM, TB_USER, TB_BUY
 		WHERE TB_PM.pm_num=TB_USER.pm_num and TB_USER.id=TB_BUY.id and TB_USER.id=#{id}
 	</select>
+	<select id="getLoginResult" parameterType="com.hb.model.UserVo"  resultType="Integer">
+	    SELECT COUNT(id) 
+	    FROM TB_USER 
+	    WHERE id=#{id} AND PASSWORD=#{password};
+	</select>
 </mapper>
 
 
