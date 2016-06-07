@@ -1,6 +1,6 @@
 package com.hb.model;
 
-public class ProductVo {
+public class ProductVo { 
 	
 	private int serial_num;
 	private int kind_num;

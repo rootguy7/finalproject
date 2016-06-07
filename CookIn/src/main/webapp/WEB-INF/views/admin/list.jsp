@@ -70,7 +70,7 @@ $(document).ready(function(){
 			<table class="table-condensed table-hover table tabletd">
 				<colgroup>
 	                <col width="100" />
-	                <col width="300" />
+	                <col width="300" /> 
 	                <col width="500" />
 	                <col width="200" />
 	            </colgroup>

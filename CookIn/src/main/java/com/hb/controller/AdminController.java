@@ -24,7 +24,7 @@ public class AdminController {
 	public String index(){
 		return "adm_index";
 	}
-	
+	 
 	@RequestMapping("/admin/info")
 	public String info(Model model){
 		List<UserVo> list=null;
