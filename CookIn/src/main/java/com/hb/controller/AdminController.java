@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hb.model.ProductDao;
+import com.hb.model.ProductVo;
 import com.hb.model.UserDao;
 import com.hb.model.UserVo;
 
@@ -15,11 +17,14 @@ public class AdminController {
 	
 	@Autowired
 	private UserDao dao;
+	@Autowired
+	private ProductDao dao1;
 	
 	@RequestMapping("/admin")
 	public String index(){
 		return "adm_index";
 	}
+	
 	@RequestMapping("/admin/info")
 	public String info(Model model){
 		List<UserVo> list=null;
@@ -30,11 +35,18 @@ public class AdminController {
 			e.printStackTrace();
 		}
 		model.addAttribute("list", list);
-		
 		return "admin/info";
 	}
 	@RequestMapping("/admin/list")
-	public String list(){
+	public String list(Model model){
+		List<ProductVo> list=null;
+		try {
+			list=dao1.selectProList();
+			System.out.println(list.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("list",list);
 		return "admin/list";
 	}
 	@RequestMapping("/admin/listedit")

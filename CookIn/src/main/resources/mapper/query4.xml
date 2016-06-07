@@ -7,6 +7,9 @@
 	<select id="selectUserInfo" resultType="com.hb.model.UserVo" parameterType="String">
   		SELECT id, name, phone, point FROM TB_USER
   	</select>
+	<select id="selectProList" resultType="com.hb.model.ProductVo" parameterType="String">
+  		select serial_num, name, price from TB_PRODUCT
+  	</select>
 </mapper>
 
 
