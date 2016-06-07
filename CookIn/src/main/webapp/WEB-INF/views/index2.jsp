@@ -71,10 +71,30 @@ $(document).ready(function(){
 				$('#userpw').focus();
 				return false;
 			}
-			
+						
 			/* $('#loginForm').attr('action','login.blog').submit();
 			return;  */
 // 		} 
+		   
+			var url = "/cook/login";   //Controller 호출
+		    var postString = "";       // post방식으로 처리하기 위한 파라미터들
+		    postString   = "id=" + $('#userid').val();
+		    postString += "&pw=" + $('#userpw').val();
+			
+		    $.ajax({                          // 이부분부터 비동기통신을 하게 된다. 위에서 설정한 값들을 입력후
+		        type: "POST",
+		        url: url,
+		        data: postString,
+		        success: function() {  //성공시 이 함수를 호출한다.
+// 		            setTimeout('parent.stopLayer('+msg+')',2500); 
+		       	alert("성공");
+		       },
+		       error: function (jqXHR, textStatus, errorThrown) {
+	               alert("ERROR" + textStatus + " : " + errorThrown);
+	           }
+		   
+		    }); //ajax end
+
 	}); //click end
 }); //ready end
 </script>
