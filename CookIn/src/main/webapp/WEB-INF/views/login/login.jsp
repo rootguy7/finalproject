@@ -38,7 +38,7 @@
 				<h4 class="modal-title" id="myModalLabel">Log in</h4>
 			</div>
 			<div class="modal-body">
-				<form action="#" method="post">
+				<form action="#" method="post" id="loginForm">
 					<div class="form-group">
 						<label for="userid" class="control-label">ID</label>
 						<input type="text" class="form-control" id="userid">
@@ -48,7 +48,7 @@
 						<input type="password" class="form-control" id="userpw">
 					</div>
 					<div class="form-group bottomColor">
-						<button type="submit">SIGN IN</button>
+						<button type="submit" id="loginButton">SIGN IN</button>
 					</div>
 				</form>
 			</div>

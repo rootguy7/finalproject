@@ -50,6 +50,34 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="/cook/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+// 	alert("main 실행");
+	
+	//Sign in 버튼 클릭시 이벤트 발생
+	$('#loginButton').click(function(){
+// 		var loginSubmit = function(){
+			//아이디 벨리데이션 검사
+			if($('#userid').val() == "") 
+			{
+				alert("아이디를 입력해주세요");
+				$('#userid').focus();
+				return false;
+			}
+			//패스워드 벨리데이션 검사
+			else if($('#userpw').val() == "") 
+			{
+				alert("비밀번호를 입력해주세요");
+				$('#userpw').focus();
+				return false;
+			}
+			
+			/* $('#loginForm').attr('action','login.blog').submit();
+			return;  */
+// 		} 
+	}); //click end
+}); //ready end
+</script>
 </head>
 
 <body id="page-top" class="index">
