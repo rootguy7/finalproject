@@ -1,5 +1,6 @@
 package com.hb.model;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -44,4 +45,9 @@ public class BuyDaoImp implements BuyDao{
 		return sqlSession.selectOne("buy.selMaxbuynum");
 	}
 
+	@Override
+	public void editPoint(HashMap<String, String> map) {
+		sqlSession.update("buy.editPoint", map);
+		
+	}
 }

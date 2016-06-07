@@ -22,6 +22,9 @@
 .mr{
 	margin-bottom: 100px; 
 }
+.lpadding{
+	padding-left: 0px;
+}
 </style>
 
 <c:set var="delCh" value="2500"/> <!-- 배송비. 어디다 선언할 때가 없어서 일단 씀. 나중에 수정 할 생각 -->
@@ -90,7 +93,6 @@
         $(".chkbasic").click(function(){
 	        //눌렀을때 체크 되어 있다면
 	        if($(".chkbasic").prop("checked")){
-	        	alert('체크됨');
 	        	$('.recname').val('${userOne.name}');
 	        	$('.recmobile').val('${userOne.mobile}');
 	        	$('.recpost').val('${userOne.post}');
@@ -104,6 +106,20 @@
 	        	$('.recsubaddr').val('');
 	        }
 	    })
+	    
+	    $('form').submit(function(){
+	    	var flag=true;
+	    	$(".notnull").each(function(){
+	    		if($(this).val()==""){
+	    			alert('필수 입력값을 확인하세요.');
+	    			this.focus();
+	    			flag=false;
+	    			return false;
+	    		}
+	    	});
+	    	if(!flag)
+    			return false;
+	    });//submit 끝
     });
 </script>
 </head>
@@ -157,37 +173,37 @@
 				<h3>받는사람 정보</h3> 
 				<table class="table">
 				<tr>
-					<td id="tbclr">이름</td>
+					<td id="tbclr">이름(*)</td>
 					<td>
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control recname" id="exampleInputName2" name="recname" >
+						    <input type="text" class="form-control recname notnull" id="exampleInputName2" name="rec_name" >
 						  </div>
 					 </td>
 				</tr>
 				<tr>
-					<td id="tbclr">휴대폰</td>
+					<td id="tbclr">휴대폰(*)</td>
 						<td>
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control onlyNumber recmobile" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요." name="recmobile">
+						    <input type="text" class="form-control onlyNumber recmobile notnull" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요." name="phone">
 						  </div>
 					 </td>
 				</tr>
 				<tr>
-					<td id="tbclr">배송주소</td>
+					<td id="tbclr">배송주소(*)</td>
 					<td>
-						<div class="col-xs-3">
+						<div class="col-xs-3 lpadding">
 						<div class="form-group form-group-sm" >
-						<input type="text" class="form-control onlyNumber recpost" id="sample6_postcode" placeholder="우편번호" name="recpost" >
+						<input type="text" class="form-control onlyNumber recpost notnull" id="sample6_postcode" placeholder="우편번호" name="post" >
 						</div>
 						</div>
 					<button type="button" class="btn btn-default"  onclick="sample6_execDaumPostcode()">우편번호 찾기</button>
 					<div class="col-xs-15">
 						  <div class="form-group form-group-sm" >
-						    <input type="text" class="form-control recmainaddr" id="sample6_address" placeholder="주소를 입력해주세요" name="recmainaddr">
+						    <input type="text" class="form-control recmainaddr notnull" id="sample6_address" placeholder="주소를 입력해주세요" name="main_addr">
 						  </div>
 						</div>
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control recsubaddr" id="sample6_address2" placeholder="상세주소" name="recsubaddr">
+						    <input type="text" class="form-control recsubaddr notnull" id="sample6_address2" placeholder="상세주소" name="sub_addr">
 						  </div>
 					</td>
 				</tr>
@@ -195,21 +211,21 @@
 					<td id="tbclr">추가 연락처</td>	
 					<td>
 						  <div class="form-group form-group-sm">
-						    <input type="text" class="form-control onlyNumber" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요." name="recspphone">
+						    <input type="text" class="form-control onlyNumber" id="exampleInputName2" placeholder="-를 제외하고 숫자만 입력하세요." name="se_phone">
 						  </div>
 					 </td>
 				</tr>
 				<tr>
 					<td id="tbclr">배송 시 요청사항</td>
 					<td>
-					<select class="form-control" name="reqcomm">
+					<select class="form-control" name="comment">
 						  <option>배송시 요청사항을 선택해 주세요.</option>
 						  <option>배송 전 연락 바랍니다.</option>
 						  <option>집 앞에 놔 주세요.</option>
 						  <option>경비실에 맡겨 주세요.</option>
 						  <option>택배함에 놔 주세요.</option>
 					</select>
-					<input type="text" class="form-control " placeholder="기타내용을 입력해 주세요." name="reqspcomm">
+					<input type="text" class="form-control " placeholder="기타내용을 입력해 주세요." name="add_comment">
 					</td>
 				</tr>
 				</table>
@@ -247,13 +263,13 @@
 					<td id="tbclr">결제방법</td>
 					<td>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions"  value="card">신용/체크카드
+						  <input type="radio" name="pay_option"  value="card">신용/체크카드
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions" value="phone"> 휴대폰
+						  <input type="radio" name="pay_option" value="phone"> 휴대폰
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="inlineRadioOptions"  value="bankbook"> 무통장입금
+						  <input type="radio" name="pay_option"  value="bankbook"> 무통장입금
 						</label>
 				  </td>
 				</tr>

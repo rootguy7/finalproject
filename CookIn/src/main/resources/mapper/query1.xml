@@ -14,11 +14,15 @@
 		select cart_idx, `name` p_name, id, TB_PRODUCT.serial_num, ea, price eaPrice, cart_date from TB_CART, TB_PRODUCT where TB_CART.serial_num = TB_PRODUCT.serial_num and cart_idx=#{value}
 	</select>
 	<insert id="insertBuyOne" parameterType="com.hb.model.BuyVo">
-		insert into TB_BUY(id, serial_num, ea, state_num, rec_name, phone, post, main_addr, sub_addr, se_phone, comment, add_comment, pay_option, buynum) values(#{id}, #{serial_num}, #{ea}, #{state_num}, #{rec_name}, #{phone}, #{post}, #{main_addr}, #{sub_addr}, #{se_phone}, #{comment}, #{add_comment}, #{pay_option}, #{buynum})
+	<!-- 널값 넘어오면 널을 자동으로 넘겨주게 jdbcType=(데이터 타입) 이걸 사용함-->
+		insert into TB_BUY(id, serial_num, ea, state_num, rec_name, phone, post, main_addr, sub_addr, se_phone, comment, add_comment, pay_option, buynum) values(#{id}, #{serial_num}, #{ea}, #{state_num}, #{rec_name}, #{phone}, #{post}, #{main_addr}, #{sub_addr}, #{se_phone, jdbcType=VARCHAR}, #{comment}, #{add_comment, jdbcType=VARCHAR}, #{pay_option}, #{buynum})
 	</insert>
 	<select id="selMaxbuynum" resultType="int">
 		select max(buynum) from TB_BUY
 	</select>
+	<update id="editPoint" parameterType="hashmap">
+		update TB_USER set point=#{point} where id=#{id}
+	</update>
 </mapper>
 
 

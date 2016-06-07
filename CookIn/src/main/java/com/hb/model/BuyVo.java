@@ -12,14 +12,14 @@ public class BuyVo{
 	private int state_num;
 	private Date req_date;
 	private String rec_name;
-	private int phone;
+	private String phone;
 	private int post;
 	private String main_addr;
 	private String sub_addr;
 	/**
 	 * DB에 널값 가능
 	 */
-	private int se_phone;
+	private String se_phone;
 	private String comment;
 	/**
 	 * DB에 널값 가능
@@ -34,7 +34,7 @@ public class BuyVo{
 	public BuyVo() {}
 
 	public BuyVo(int index, String id, int serial_num, int ea, int state_num, Date req_date, String rec_name,
-			int phone, int post, String main_addr, String sub_addr, int se_phone, String comment, String add_comment,
+			String phone, int post, String main_addr, String sub_addr, String se_phone, String comment, String add_comment,
 			String pay_option, int buynum) {
 		this.index = index;
 		this.id = id;
@@ -102,7 +102,7 @@ public class BuyVo{
 		return rec_name;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
@@ -118,7 +118,7 @@ public class BuyVo{
 		return sub_addr;
 	}
 
-	public int getSe_phone() {
+	public String getSe_phone() {
 		return se_phone;
 	}
 
@@ -166,7 +166,7 @@ public class BuyVo{
 		this.rec_name = rec_name;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
@@ -182,7 +182,7 @@ public class BuyVo{
 		this.sub_addr = sub_addr;
 	}
 
-	public void setSe_phone(int se_phone) {
+	public void setSe_phone(String se_phone) {
 		this.se_phone = se_phone;
 	}
 

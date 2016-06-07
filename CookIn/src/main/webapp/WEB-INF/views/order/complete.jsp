@@ -94,11 +94,11 @@
 					<td id="tbclr">연락처</td><td>${buyList[0].phone }</td>
 				</tr>
 				<tr>
-					<td id="tbclr">주소</td><td>${buyList[0].main_addr } </td>
+					<td id="tbclr">주소</td><td>${buyList[0].main_addr } ${buyList[0].sub_addr }</td>
 				</tr>
 				<tr>
 					<td id="tbclr">주문메세지</td>
-					<td>부재시 경비실에 놔주세요.</td>
+					<td>${buyList[0].comment }</td>
 				</tr>
 				</table>
 				<br/>
@@ -106,7 +106,7 @@
 				<table class="table">
 				<tr>
 					<td id="tbclr">손지현님의 주문이 완료되었습니다.<br>
-					귀하의 주문확인 번호는 0000000-00000000000000 입니다.<br>
+					귀하의 주문확인 번호는 ${buyList[0].buynum } 입니다.<br>
 					입금방법이 무통장 입금인 경우 계좌번호를 메모하세요<br>
 					입금 확인 후 상품을 준비하여 배송해 드리겠습니다.<br><br>
 					주문해주셔서 감사합니다.<br>
@@ -116,7 +116,7 @@
 				</div>
 				<div class="text-center">
 				<button type="button" class="btn btn-default" onclick="location.href='/cook/'" >계속 쇼핑하기</button>
-				<button type="button" class="btn btn-default" onclick="location.href='/mypage/allorder'">주문내역 확인</button>
+				<button type="button" class="btn btn-default" onclick="location.href='/cook/mypage/allorder'">주문내역 확인</button>
 				</div>
 				<br/><br/>
             </div> <!-- col-md- end -->

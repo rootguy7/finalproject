@@ -1,5 +1,6 @@
 package com.hb.model;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -14,4 +15,5 @@ public interface BuyDao {
 	void insertBuyOne(BuyVo bvo) throws Exception;
 	void delCartOne(int cart_idx) throws Exception;
 	int selMaxbuynum() throws Exception;
+	void editPoint(HashMap<String, String> map);
 }
