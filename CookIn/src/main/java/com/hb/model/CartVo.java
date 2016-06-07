@@ -3,7 +3,9 @@ package com.hb.model;
 import java.sql.Date;
 
 public class CartVo {
-
+	//TB_CART에 쓸꺼
+	
+	
 	private int cart_idx;
 	private String p_name;
 	private String id;

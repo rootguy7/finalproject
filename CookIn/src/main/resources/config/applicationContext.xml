@@ -3,18 +3,26 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
+	<!-- app.properties 맵핑 시킴 -->
+	<bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:/app.properties"></property>
+	</bean>
+	
 	<!-- dataSource 초기화 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://133.130.97.26/HanBit_Final" />
-		<property name="username" value="scott" />
-		<property name="password" value="tiger" />
+		<!-- <property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
+		<!-- <property name="url" value="jdbc:mysql://133.130.97.26/HanBit_Final" /> -->
+		<property name="driverClassName" value="${driverClassName.driver}" />
+		<property name="url" value="${url.url}" />
+		<property name="username" value="${username.id}" />
+		<property name="password" value="${password.pw}" />
 	</bean>
 
 	<!-- mybatis 초기화 -->
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath:/mapper/**/*.xml" />
+		<!-- <property name="mapperLocations" value="classpath:/mapper/**/*.xml" /> -->
+		<property name="mapperLocations" value="classpath:${configLocation.config}" />
 	</bean>
 
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">

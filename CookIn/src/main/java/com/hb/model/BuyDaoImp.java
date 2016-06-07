@@ -27,4 +27,9 @@ public class BuyDaoImp implements BuyDao{
 		return sqlSession.selectOne("buy.selectPcartOne", cart_idx);
 	}
 
+	@Override
+	public void insertBuyOne(BuyVo bvo) throws Exception {
+		sqlSession.insert("buy.insertBuyOne", bvo);
+	}
+
 }
