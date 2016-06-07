@@ -41,31 +41,31 @@
 	            <tr><td rowspan="8"><img id="listimg"  src="../resources/imgs/b1d1.PNG"/></td></tr>
 	            <tr>
 	            	<th class="active">상품 번호</th>
-	            	<td>1622-09</td>
+	            	<td>${var.serial_num }</td>
 	            </tr>
 	            <tr>
 	            	<th class="active">상품명</th>
-	            	<td>허쉬 자이언트 초콜렛</td>
+	            	<td>${var.name }</td>
 	            </tr>
 	            <tr>
 	            	<th class="active">입고 날짜</th>
-	            	<td>2016.05.31</td>
+	            	<td>${var.ip_date }</td>
 	            </tr>
 	            <tr>
 	            	<th class="active">제조사</th>
-	            	<td>제조사 하단참조</td>
+	            	<td>${var.c_name }</td>
 	            </tr>
 	            <tr>
 	            	<th class="active">원산지</th>
-	            	<td>미국</td>
+	            	<td>${var.c_name }</td>
 	            </tr>
 	            <tr>
 	            	<th class="active">소비자가</th>
-	            	<td>6,000원</td>
+	            	<td>${var.price}</td>
 	            </tr>
 	            <tr>
 	            	<th class="active">판매가</th>
-	            	<td>3,500원</td>
+	            	<td>${var.price}</td>
 	            </tr>
 			</table>
 		</div>
