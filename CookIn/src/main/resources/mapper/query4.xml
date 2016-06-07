@@ -10,6 +10,12 @@
 	<select id="selectProList" resultType="com.hb.model.ProductVo" parameterType="String">
   		select serial_num, name, price from TB_PRODUCT
   	</select>
+	<select id="selectOne" resultType="com.hb.model.ProductVo" parameterType="String">
+  		SELECT A.serial_num, A.name, A.price, B.IP_DATE, C.c_name, D.EA, E.kind 
+		FROM TB_PRODUCT AS A, TB_INPUT AS B, TB_COUNTRY AS C, TB_SALES AS D, TB_PROD_KIND AS E
+		where A.serial_num=100000 AND A.c_num=C.c_num
+		AND D.serial_num=A.serial_num AND A.kind_num=E.kind_num
+  	</select>
 </mapper>
 
 

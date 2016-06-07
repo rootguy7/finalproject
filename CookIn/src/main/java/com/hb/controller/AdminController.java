@@ -54,7 +54,14 @@ public class AdminController {
 		return "admin/listedit";
 	}
 	@RequestMapping("/admin/listdetail")
-	public String listdetail(){
+	public String listdetail(int serial_num, Model model){
+		ProductVo vo = null;
+		try {
+			vo = dao1.selectOne(serial_num);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("var", vo);
 		return "admin/listdetail";
 	}
 	@RequestMapping("/admin/listadd")

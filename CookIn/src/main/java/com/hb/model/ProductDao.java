@@ -8,5 +8,6 @@ import org.slf4j.LoggerFactory;
 public interface ProductDao {
 	static final Logger logger = LoggerFactory.getLogger(ProductDao.class);
 	
-	List<ProductVo> selectProList() throws Exception;
+	List<ProductVo> selectProList() throws Exception;//list
+	ProductVo selectOne(int serial_num) throws Exception;//detail
 }

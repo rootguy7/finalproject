@@ -16,4 +16,8 @@ public class ProductDaoImp implements ProductDao{
 	public List<ProductVo> selectProList() throws Exception {
 		return sqlSession.selectList("info.selectProList");
 	}
+	@Override
+	public ProductVo selectOne(int serial_num) throws Exception {
+		return sqlSession.selectOne("",serial_num);
+	}
 }

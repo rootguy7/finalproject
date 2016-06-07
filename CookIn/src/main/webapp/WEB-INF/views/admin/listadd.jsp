@@ -55,7 +55,7 @@
 	            <tr>
 	            	<th class="active">상품 대표사진</th>
 	            	<td><input type="file"id="InputFile">
-	            	<p class="help-block">파일 선택 도움말 꺄르륵 왕십리음악대장 오이도짠짜라 까치산꾀꼬리 흑석동우럭</p></td>
+	            	<p class="help-block">파일 선택 도움말</p></td>
 	            </tr>
 	            <tr>
 	            	<th class="active">상품 번호</th>
