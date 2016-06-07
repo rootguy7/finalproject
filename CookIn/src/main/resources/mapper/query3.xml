@@ -6,7 +6,7 @@
 <mapper namespace="user">
 	<select id="selectOrder" resultType="com.hb.model.UserVo" parameterType="String">
 	    SELECT TB_BUY.req_date, TB_PRODUCT.name, TB_PRODUCT.price, TB_STATE.state 
-		FROM HanBit_Final.TB_USER, HanBit_Final.TB_BUY, HanBit_Final.TB_PRODUCT, HanBit_Final.TB_STATE 
+		FROM TB_USER, TB_BUY, TB_PRODUCT, TB_STATE 
 		WHERE TB_USER.id=TB_BUY.id and TB_BUY.serial_num=TB_PRODUCT.serial_num and TB_BUY.state_num=TB_STATE.state_num
         and TB_USER.id=#{id}
   	</select>
@@ -14,6 +14,7 @@
 		SELECT id, `name`, post, main_addr, sub_addr, sex, phone, mobile, email, `point`, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num and TB_USER.id=#{id}
 	</select>
 </mapper>
+
 
 
 
