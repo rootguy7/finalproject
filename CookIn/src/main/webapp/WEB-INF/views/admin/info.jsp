@@ -52,17 +52,15 @@ table tr{
 				</span>
 		  		<table class="table">
 			  		<colgroup>
-		                <col width="100" />
 		                <col width="200" />
 		                <col width="200" />
 		                <col width="300" />
 		                <col width="300" />
 		            </colgroup>
-					<tr class="active"><th class="title">No</th><th class="title">ID</th><th class="title">이름</th><th class="title">휴대폰 번호</th><th class="title">POINT</th></tr>	
+					<tr class="active"><th class="title">ID</th><th class="title">이름</th><th class="title">휴대폰 번호</th><th class="title">POINT</th></tr>	
 		        </table>
 		        <table class="table-condensed table-hover table tabletd">
 					<colgroup>
-						<col width="100" />
 		                <col width="200" />
 		                <col width="200" />
 		                <col width="300" />
@@ -70,7 +68,6 @@ table tr{
 		            </colgroup>
 		            <c:forEach items="${list }" var="var">
 					<tr class="rownum">
-						<td>no</td>
 						<td>${var.id }</td>
 						<td>${var.name }</td>
 						<td>${var.phone }</td>
