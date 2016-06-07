@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hb.model.BbsDao;
+import com.hb.model.BbsVo;
 import com.hb.model.ProductDao;
 import com.hb.model.ProductVo;
 import com.hb.model.UserDao;
@@ -19,6 +21,8 @@ public class AdminController {
 	private UserDao dao;
 	@Autowired
 	private ProductDao dao1;
+	@Autowired
+	private BbsDao dao2;
 	
 	@RequestMapping("/admin")
 	public String index(){
@@ -81,7 +85,14 @@ public class AdminController {
 		return "admin/delivery";
 	}
 	@RequestMapping("/admin/notice")
-	public String notice(){
+	public String notice(Model model){
+		List<BbsVo> list=null;
+		try {
+			list = dao2.selectNoticeList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("list", list);
 		return "admin/notice";	
 	}
 	@RequestMapping("/admin/qna")

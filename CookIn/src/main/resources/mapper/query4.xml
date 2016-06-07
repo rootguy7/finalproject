@@ -4,18 +4,26 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="info">
+	<!-- admin info  -->
 	<select id="selectUserInfo" resultType="com.hb.model.UserVo" parameterType="String">
   		SELECT id, name, phone, point FROM TB_USER
   	</select>
+  	<!-- admin list  -->
 	<select id="selectProList" resultType="com.hb.model.ProductVo" parameterType="String">
   		select serial_num, name, price from TB_PRODUCT
   	</select>
+  	<!-- admin list detail -->
 	<select id="selectOne" resultType="com.hb.model.ProductVo" parameterType="String">
   		SELECT A.serial_num, A.name, A.price, B.IP_DATE, C.c_name, D.EA, E.kind 
 		FROM TB_PRODUCT AS A, TB_INPUT AS B, TB_COUNTRY AS C, TB_SALES AS D, TB_PROD_KIND AS E
 		where A.serial_num=100000 AND A.c_num=C.c_num
 		AND D.serial_num=A.serial_num AND A.kind_num=E.kind_num
   	</select>
+  	<!-- admin notice -->
+  	<select id="selectNoticeList" resultType="com.hb.model.BbsVo" parameterType="String">
+  		select a.bbs_idx, a.title, a.time, a.id, a.count from TB_BBS as a, TB_BBS_KIND as b where b.kind_num=1
+  	</select>
+  	
 </mapper>
 
 

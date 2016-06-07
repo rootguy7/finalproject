@@ -57,50 +57,16 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 				</tr>
 			</table>
 			<table class="table table-hover table-condensed">
+			<c:forEach items="${list}" var="var">
 				<tr class="rownum">
-					<td class="bno">2</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
+					<td class="bno">${var.bbs_idx}</td>
+					<td class="btit">${var.title}</td>
+					<td class="btime">${var.time}</td>
+					<td class="bname">${var.id}</td>
+					<td class="bcount">${var.count}</td>
 				</tr>
-				<tr class="rownum">
-					<td class="bno">4</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
-				</tr>
-				<tr class="rownum">
-					<td class="bno">5</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
-				</tr>
-				<tr class="rownum">
-					<td class="bno">7</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
-				</tr>
-				<tr class="rownum">
-					<td class="bno">8</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
-				</tr>
-				<tr class="rownum">
-					<td class="bno">6</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
-				</tr>
+			</c:forEach>
 			</table>
-			<!-- 글쓰기는 필요 없을꺼 같음 -->
  			<div class="row">
 					<div class="col-md-10"></div>
 					<div class="col-md-2">

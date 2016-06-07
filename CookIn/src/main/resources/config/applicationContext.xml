@@ -42,4 +42,7 @@
 		<property name="sqlSession" ref="sqlSession"></property>
 	</bean>
 
+	<bean id="bbsDao" class="com.hb.model.BbsDaoImp">
+		<property name="sqlSession" ref="sqlSession"></property>
+	</bean>
 </beans>
