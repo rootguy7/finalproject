@@ -26,12 +26,16 @@ public class BuyVo {
 	 */
 	private String add_comment;
 	private String pay_option;
+	/**
+	 * 운송장 번호
+	 */
+	private int buynum;
 	
 	public BuyVo() {}
 
 	public BuyVo(int index, String id, int serial_num, int ea, int state_num, Date req_date, String rec_name,
 			int phone, int post, String main_addr, String sub_addr, int se_phone, String comment, String add_comment,
-			String pay_option) {
+			String pay_option, int buynum) {
 		this.index = index;
 		this.id = id;
 		this.serial_num = serial_num;
@@ -47,6 +51,7 @@ public class BuyVo {
 		this.comment = comment;
 		this.add_comment = add_comment;
 		this.pay_option = pay_option;
+		this.buynum = buynum;
 	}
 
 	public int getIndex() {
@@ -109,6 +114,10 @@ public class BuyVo {
 		return pay_option;
 	}
 
+	public int getBuynum() {
+		return buynum;
+	}
+	
 	public void setIndex(int index) {
 		this.index = index;
 	}
@@ -169,12 +178,18 @@ public class BuyVo {
 		this.pay_option = pay_option;
 	}
 
+	public void setBuynum(int buynum) {
+		this.buynum = buynum;
+	}
+
 	@Override
 	public String toString() {
 		return "BuyVo [index=" + index + ", id=" + id + ", serial_num=" + serial_num + ", ea=" + ea + ", state_num="
 				+ state_num + ", req_date=" + req_date + ", rec_name=" + rec_name + ", phone=" + phone + ", post="
 				+ post + ", main_addr=" + main_addr + ", sub_addr=" + sub_addr + ", se_phone=" + se_phone + ", comment="
-				+ comment + ", add_comment=" + add_comment + ", pay_option=" + pay_option + "]";
+				+ comment + ", add_comment=" + add_comment + ", pay_option=" + pay_option + ", buynum=" + buynum + "]";
 	}
+	
+	
 	
 }
