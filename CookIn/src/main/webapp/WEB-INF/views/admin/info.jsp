@@ -91,7 +91,7 @@ table tr{
 			</div>
 			<div class="col-md-3">
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search for..."/> 
+					<input type="text" class="form-control" id="searchinput" placeholder="Search for..."/> 
 					<span class="input-group-btn">
 						<button class="btn btn-default" type="button">검색</button>
 					</span>

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +9,8 @@
 <title>관리자-상품 상세페이지</title>
 <style type="text/css">
 #listimg{
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -38,7 +37,7 @@
 	                <col width="200" />
 	                <col width="500" />
 	            </colgroup>
-	            <tr><td rowspan="8"><img id="listimg"  src="../resources/imgs/b1d1.PNG"/></td></tr>
+	            <tr><td rowspan="9"><img id="listimg"  src="../resources/imgs/b1d1.PNG"/></td></tr>
 	            <tr>
 	            	<th class="active">상품 번호</th>
 	            	<td>${var.serial_num }</td>
@@ -52,8 +51,12 @@
 	            	<td>${var.ip_date }</td>
 	            </tr>
 	            <tr>
+	            	<th class="active">수량</th>
+	            	<td>${var.ea}</td>
+	            </tr>
+	            <tr>
 	            	<th class="active">제조사</th>
-	            	<td>${var.c_name }</td>
+	            	<td>제조사 하단참조</td>
 	            </tr>
 	            <tr>
 	            	<th class="active">원산지</th>

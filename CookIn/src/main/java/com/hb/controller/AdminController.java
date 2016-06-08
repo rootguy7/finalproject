@@ -2,10 +2,13 @@ package com.hb.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hb.model.BbsDao;
 import com.hb.model.BbsVo;
@@ -58,15 +61,20 @@ public class AdminController {
 		return "admin/listedit";
 	}
 	@RequestMapping("/admin/listdetail")
-	public String listdetail(int serial_num, Model model){
+	public String listdetail(@RequestParam("serial_num") String serial_num, Model model){
 		ProductVo vo = null;
 		try {
 			vo = dao1.selectOne(serial_num);
+			System.out.println(vo.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		model.addAttribute("var", vo);
-		return "admin/listdetail";
+		if (vo != null) {
+			model.addAttribute("var", vo);
+			return "admin/listdetail";
+		} else {
+			return "admin/list";
+		}
 	}
 	@RequestMapping("/admin/listadd")
 	public String listadd(){

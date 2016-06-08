@@ -55,7 +55,7 @@
 	            <tr>
 	            	<th class="active">상품 대표사진</th>
 	            	<td><input type="file"id="InputFile">
-	            	<p class="help-block">파일 선택 도움말</p></td>
+	            	<p class="help-block">파일 대표사진 선택</p></td>
 	            </tr>
 	            <tr>
 	            	<th class="active">상품 번호</th>
@@ -68,6 +68,10 @@
 	            <tr>
 	            	<th class="active">입고 날짜</th>
 	            	<td><input type="text" class="form-control" id="datepicker" placeholder="날짜를 선택하려면 클릭하세요."></td>
+	            </tr>
+	            <tr>
+	            	<th class="active">수량</th>
+	            	<td><input type="text" class="form-control" id="ea" placeholder="수량을 입력하세요."></td>
 	            </tr>
 	            <tr>
 	            	<th class="active">제조사</th>
@@ -86,10 +90,9 @@
 	            	<td><input type="text" class="form-control" id="price2" placeholder="소비자가격*0.8"></td>
 	            </tr>
 	            <tr>
-	            	<th colspan="3" class="active">상세 내용</th>
-	            </tr>
-	            <tr>
-	            	<td colspan="3"><textarea class="form-control" rows="10" placeholder="제품 상세 내용을 입력하세요."></textarea></td>
+	            	<th class="active">상품 상세사진</th>
+	            	<td><input type="file"id="InputFile">
+	            	<p class="help-block">제품 상세설명 파일 선택</p></td>
 	            </tr>
 			</table>
 		</div>
