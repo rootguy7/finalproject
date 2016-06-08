@@ -22,12 +22,6 @@ public class MyController {
 	private UserDao userDao1;
 	private BbsDao bbsDao;
 	
-	@RequestMapping("/mypage")
-	public String MypageDefault() { //마이페이지 메인
-		
-		return "mypage/mypagehome";
-	}
-	
 	@RequestMapping("/mypage/allorder") //전체주문내역
 	public String MypageOrder(Model model) {
 		String id = "joohyung";
@@ -52,7 +46,7 @@ public class MyController {
 	}
 	
 	
-	@RequestMapping("/mypage/point") //내포인트
+	@RequestMapping("/mypage") //내포인트
 	public String MypagePoint(Model model) {
 		
 		String id = "joohyung";
@@ -65,7 +59,7 @@ public class MyController {
 		
 		model.addAttribute("vo", vo);
 		
-		return "mypage/point";
+		return "mypage/mypagehome";
 	}
 	
 	@RequestMapping("/mypage/mydiary") //내가쓴글
