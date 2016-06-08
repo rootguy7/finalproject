@@ -10,4 +10,5 @@ public interface BbsDao {
 	
 	List<BbsVo> selectNoticeList() throws Exception;//notice list
 	List<BbsVo> selectQnaList() throws Exception;//qna list
+	List<BbsVo> selMyWrite(String id) throws Exception;//mypage write list
 }

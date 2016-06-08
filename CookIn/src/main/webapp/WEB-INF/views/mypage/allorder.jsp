@@ -105,12 +105,12 @@
 			<div class="col-md-8">
 				<table class="table table-hover">
 				<thead>
-					<tr><th>번호</th><th>주문일자</th><th>상품명</th><th>결제금액</th><th>배송현황</th></tr>
+					<tr><th>주문일자</th><th>상품명</th><th>결제금액</th><th>배송현황</th></tr>
 					</thead>
 					<tbody>
-					<c:forEach items="${orderlist }" var="userVo">
+					<c:forEach items="${orderlist }" var="list">
 					<tr class="rownum">
-						<th>1</th><td>${userVo.req_date }</td><td>허쉬초콜렛</td><td>5,000원</td><td>배송준비중</td>
+						<td>${list.req_date }</td><td>${list.name }</td><td>${list.price }</td><td>${list.state }</td>
 					</tr>
 					</c:forEach>
 					</tbody>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,12 +108,14 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 			<div class="col-md-8">
 				<table class="table table-hover">
 				<thead>
-					<tr><th>번호</th><th>문의종류</th><th>제목</th><th>문의날짜</th><th>상태</th></tr>
+					<tr><th>번호</th><th>문의종류</th><th>제목</th><th>문의날짜</th></tr>
 					</thead>
 					<tbody>
+					<c:forEach items="${list }" var="list">
 					<tr class="rownum2">
-						<th>1</th><td>배송문의</td><td>언제쯤 배송되나요?</td><td>2016-05-30</td><td>답변완료</td>
+						<td>${list.bbs_idx}</td><td>${list.kind_num}</td><td>${list.title}</td><td>${list.time}</td>
 					</tr>
+					</c:forEach>
 					</tbody>
 				</table>
 			</div>

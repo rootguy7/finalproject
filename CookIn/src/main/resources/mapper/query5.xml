@@ -6,18 +6,23 @@
 <mapper namespace="mypage">
     <!--my page 전체주문내역  -->
 	<select id="selectOrder" resultType="com.hb.model.UserVo" parameterType="String">
-	    SELECT TB_BUY.req_date, TB_PRODUCT.name, TB_PRODUCT.price, TB_STATE.state 
-		FROM TB_USER, TB_BUY, TB_PRODUCT, TB_STATE 
-		WHERE TB_USER.id=TB_BUY.id and TB_BUY.serial_num=TB_PRODUCT.serial_num and TB_BUY.state_num=TB_STATE.state_num
-        and TB_USER.id=#{id}
+	    SELECT B.req_date, C.name, C.price, D.state 
+		FROM TB_USER AS A, TB_BUY AS B, TB_PRODUCT AS C, TB_STATE AS D 
+		WHERE A.id=B.id and B.serial_num=C.serial_num and B.state_num=D.state_num
+        and A.id=#{id}
   	</select>
     <!--my page point list  -->
-	<select id="selectOne" resultType="com.hb.model.UserVo" parameterType="String">
-	    SELECT id, `name`, post, main_addr, sub_addr, sex, phone, mobile, email, `point`, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num and TB_USER.id=#{id}
+	<select id="selOnePoint" resultType="com.hb.model.UserVo" parameterType="String">
+	    SELECT point FROM TB_USER where id=#{id}
+	    <!-- SELECT id, `name`, post, main_addr, sub_addr, sex, phone, mobile, email, `point`, pm FROM TB_USER, TB_PM where TB_USER.pm_num=TB_PM.pm_num and TB_USER.id=#{id} -->
 		<!-- SELECT TB_PM.pm, TB_PM.pm_num, TB_USER.point, TB_BUY.req_date
 		FROM TB_PM, TB_USER, TB_BUY
 		WHERE TB_PM.pm_num=TB_USER.pm_num and TB_USER.id=TB_BUY.id and TB_USER.id=#{id} -->
 	</select>
+    <!--my page 내가 쓴글  -->
+    <select id="selMyWrite" resultType="com.hb.model.BbsVo" parameterType="String">
+			SELECT bbs_idx, kind_num, title, time FROM TB_BBS where id=#{id}
+        </select>
 </mapper>
 
 

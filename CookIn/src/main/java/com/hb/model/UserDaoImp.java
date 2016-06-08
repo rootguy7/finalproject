@@ -21,8 +21,8 @@ public class UserDaoImp implements UserDao{
 	}
 
 	@Override
-	public UserVo selectOne(String id) throws Exception {
-		return sqlSession.selectOne("mypage.selectOne", id);
+	public UserVo selOnePoint(String id) throws Exception {
+		return sqlSession.selectOne("mypage.selOnePoint", id);
 	}
 	
 	public List<UserVo> selectUserInfo() throws Exception{

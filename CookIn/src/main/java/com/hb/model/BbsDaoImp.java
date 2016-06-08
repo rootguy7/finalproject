@@ -19,5 +19,10 @@ public class BbsDaoImp implements BbsDao{
 	public List<BbsVo> selectQnaList() throws Exception {
 		return sqlSession.selectList("info.selectQnaList");
 	}
+	@Override
+	public List<BbsVo> selMyWrite(String id) throws Exception {
+		return sqlSession.selectList("mypage.selMyWrite",id);
+	}
+	
 	
 }

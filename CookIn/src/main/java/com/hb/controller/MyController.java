@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hb.model.BbsDao;
+import com.hb.model.BbsVo;
 import com.hb.model.BuyDao;
 import com.hb.model.CartVo;
 import com.hb.model.UserDao;
@@ -18,6 +20,7 @@ public class MyController {
 	@Autowired
 	private UserDao userDao;
 	private UserDao userDao1;
+	private BbsDao bbsDao;
 	
 	@RequestMapping("/mypage")
 	public String MypageDefault() { //마이페이지 메인
@@ -55,7 +58,7 @@ public class MyController {
 		String id = "joohyung";
 		UserVo vo = null;
 		try {
-			 vo = userDao.selectOne(id);
+			 vo = userDao.selOnePoint(id);
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
@@ -66,7 +69,17 @@ public class MyController {
 	}
 	
 	@RequestMapping("/mypage/mydiary") //내가쓴글
-	public String MypageDiary() {
+	public String MypageDiary(Model model) {
+		String id = "jiyooni";
+		List<BbsVo> list = null;
+		try {
+			 list = bbsDao.selMyWrite(id);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		model.addAttribute("list", list);
 		
 		return "mypage/mydiary";
 	}
