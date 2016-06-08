@@ -106,18 +106,24 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
-				<table class="table table-hover">
-				<thead>
-					<tr><th>번호</th><th>문의종류</th><th>제목</th><th>문의날짜</th></tr>
-					</thead>
-					<tbody>
-					<c:forEach items="${list }" var="var">
-					<tr class="rownum2">
-						<td>${var.bbs_idx}</td><td>${var.kind_num}</td><td>${var.title}</td><td>${var.time}</td>
-					</tr>
-					</c:forEach>
-					</tbody>
-				</table>
+				<table class="table tabletd">
+				<tr>
+					<th>No</th>
+					<th>문의종류</th>
+					<th>제목</th>
+					<th>문의날짜</th>
+				</tr>
+			</table>
+			<table class="table table-hover table-condensed">
+			<c:forEach items="${list}" var="var">
+				<tr class="rownum2">
+					<td>${var.bbs_idx}</td>
+					<td>${var.kind_num}</td>
+					<td>${var.title}</td>
+					<td>${var.time}</td>
+				</tr>
+			</c:forEach>
+			</table>
 			</div>
 			<div id="pagination">
 			<ul class="pagination">

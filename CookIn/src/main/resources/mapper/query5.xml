@@ -21,7 +21,7 @@
 	</select>
     <!--my page 내가 쓴글  -->
     <select id="selMyWrite" resultType="com.hb.model.BbsVo" parameterType="String">
-			SELECT bbs_idx, kind_num, title, time FROM TB_BBS where id=#{id}
+			SELECT bbs_idx, title, time, kind_num FROM TB_BBS where id=#{id}
         </select>
 </mapper>
 

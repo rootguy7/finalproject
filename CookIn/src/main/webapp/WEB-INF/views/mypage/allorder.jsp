@@ -103,18 +103,24 @@
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
-				<table class="table table-hover">
-				<thead>
-					<tr><th>주문일자</th><th>상품명</th><th>결제금액</th><th>배송현황</th></tr>
-					</thead>
-					<tbody>
-					<c:forEach items="${orderlist }" var="list">
-					<tr class="rownum">
-						<td>${list.req_date }</td><td>${list.name }</td><td>${list.price }</td><td>${list.state }</td>
-					</tr>
-					</c:forEach>
-					</tbody>
-				</table>
+			<table class="table tabletd">
+				<tr>
+					<th>주문일자</th>
+					<th>상품명</th>
+					<th>결제금액</th>
+					<th>배송현황</th>
+				</tr>
+			</table>
+			<table class="table table-hover table-condensed">
+			<c:forEach items="${orderlist}" var="var">
+				<tr class="rownum2">
+					<td>${var.req_date}</td>
+					<td>${var.name}</td>
+					<td>${var.price}</td>
+					<td>${var.state}</td>
+				</tr>
+			</c:forEach>
+			</table>
 			</div>
 					<div id="pagination">
 			<ul class="pagination">

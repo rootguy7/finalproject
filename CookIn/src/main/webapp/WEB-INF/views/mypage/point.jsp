@@ -61,21 +61,25 @@
 				<!-- <div class="alert alert-warning" role="alert">[박지윤]님이 쇼핑몰에서 사용 가능한 포인트 내역입니다.</div> -->
 					*적립된 포인트가 100점 이상 누적되었을 때, 사용하실 수 있습니다.
 				    <img alt="" src="/cook/resources/imgs/money.JPG" align="right" >
-				<table class="table table-hover">
-			  		<colgroup>
+				    <table class="table tabletd">
+				    <colgroup>
 		                <col width="100" />
 		                <col width="200" />
 		                <col width="200" />
 		            </colgroup>
-		            <thead>
-					<tr><th class="title">날짜</th><th class="title">포인트 적립내역</th><th class="title">포인트</th></tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td>2016-05-29</td><td>물품구입에 대한 적립포인트입니다^^</td><td>${vo.point}점</td>
-					</tr>
-					</tbody>
-				</table>
+				<tr>
+					<th>날짜</th>
+					<th>포인트 적립내역</th>
+					<th>포인트</th>
+				</tr>
+			</table>
+			<table class="table table-hover table-condensed">
+				<tr class="rownum2">
+					<td>2016-05-29</td>
+					<td>물품구입에 대한 적립포인트입니다^^</td>
+					<td>${vo.point}점</td>
+				</tr>
+			</table>
 				<div class="col-md-2"></div>
 			</div>
 		</div>
