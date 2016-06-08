@@ -86,12 +86,14 @@ $(document).ready(function(){
 		        type: "POST",
 		        url: url,
 		        data: postString,
-// 		        cache: false,
-// 		        async: false,
+		        cache: false,
+		        async: false,
 		        dataType: "text",
 		        success: function(response) {
-		        	alert(response);
-		            if(response=='1')
+// 		        	alert(response);
+		        	var userCheck = response;
+// 		        	alert("userCheck>>>"+userCheck);
+		            if(userCheck==1)
 		            {
 		             alert("로그인 해줄게요. 기다리세요.")
 		            }
@@ -100,8 +102,7 @@ $(document).ready(function(){
 		             alert("아이디 또는 비번이 틀렸습니다. 다시 입력하세요.")
 // 		             return false;
 		            } 
-		            
-		            alert("아짱나");
+		         
 		           },
 		       error: function (jqXHR, textStatus, errorThrown) {
 	               alert("ERROR" + textStatus + " : " + errorThrown);

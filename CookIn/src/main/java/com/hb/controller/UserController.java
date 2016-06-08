@@ -89,8 +89,9 @@ public class UserController {
 		{
 			logger.info("로그인실패");
 			loginCheck = "0";
+//			System.out.println("loginCheck>>>"+loginCheck);
 		}
-		System.out.println(loginValue);
+//		System.out.println(loginCheck);
 		return loginCheck; 
 		
 	}
