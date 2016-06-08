@@ -4,7 +4,14 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="bbs">
-	
+  	<!-- notice -->
+  	<select id="selectNoticeList" resultType="com.hb.model.BbsVo" parameterType="String">
+  		select bbs_idx, title, time, id, count from TB_BBS where kind_num=1
+  	</select>
+  	<!-- qna -->
+  	<select id="selectQnaList" resultType="com.hb.model.BbsVo" parameterType="String">
+  		select bbs_idx, title, time, id, count from TB_BBS where kind_num=2
+  	</select>
 </mapper>
 
 

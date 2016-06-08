@@ -1,15 +1,31 @@
 package com.hb.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.hb.model.BbsDao;
+import com.hb.model.BbsVo;
 
 @Controller
 public class NoticeController {
 
+	@Autowired
+	private BbsDao dao2;
 	
 	@RequestMapping("/notice")
-	public String NoticeDefault() {
-		
+	public String NoticeDefault(Model model) {
+		List<BbsVo> list=null;
+		try {
+			list = dao2.selectNoticeList();
+			System.out.println("notice: "+list.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("list", list);
 		return "notice/ntbbs";
 	}
 	@RequestMapping("/ntdetail")
