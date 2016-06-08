@@ -46,7 +46,7 @@ public class UserController {
 		
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	@ResponseBody
-	 public int login(@RequestParam(value = "id", required = false) String id, @RequestParam(value = "pw", required = false) String password){
+	 public String login(@RequestParam(value = "id", required = false) String id, @RequestParam(value = "pw", required = false) String password){
 		
 		
 		
@@ -54,13 +54,14 @@ public class UserController {
 		
 //		String id = Util.nullCheck(request.getParameter("id"), "");
 //		String password = Util.nullCheck(request.getParameter("pw"), "");
-		System.out.println(id);
-		System.out.println(password);
+		logger.info(id);
+		logger.info(password);
 		
 		map.put("id",id);
 		map.put("password", password);
 		
 		int loginValue = 0;
+		String loginCheck = null;
 		
 		try {  loginValue = userDao.getLoginResult(map);  } catch (Exception e) { }
 		
@@ -81,15 +82,16 @@ public class UserController {
 //			mav.addObject("id",id);
 //			session.setAttribute("userId", userVo.getId());
 //			session.setAttribute("userPassword", userVo.getPassword());
+			loginCheck = Integer.toString(loginValue);
 			
 		}
 		else
 		{
 			logger.info("로그인실패");
+			loginCheck = "0";
 		}
-		
 		System.out.println(loginValue);
-		return loginValue; 
+		return loginCheck; 
 		
 	}
 	

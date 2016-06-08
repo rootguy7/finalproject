@@ -91,15 +91,14 @@ $(document).ready(function(){
 		        dataType: "text",
 		        success: function(response) {
 		        	alert(response);
-		        	alert("sdfsdfsdf");
-		            if(response==1)
+		            if(response=='1')
 		            {
 		             alert("로그인 해줄게요. 기다리세요.")
 		            }
 		            else
 		            {
 		             alert("아이디 또는 비번이 틀렸습니다. 다시 입력하세요.")
-		             return false;
+// 		             return false;
 		            } 
 		            
 		            alert("아짱나");

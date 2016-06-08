@@ -18,14 +18,12 @@
 	<select id="getLoginResult" parameterType="com.hb.model.UserVo"  resultType="Integer">
 	    SELECT COUNT(id) 
 	    FROM TB_USER 
-	    WHERE id=#{id} AND PASSWORD=#{password};
+	    WHERE id=#{id} AND PASSWORD=PASSWORD(#{password});
 	</select>
 	<select id="getUserInfo" parameterType="com.hb.model.UserVo"  resultType="String">
-	
 	 	SELECT id, password, name
 		FROM TB_USER
 		WHERE id = #{id}
-	   
 	</select>
 </mapper>
 
