@@ -21,7 +21,7 @@
   	</select>
   	<!-- admin notice -->
   	<select id="selectNoticeList" resultType="com.hb.model.BbsVo" parameterType="String">
-  		select a.bbs_idx, a.title, a.time, a.id, a.count from TB_BBS as a, TB_BBS_KIND as b where b.kind_num=1
+  		select bbs_idx, title, time, id, count from TB_BBS where kind_num=1
   	</select>
   	
 </mapper>
