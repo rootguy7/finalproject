@@ -880,34 +880,15 @@ $(document).ready(function(){
 					<th class="bname">작성자</th>
 					<th class="bcount">조회수</th> 
 				</tr>
+			<c:forEach items="${list}" var="var">
 				<tr class="rownum">
-					<td class="bno">10</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
+					<td class="bno">${var.bbs_idx}</td>
+					<td class="btit">${var.title}</td>
+					<td class="btime">${var.time}</td>
+					<td class="bname">${var.id}</td>
+					<td class="bcount">${var.count}</td>
 				</tr>
-				<tr class="rownum">
-					<td class="bno">10</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
-				</tr>
-				<tr class="rownum">
-					<td class="bno">10</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
-				</tr>
-				<tr class="rownum">
-					<td class="bno">10</td>
-					<td class="btit">더미타이틀</td>
-					<td class="btime">더미 시간</td>
-					<td class="bname">더미 작성자</td>
-					<td class="bcount">5</td>
-				</tr>
+			</c:forEach>
 			</table>
 			</div>
 			<div class="col-md-1"></div>
