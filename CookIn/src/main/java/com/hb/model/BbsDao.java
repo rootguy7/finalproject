@@ -8,5 +8,6 @@ import org.slf4j.LoggerFactory;
 public interface BbsDao {
 	static final Logger logger = LoggerFactory.getLogger(BbsDao.class);
 	
-	List<BbsVo> selectNoticeList() throws Exception;//list
+	List<BbsVo> selectNoticeList() throws Exception;//notice list
+	List<BbsVo> selectQnaList() throws Exception;//qna list
 }

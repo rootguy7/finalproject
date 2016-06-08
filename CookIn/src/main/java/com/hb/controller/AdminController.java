@@ -89,6 +89,7 @@ public class AdminController {
 		List<BbsVo> list=null;
 		try {
 			list = dao2.selectNoticeList();
+			System.out.println("notice: "+list.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -96,7 +97,15 @@ public class AdminController {
 		return "admin/notice";	
 	}
 	@RequestMapping("/admin/qna")
-	public String qna(){
+	public String qna(Model model){
+		List<BbsVo> list=null;
+		try {
+			list=dao2.selectQnaList();
+			System.out.println("qna: "+list.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("list",list);
 		return "admin/qna";
 	}	
 	@RequestMapping("/admin/bbsdetail")

@@ -23,6 +23,10 @@
   	<select id="selectNoticeList" resultType="com.hb.model.BbsVo" parameterType="String">
   		select bbs_idx, title, time, id, count from TB_BBS where kind_num=1
   	</select>
+  	<!-- admin qna -->
+  	<select id="selectQnaList" resultType="com.hb.model.BbsVo" parameterType="String">
+  		select bbs_idx, title, time, id, count from TB_BBS where kind_num=2
+  	</select>
   	
 </mapper>
 
