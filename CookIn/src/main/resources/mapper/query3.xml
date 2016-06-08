@@ -4,17 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="user">
-	<select id="selectOrder" resultType="com.hb.model.UserVo" parameterType="String">
-	    SELECT TB_BUY.req_date, TB_PRODUCT.name, TB_PRODUCT.price, TB_STATE.state 
-		FROM TB_USER, TB_BUY, TB_PRODUCT, TB_STATE 
-		WHERE TB_USER.id=TB_BUY.id and TB_BUY.serial_num=TB_PRODUCT.serial_num and TB_BUY.state_num=TB_STATE.state_num
-        and TB_USER.id=#{id}
-  	</select>
-	<select id="selectOne" resultType="com.hb.model.UserVo" parameterType="String">
-		SELECT TB_PM.pm, TB_PM.pm_num, TB_USER.point, TB_BUY.req_date
-		FROM TB_PM, TB_USER, TB_BUY
-		WHERE TB_PM.pm_num=TB_USER.pm_num and TB_USER.id=TB_BUY.id and TB_USER.id=#{id}
-	</select>
 	<select id="getLoginResult" parameterType="com.hb.model.UserVo"  resultType="Integer">
 	    SELECT COUNT(id) 
 	    FROM TB_USER 

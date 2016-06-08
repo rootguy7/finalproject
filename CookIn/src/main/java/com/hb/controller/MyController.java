@@ -17,6 +17,7 @@ public class MyController {
 
 	@Autowired
 	private UserDao userDao;
+	private UserDao userDao1;
 	
 	@RequestMapping("/mypage")
 	public String MypageDefault() { //마이페이지 메인
@@ -29,7 +30,7 @@ public class MyController {
 		String id = "joohyung";
 		List<UserVo> list = null;
 		try {
-			 list = userDao.selectOrder(id);
+			 list = userDao1.selectOrder(id);
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -52,14 +53,14 @@ public class MyController {
 	public String MypagePoint(Model model) {
 		
 		String id = "joohyung";
-		UserVo userOne = null;
+		UserVo vo = null;
 		try {
-			userOne = userDao.selectOne(id);
+			 vo = userDao.selectOne(id);
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
 		
-		model.addAttribute("userone", userOne);
+		model.addAttribute("vo", vo);
 		
 		return "mypage/point";
 	}

@@ -10,6 +10,7 @@
 		<mapper resource="mapper/query2.xml"/>	
 		<mapper resource="mapper/query3.xml"/>	
 		<mapper resource="mapper/query4.xml"/>	
+		<mapper resource="mapper/query5.xml"/>	
 	</mappers>
 
 </configuration>

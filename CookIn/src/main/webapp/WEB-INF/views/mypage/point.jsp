@@ -41,18 +41,18 @@
 				<div class="panel panel-default" id="aa">
 				 <div class="panel-body">
 				    <p>김우빈</p>
-				    <p>회원등급 : ${userone.pm}/Level${userone.pm_num }</p>
+				    <p>회원등급 :/Level</p>
 							<div class="progress">
 								 <div class="progress-bar progress-bar-warning progress-bar-striped active" 
 								 role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
 									<span class="sr-only">50% Complete</span>
 								</div>
 							</div>
-							<p>포인트 : ${userone.point }점</p>
+							<p>포인트 : ${vo.point}점</p>
 				    <p> > 총 보유 포인트
-				    <span class="label label-warning">${userone.point }점</span> 
+				    <span class="label label-warning">${vo.point}점</span> 
 				    <p> > 사용가능 포인트 
-				     <span class="label label-warning">${userone.point }점</span>  
+				     <span class="label label-warning">${vo.point}점</span>  
 				    <p> > 사용된 포인트
 				     <span class="label label-warning">0점</span> 
 				  </div>
@@ -72,7 +72,7 @@
 					</thead>
 					<tbody>
 					<tr>
-						<td>2016-05-29</td><td>물품구입에 대한 적립포인트입니다^^</td><td>230점</td>
+						<td>2016-05-29</td><td>물품구입에 대한 적립포인트입니다^^</td><td>${vo.point}점</td>
 					</tr>
 					</tbody>
 				</table>

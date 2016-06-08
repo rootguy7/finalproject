@@ -17,12 +17,12 @@ public class UserDaoImp implements UserDao{
 
 	@Override
 	public List<UserVo> selectOrder(String id) throws Exception {
-		return sqlSession.selectList("user.selectOrder",id);
+		return sqlSession.selectList("mypage.selectOrder",id);
 	}
 
 	@Override
 	public UserVo selectOne(String id) throws Exception {
-		return sqlSession.selectOne("user.selectOne", id);
+		return sqlSession.selectOne("mypage.selectOne", id);
 	}
 	
 	public List<UserVo> selectUserInfo() throws Exception{
