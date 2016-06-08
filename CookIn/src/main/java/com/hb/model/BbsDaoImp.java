@@ -24,5 +24,4 @@ public class BbsDaoImp implements BbsDao{
 		return sqlSession.selectList("mypage.selMyWrite",id);
 	}
 	
-	
 }

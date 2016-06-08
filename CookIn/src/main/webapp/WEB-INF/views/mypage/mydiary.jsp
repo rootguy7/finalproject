@@ -111,9 +111,9 @@ function getRow(rowValue) {//테이블 클릭시 row num 넘겨주는 함수
 					<tr><th>번호</th><th>문의종류</th><th>제목</th><th>문의날짜</th></tr>
 					</thead>
 					<tbody>
-					<c:forEach items="${list }" var="list">
+					<c:forEach items="${list }" var="var">
 					<tr class="rownum2">
-						<td>${list.bbs_idx}</td><td>${list.kind_num}</td><td>${list.title}</td><td>${list.time}</td>
+						<td>${var.bbs_idx}</td><td>${var.kind_num}</td><td>${var.title}</td><td>${var.time}</td>
 					</tr>
 					</c:forEach>
 					</tbody>
