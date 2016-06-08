@@ -34,12 +34,6 @@ public class BuyDaoImp implements BuyDao{
 	}
 
 	@Override
-	public void delCartOne(int cart_idx) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public int selMaxbuynum() throws Exception {
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne("buy.selMaxbuynum");
@@ -49,5 +43,10 @@ public class BuyDaoImp implements BuyDao{
 	public void editPoint(HashMap<String, String> map) {
 		sqlSession.update("buy.editPoint", map);
 		
+	}
+
+	@Override
+	public void delCartOne(String cart_idx) throws Exception {
+		sqlSession.delete("buy.delCartOne", cart_idx);
 	}
 }

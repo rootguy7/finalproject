@@ -90,7 +90,7 @@ public class OrderController {
 				totalM+=cvo.getEa()*cvo.getEaPrice();
 				buyDao.insertBuyOne(bvo);//DB TB_Buy에 등록
 				logger.debug("bvo"+ bvo);
-				buyDao.delCartOne(Integer.parseInt(str));//DB 장바구니에서 삭제. //아직 구현 안함
+//				buyDao.delCartOne(str);//DB 장바구니에서 삭제. 구현은 됬는데 삭제되면 귀찮아서 일단 주석
 			}catch (Exception e) {e.printStackTrace();}
 		}
 

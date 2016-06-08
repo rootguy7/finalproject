@@ -64,6 +64,17 @@ function sum(){
 	$('.resPoint').text(totEaP*0.01);
 }
 
+function submitact(index){
+	var go = "";
+	if(index==1){
+		go = "/cook/cartdel";
+	}
+	else if(index==2){
+		 go = "/cook/cartli";
+	}
+	document.chkform.action = go;
+	document.chkform.submit();
+}
 
    $(document).ready(function(){
 	   $('.chkitm').change(function() {
@@ -84,15 +95,21 @@ function sum(){
 	        }
 	    })
 	    
-	    $('form').submit(function(){
-	    	
-	    	
+	    $('form').submit(function(e){
 	    	if($("input:checkbox[name=chkitm]:checked").length==0){
 				alert('선택된 상품이 없습니다.');	    		
 		    	return false;
 	    	}
-	    		
+	    	function openCheckMenu(){ //스크립트 이름(폼정보)
+// 	    		form.action="test.jsp"; //폼정보를 보낼 액션
+// 	    		checkMenu.submit(); //서브밋 명령어 추가
+	    		alert(e.target.nodeName);
+	    	}
+	    	openCheckMenu();
+	    	return false;
 	    });
+	   
+	   
    });
 </script>
 </head>
@@ -108,13 +125,13 @@ function sum(){
 
 
             <div class="col-md-12"> <!-- col-md- start -->
+			<form method="post" name="chkform"> <!-- 버튼에 따라 다른 action을 줄려고 submitact에다가 갈 곳 정의함  -->
             <br/><br/><br/>
            		<h2>장바구니</h2> 
 				<hr/>
 				
 				<div class="row">	
 				<div class="col-md-12">
-				<form action="/cook/cartli" method="post">
 				<table class="table table-striped">
 				<tr>
 					<td>
@@ -166,7 +183,7 @@ function sum(){
 				</tr>
 				<tr>
 <%-- 					<td>상품가격(총 ${totalEa }개)</td><td>${totalSum}원</td> --%>
-					<td class="ttea">상품가격(총 ${totalEa }개)</td><td class="tteap">0원</td>
+					<td class="ttea">상품가격(총 0개)</td><td class="tteap">0원</td>
 				</tr>
 				<tr>
 					<td>할인금액 (보유 포인트)</td><td>${userOne.point }원</td>
@@ -181,12 +198,12 @@ function sum(){
 				</div>
 			
 				<div class="text-center">
-				<button type="button" class="btn btn-default" >선택상품삭제</button>
-				<button type="submit" class="btn btn-default">선택상품주문</button>
-				</form>
+				<button type="button" class="btn btn-default btndel" onclick="submitact(1)">선택상품삭제</button>
+				<button type="button" class="btn btn-default btnbuy" onclick="submitact(2)">선택상품주문</button>
 				</div>
 				<br/><br/>
             </div>
+			</form>
             </div> <!-- col-md- end -->
 
 	   	   

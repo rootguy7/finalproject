@@ -81,5 +81,19 @@ public class CartController {
 		
 		return "order/ordersheet";
 	}
+	
+	@RequestMapping("cartdel")
+	public String cartDel(HttpServletRequest req){
+		
+		String[] listidx = req.getParameterValues("chkitm");//input 체크박스에 체크된값의 value를 받아옴 
+		
+		for (String str : listidx) {
+			try {
+				buyDao.delCartOne(str);
+			} catch (Exception e) {e.printStackTrace();}
+		}
+		return "redirect:/cart";
+	}
+	
 
 }

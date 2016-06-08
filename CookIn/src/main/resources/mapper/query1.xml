@@ -23,6 +23,9 @@
 	<update id="editPoint" parameterType="hashmap">
 		update TB_USER set point=#{point} where id=#{id}
 	</update>
+	<delete id="delCartOne" parameterType="String">
+		delete from TB_CART where cart_idx=#{value}
+	</delete>
 </mapper>
 
 
