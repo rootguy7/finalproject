@@ -4,7 +4,13 @@
 <html>
 <head>
 <style type="text/css">
-
+	.btn-default{
+		border:none;
+		background: none;
+		margin-top: 8px;
+		box-shadow: none;
+		color: gray;
+	}
 </style>
 <!-- jquery -->
 <script
@@ -72,7 +78,17 @@
                         <a class="page-scroll" href="join"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/cook/mypage"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    	<!--수정중  -->
+						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						    <span class="glyphicon glyphicon-user" aria-hidden="true"><a class="page-scroll" href="/cook/mypage" ></a></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu">
+						    <li><a href="#">Action</a></li>
+						    <li><a href="#">Another action</a></li>
+						    <li><a href="#">Something else here</a></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+                    <!--수정중  -->
                     </li>
                     <li>
                         <a class="page-scroll" href="/cook/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
