@@ -1,3 +1,81 @@
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>관리자-전체상품 페이지</title>
+<style type="text/css">
+.spinner {
+  width: 100px;
+}
+.spinner input {
+  text-align: right;
+}
+.input-group-btn-vertical {
+  position: relative;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
+}
+.input-group-btn-vertical > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px;
+  margin-left: -1px;
+  position: relative;
+  border-radius: 0;
+}
+.input-group-btn-vertical > .btn:first-child {
+  border-top-right-radius: 4px;
+}
+.input-group-btn-vertical > .btn:last-child {
+  margin-top: -2px;
+  border-bottom-right-radius: 4px;
+}
+.input-group-btn-vertical i{
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+.upkey, .downkey{
+	height: 10px;
+}
+</style>
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="../resources/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.spinner .btn:first-of-type').on('click', function() {
+	  $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
+	});
+	$('.spinner .btn:last-of-type').on('click', function() {
+	  $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+	});
+});
+</script>
+</head>
+<body>
+	<div class="container">
+	<div class="page-header"><h1>Bootstrap 3 input-spinner</h1></div>  
+	  <div class="input-group spinner">
+	    <input type="text" class="form-control" value="42">
+	    <div class="input-group-btn-vertical">
+	      <button class="btn btn-default upkey" type="button">▲<i class="fa fa-caret-up"></i></button>
+	      <button class="btn btn-default downkey" type="button">▼<i class="fa fa-caret-down"></i></button>
+	    </div>
+	  </div>
+	</div>
+</body>
+</html> --%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -17,24 +95,69 @@
 	width: 200px;
 	height: 200px;
 }
+.spinner {
+  width: 100px;
+}
+.spinner input {
+  text-align: right;
+}
+.input-group-btn-vertical {
+  position: relative;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
+}
+.input-group-btn-vertical > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px;
+  margin-left: -1px;
+  position: relative;
+  border-radius: 0;
+}
+.input-group-btn-vertical > .btn:first-child {
+  border-top-right-radius: 4px;
+}
+.input-group-btn-vertical > .btn:last-child {
+  margin-top: -2px;
+  border-bottom-right-radius: 4px;
+}
+.input-group-btn-vertical i{
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+.upkey, .downkey{
+	height: 10px;
+}
 </style>
 <script type="text/javascript">
-	$(function(){
-		$("#datepicker").datepicker({
-			dateFormat: 'yy-mm-dd',
-		    prevText: '이전 달',
-		    nextText: '다음 달',
-		    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-		    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-		    dayNames: ['일','월','화','수','목','금','토'],
-		    dayNamesShort: ['일','월','화','수','목','금','토'],
-		    dayNamesMin: ['일','월','화','수','목','금','토'],
-		    showMonthAfterYear: true,
-		    changeMonth: true,
-		    changeYear: true,
-		    yearSuffix: '년'
-		});		
+$(function(){
+	$('.spinner .btn:first-of-type').on('click', function() {
+	  $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
 	});
+	$('.spinner .btn:last-of-type').on('click', function() {
+	  $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+	});
+	
+	$("#datepicker").datepicker({
+		dateFormat: 'yy-mm-dd',
+	    prevText: '이전 달',
+	    nextText: '다음 달',
+	    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	    dayNames: ['일','월','화','수','목','금','토'],
+	    dayNamesShort: ['일','월','화','수','목','금','토'],
+	    dayNamesMin: ['일','월','화','수','목','금','토'],
+	    showMonthAfterYear: true,
+	    changeMonth: true,
+	    changeYear: true,
+	    yearSuffix: '년'
+	});		
+});
 </script>
 </head>
 <body>
@@ -63,7 +186,8 @@
 	            </tr>
 	            <tr>
 	            	<th class="active">상품명</th>
-	            	<td><input type="text" class="form-control" id="productname" placeholder="상품명을 입력하세요."></td>
+	            	<td><input type="text" class="form-control" id="productname" placeholder="상품명을 입력하세요."
+	            	></td>
 	            </tr>
 	            <tr>
 	            	<th class="active">입고 날짜</th>
@@ -71,7 +195,15 @@
 	            </tr>
 	            <tr>
 	            	<th class="active">수량</th>
-	            	<td><input type="text" class="form-control" id="ea" placeholder="수량을 입력하세요."></td>
+	            	<td>
+						<div class="input-group spinner">
+						  <input type="text" class="form-control" value="100">
+						  <div class="input-group-btn-vertical">
+						    <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+						    <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+						  </div>
+						</div>
+	            	</td>
 	            </tr>
 	            <tr>
 	            	<th class="active">제조사</th>
