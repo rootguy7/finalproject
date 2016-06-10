@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hb.model.BuyDao;
 import com.hb.model.ProductVo;
@@ -40,9 +41,17 @@ public class AllController {
 		return "all/alllist";
 	}
 
-	@RequestMapping("/a1detail")
-	public String alldetail() {
-		return "all/a1detail";
+	@RequestMapping("/pdtdetail")
+	public String alldetail(@RequestParam("serial_num") int serial_num, Model model) {
+		
+		ProductVo vo = null;
+		try {
+			vo = buydao.selectPOne(serial_num);
+		} catch (Exception e) {e.printStackTrace();}
+		
+		model.addAttribute("proVo", vo);
+		
+		return "all/pdtdetail";
 	}
 
 	@RequestMapping("/a2detail")

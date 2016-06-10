@@ -54,4 +54,10 @@ public class BuyDaoImp implements BuyDao{
 	public List<ProductVo> selectPList() throws Exception {
 		return sqlSession.selectList("buy.selectPList");
 	}
+
+	@Override
+	public ProductVo selectPOne(int serial_num) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("buy.selectPOne", serial_num);
+	}
 }

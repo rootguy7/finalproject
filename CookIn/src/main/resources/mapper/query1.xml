@@ -29,6 +29,9 @@
 	<select id="selectPList" resultType="com.hb.model.ProductVo" parameterType="String">
   		select serial_num, kind_num, `name`, price, c_num, reppicture, explpicture, imgname, mainexp from TB_PRODUCT order by serial_num
   	</select>
+	<select id="selectPOne" resultType="com.hb.model.ProductVo" parameterType="int">
+  		select serial_num, kind_num, `name`, price, c_num, reppicture, explpicture, imgname, mainexp, TB_COUNTRY.c_name from TB_PRODUCT join TB_COUNTRY using(c_num) where serial_num = #{value}
+  	</select>
 </mapper>
 
 

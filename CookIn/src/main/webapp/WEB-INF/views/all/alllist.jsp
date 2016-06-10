@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,114 +108,25 @@
                 <c:forEach items="${pList }" var="prodVo">
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <!-- <a href="/cook/b1detail"><img src="/cook/resources/imgs/ck1.PNG" ></a> -->
-                            <a href="/cook/b1detail"><img src="${prodVo.reppicture+prodVo.imgname }" ></a>
+                            <a href="/cook/pdtdetail?serial_num=${prodVo.serial_num }"><img src="${prodVo.reppicture}${prodVo.imgname }" ></a>
                             <div class="caption">
-                                <h4 class="pull-right">${prodVo.price }\</h4>
-                                <h4><a href="/cook/b1detail">${prodVo.name }</a>
+                                <h4 class="pull-right"><fmt:formatNumber value="${prodVo.price }" pattern="#,###" />￦</h4>
+                                <h4><a href="/cook/pdtdetail?serial_num=${prodVo.serial_num }">
+                                <c:choose>
+                                	<c:when test="${fn:length(prodVo.name)>10 }">
+                                		<c:out value="${fn:substring(prodVo.name,0,12)}"/>...
+                               		</c:when>
+                               		<c:otherwise>
+            							<c:out value="${prodVo.name }"/>
+           							</c:otherwise> 
+                                </c:choose>
+                                </a>
                                 </h4>
-                                <p>${proVo.mainexp }</p>
+                                <p>${prodVo.mainexp }</p>
                             </div>
                         </div>
                     </div>
                	</c:forEach>	                    
-                    <!-- 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="/cook/b2detail"><img src="/cook/resources/imgs/ck2.PNG" ></a>
-                            <div class="caption">
-                                <h4 class="pull-right">800\</h4>
-                                <h4><a href="/cook/b2detail">로아커웨하스 미니 3종</a>
-                                </h4>
-                                <p>로하커웨하스 미니45g 3종(나폴리타너,바닐라,크림카카오) </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="/cook/b3detail"><img src="/cook/resources/imgs/ck3.PNG" ></a>
-                            <div class="caption">
-                                <h4 class="pull-right">2,300\</h4>
-                                <h4><a href="/cook/b3detail">하리보 신상품 판타지아</a>
-                                </h4>
-                                <p>하리보 신상품 판타지아 200g/ 크레지파이션 175g </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="/cook/b4detail"><img src="/cook/resources/imgs/ck4.PNG" ></a>
-                            <div class="caption">
-                                <h4 class="pull-right">2,700\</h4>
-                                <h4><a href="/cook/b4detail">우마이봉 4종 </a>
-                                </h4>
-                                <p>우마이봉(멘타이,초코,치즈,콘포타지)_유통기한 임박 세일</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="/cook/b5detail"><img src="/cook/resources/imgs/ck5.PNG" ></a>
-                            <div class="caption">
-                                <h4 class="pull-right">1,100\</h4>
-                                <h4><a href="/cook/b5detail">피오렐라 초코 비스켓</a>
-                                </h4>
-                                <p>피오렐라 초코 비스켓_ 유통기한 임박 세일(2016.06.26)</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="/cook/b6detail"><img src="/cook/resources/imgs/ck6.PNG" ></a>
-                            <div class="caption">
-                                <h4 class="pull-right">2,500\</h4>
-                                <h4><a href="/cook/b6detail">바이올란타 3종</a>
-                                </h4>
-                                <p>full45 & cookies & cream biscuits </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="/cook/a1detail"><img src="/cook/resources/imgs/ck7.PNG" ></a>
-                            <div class="caption">
-                                <h4 class="pull-right">14,500\</h4>
-                                <h4><a href="/cook/a1detail">마오얌 Bloxx</a>
-                                </h4>
-                                <p>마오얌 Bloxx 박스 </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="/cook/a2detail"><img src="/cook/resources/imgs/ck8.PNG" ></a>
-                            <div class="caption">
-                                <h4 class="pull-right">22,800\</h4>
-                                <h4><a href="/cook/a2detail">블랙포레스트 젤리 박스</a>
-                                </h4>
-                                <p>블랙포레스트 젤리 박스(80개입) </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="/cook/a3detail"><img src="/cook/resources/imgs/ck9.PNG" ></a>
-                            <div class="caption">
-                                <h4 class="pull-right">1,000\</h4>
-                                <h4><a href="/cook/a3detail">스위스미스 핫코코아 믹스컵</a>
-                                </h4>
-                                <p>스위스믹스 핫코코아 믹스컵 </p>
-                            </div>
-                        </div>
-                    </div>
-                    -->
                 </div>
             </div> <!-- list 끝 -->
 
@@ -224,15 +136,11 @@
 							     <div><a href="#"><img src="/cook/resources/imgs/side2.PNG" class="jangbaguni"></a></div>
 						</div>		
             </div>
-
         </div>
-
     </div>
     <!-- /.container -->
-
     <div class="container">
 
-     
     		<!-- 페이징 start -->
 					<div class="row">
 						<div class="col-md-12" id="pagination">
