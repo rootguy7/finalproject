@@ -49,4 +49,9 @@ public class BuyDaoImp implements BuyDao{
 	public void delCartOne(String cart_idx) throws Exception {
 		sqlSession.delete("buy.delCartOne", cart_idx);
 	}
+
+	@Override
+	public List<ProductVo> selectPList() throws Exception {
+		return sqlSession.selectList("buy.selectPList");
+	}
 }

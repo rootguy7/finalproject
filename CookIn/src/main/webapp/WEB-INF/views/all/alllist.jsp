@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -101,18 +103,22 @@
 					신상품 | 상품명 | 낮은가격 | 높은가격 | 인기상품 | 조회수
 					<hr/>
                 <div class="row">
+                
+                <c:forEach items="${pList }" var="prodVo">
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/cook/b1detail"><img src="/cook/resources/imgs/ck1.PNG" ></a>
+                            <!-- <a href="/cook/b1detail"><img src="/cook/resources/imgs/ck1.PNG" ></a> -->
+                            <a href="/cook/b1detail"><img src="${prodVo.reppicture+prodVo.imgname }" ></a>
                             <div class="caption">
-                                <h4 class="pull-right">1,000\</h4>
-                                <h4><a href="/cook/b1detail">허쉬 자이언트 초콜렛</a>
+                                <h4 class="pull-right">${prodVo.price }\</h4>
+                                <h4><a href="/cook/b1detail">${prodVo.name }</a>
                                 </h4>
-                                <p>허쉬 자이언트 초콜렛(크림카카오, 화이트, 밀크)</p>
+                                <p>${proVo.mainexp }</p>
                             </div>
                         </div>
                     </div>
-                    
+               	</c:forEach>	                    
+                    <!-- 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <a href="/cook/b2detail"><img src="/cook/resources/imgs/ck2.PNG" ></a>
@@ -208,7 +214,7 @@
                             </div>
                         </div>
                     </div>
-             
+                    -->
                 </div>
             </div> <!-- list 끝 -->
 

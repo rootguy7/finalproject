@@ -26,6 +26,9 @@
 	<delete id="delCartOne" parameterType="String">
 		delete from TB_CART where cart_idx=#{value}
 	</delete>
+	<select id="selectPList" resultType="com.hb.model.ProductVo" parameterType="String">
+  		select serial_num, kind_num, `name`, price, c_num, reppicture, explpicture, imgname, mainexp from TB_PRODUCT order by serial_num
+  	</select>
 </mapper>
 
 

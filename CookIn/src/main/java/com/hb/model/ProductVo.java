@@ -9,27 +9,45 @@ public class ProductVo {
 	private String name;
 	private int price;
 	private int c_num;
-	private Date ip_date;
+	private String reppicture;
+	private String explpicture;
+	private String imgname;
+	private String mainexp;
 	private int ea;
 	private String c_name;
+	private Date ip_date;
 	
-	public ProductVo() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public ProductVo(String serial_num, int kind_num, String name, int price, int c_num, Date ip_date, int ea,
-			String c_name) {
-		super();
+	public ProductVo() {}
+
+	public ProductVo(String serial_num, int kind_num, String name, int price, int c_num, String reppicture,
+			String explpicture, String imgname, String mainexp, int ea, String c_name, Date ip_date) {
 		this.serial_num = serial_num;
 		this.kind_num = kind_num;
 		this.name = name;
 		this.price = price;
 		this.c_num = c_num;
-		this.ip_date = ip_date;
+		this.reppicture = reppicture;
+		this.explpicture = explpicture;
+		this.imgname = imgname;
+		this.mainexp = mainexp;
 		this.ea = ea;
 		this.c_name = c_name;
+		this.ip_date = ip_date;
 	}
 
+	public ProductVo(String serial_num, int kind_num, String name, int price, int c_num, String reppicture,
+			String explpicture, String imgname, String mainexp) {
+		this.serial_num = serial_num;
+		this.kind_num = kind_num;
+		this.name = name;
+		this.price = price;
+		this.c_num = c_num;
+		this.reppicture = reppicture;
+		this.explpicture = explpicture;
+		this.imgname = imgname;
+		this.mainexp = mainexp;
+	}
+	
 	public String getSerial_num() {
 		return serial_num;
 	}
@@ -50,8 +68,20 @@ public class ProductVo {
 		return c_num;
 	}
 
-	public Date getIp_date() {
-		return ip_date;
+	public String getReppicture() {
+		return reppicture;
+	}
+
+	public String getExplpicture() {
+		return explpicture;
+	}
+
+	public String getImgname() {
+		return imgname;
+	}
+
+	public String getMainexp() {
+		return mainexp;
 	}
 
 	public int getEa() {
@@ -60,6 +90,10 @@ public class ProductVo {
 
 	public String getC_name() {
 		return c_name;
+	}
+
+	public Date getIp_date() {
+		return ip_date;
 	}
 
 	public void setSerial_num(String serial_num) {
@@ -82,8 +116,20 @@ public class ProductVo {
 		this.c_num = c_num;
 	}
 
-	public void setIp_date(Date ip_date) {
-		this.ip_date = ip_date;
+	public void setReppicture(String reppicture) {
+		this.reppicture = reppicture;
+	}
+
+	public void setExplpicture(String explpicture) {
+		this.explpicture = explpicture;
+	}
+
+	public void setImgname(String imgname) {
+		this.imgname = imgname;
+	}
+
+	public void setMainexp(String mainexp) {
+		this.mainexp = mainexp;
 	}
 
 	public void setEa(int ea) {
@@ -94,9 +140,16 @@ public class ProductVo {
 		this.c_name = c_name;
 	}
 
+	public void setIp_date(Date ip_date) {
+		this.ip_date = ip_date;
+	}
+
 	@Override
 	public String toString() {
 		return "ProductVo [serial_num=" + serial_num + ", kind_num=" + kind_num + ", name=" + name + ", price=" + price
-				+ ", c_num=" + c_num + ", ip_date=" + ip_date + ", ea=" + ea + ", c_name=" + c_name + "]";
+				+ ", c_num=" + c_num + ", reppicture=" + reppicture + ", explpicture=" + explpicture + ", imgname="
+				+ imgname + ", mainexp=" + mainexp + ", ea=" + ea + ", c_name=" + c_name + ", ip_date=" + ip_date + "]";
 	}
+	
+	
 }

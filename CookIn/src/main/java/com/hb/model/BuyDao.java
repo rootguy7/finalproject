@@ -16,4 +16,5 @@ public interface BuyDao {
 	int selMaxbuynum() throws Exception;
 	void editPoint(HashMap<String, String> map);
 	void delCartOne(String cart_idx) throws Exception;
+	List<ProductVo> selectPList() throws Exception;
 }
