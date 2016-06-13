@@ -105,7 +105,7 @@
 				<div class="text-center">
 				<table class="table">
 				<tr>
-					<td id="tbclr">손지현님의 주문이 완료되었습니다.<br>
+					<td id="tbclr">주형님의 주문이 완료되었습니다.<br>
 					귀하의 주문확인 번호는 ${buyList[0].buynum } 입니다.<br>
 					입금방법이 무통장 입금인 경우 계좌번호를 메모하세요<br>
 					입금 확인 후 상품을 준비하여 배송해 드리겠습니다.<br><br>

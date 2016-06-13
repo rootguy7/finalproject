@@ -45,7 +45,7 @@
 					</div>
 					<div class="form-group">
 						<label for="userpw" class="control-label">PASSWORD</label>
-						<input type="text" class="form-control" id="userpw">
+						<input type="password" class="form-control" id="userpw">
 					</div>
 					<div class="form-group bottomColor">
 						<button type="submit" id="loginButton">SIGN IN</button>

@@ -50,6 +50,15 @@
 	font-size: 13pt;
 	padding: 7pt;
 }
+#jjang{
+	width:100px;
+	height: 100px;
+}
+#wkdqkrnsl{
+	font-size: 15px ;
+	color: darkgray; 
+	font-weight: bold;
+}
 }
 </style>
 <!-- jquery -->
@@ -94,7 +103,7 @@
             </div>
             <!-- /.col-md-8 -->
             <div class="col-md-5">
-                <h2><b>허쉬 자이언트 초콜렛</b></h2>
+                <h2><b>허쉬 자이언트 초콜렛 3종</b></h2>
                 <hr>
                 <table class="detailtb">
                 	<tr>
@@ -110,7 +119,7 @@
                 		<td>소비자가</td><td>6,000원</td>
                 	</tr>
                 	<tr>
-                		<td>판매가</td><td>3,500원</td>
+                		<td>판매가</td><td>6,000원</td>
                 	</tr>
                 </table>
                 <hr>
@@ -125,8 +134,8 @@
                 	</tr>
                 </table>
                 <hr>
-                <button type="button" class="btn btn-danger btn-lg">BUY NOW</button>
-                <button type="button" class="btn btn-warning btn-lg">CART</button>
+                <button type="button" class="btn btn-danger btn-lg" >BUY NOW</button>
+                <button type="button" class="btn btn-warning btn-lg" onclick="location.href='/cook/cart'">CART</button>
                 <button type="button" class="btn btn-warning btn-lg">WISH LIST</button>
             </div>
             <!-- /.col-md-4 -->
@@ -174,7 +183,8 @@
 					<!-- 사이드 장바구니 -->
 						<div class="col-md-1">  
 							 <div id="right_section2">  
-							     <div><img src="#" class="img-responsive" alt="장바구니 사진!"></div>  
+							 <p><center><a  id ="wkdqkrnsl">[최근 본 상품]</a></center></p>
+							  <div><a href="#"><img src="/cook/resources/imgs/ck1.PNG" class="jangbaguni" id ="jjang"></a></div>
 							 </div>  
 						</div> 		
 		<!-- row div end -->
