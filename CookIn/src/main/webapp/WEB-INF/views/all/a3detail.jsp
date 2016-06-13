@@ -50,6 +50,15 @@
 	font-size: 13pt;
 	padding: 7pt;
 }
+#jjang{
+	width:100px;
+	height: 100px;
+}
+#wkdqkrnsl{
+	font-size: 15px ;
+	color: darkgray; 
+	font-weight: bold;
+}
 }
 </style>
 <!-- jquery -->
@@ -110,7 +119,7 @@
                 		<td>소비자가</td><td>1,500원</td>
                 	</tr>
                 	<tr>
-                		<td>판매가</td><td>1,000원</td>
+                		<td>판매가</td><td>1,200원</td>
                 	</tr>
                 </table>
                 <hr>
@@ -163,7 +172,8 @@
 					<!-- 사이드 장바구니 -->
 						<div class="col-md-1">  
 							 <div id="right_section2">  
-							     <div><img src="#" class="img-responsive" alt="장바구니 사진!"></div>  
+							     <p><center><a  id ="wkdqkrnsl">[최근 본 상품]</a></center></p>
+							  <div><a href="#"><img src="/cook/resources/imgs/a3d1.png" class="jangbaguni" id ="jjang"></a></div>
 							 </div>  
 						</div> 		
 		<!-- row div end -->

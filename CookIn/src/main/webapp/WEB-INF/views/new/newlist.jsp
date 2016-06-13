@@ -201,10 +201,10 @@
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/cook/pdtdetail?serial_num=100010"><img src="/cook/resources/imgs/a3d1.png" ></a>
+                            <a href="/cook/a3detail"><img src="/cook/resources/imgs/a3d1.png" ></a>
                             <div class="caption">
                                 <h4 class="pull-right">1,200\</h4>
-                                <h4><a href="/cook/pdtdetail?serial_num=100010">스위스미스 핫코코아 믹스</a>
+                                <h4><a href="/cook/a3detail">스위스미스 핫코코아 믹스</a>
                                 </h4>
                              
                             </div>
