@@ -86,6 +86,9 @@ $(function(){
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="/cook/resources/css/jquery-ui.css"/>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="/cook/resources/js/jquery-ui.min.js"></script>
 <script src="../resources/js/bootstrap.min.js"></script>
@@ -124,8 +127,11 @@ $(function(){
 .input-group-btn-vertical > .btn:last-child {
   margin-top: -2px;
   border-bottom-right-radius: 4px;
+
+
 }
 .input-group-btn-vertical i{
+
   position: absolute;
   top: 0;
   left: 4px;
@@ -141,6 +147,10 @@ $(function(){
 	});
 	$('.spinner .btn:last-of-type').on('click', function() {
 	  $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+	});
+	$('.spinner>input').spinner({
+		min: 0, 
+		max: 100
 	});
 	
 	$("#datepicker").datepicker({
@@ -159,7 +169,7 @@ $(function(){
 	});		
 });
 </script>
-</head>
+</head>`
 <body>
 <%@include file="../header2.jsp" %>
 <div class="container-fluid"><br/>

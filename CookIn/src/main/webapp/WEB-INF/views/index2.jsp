@@ -81,7 +81,7 @@ $(document).ready(function(){
 		    var postString = "";       // post방식으로 처리하기 위한 파라미터들
 		    postString   = "id=" + $('#userid').val();
 		    postString += "&pw=" + $('#userpw').val();
-			alert(postString);
+// 			alert(postString);
 		    $.ajax({                          // 이부분부터 비동기통신을 하게 된다. 위에서 설정한 값들을 입력후
 		        type: "POST",
 		        url: url,
@@ -91,21 +91,21 @@ $(document).ready(function(){
 		        dataType: "text",
 		        success: function(response) {
 // 		        	alert(response);
-		        	var userCheck = response;
-// 		        	alert("userCheck>>>"+userCheck);
-		            if(userCheck==1)
-		            {
-		             alert("로그인 해줄게요. 기다리세요.")
-		            }
-		            else
-		            {
-		             alert("아이디 또는 비번이 틀렸습니다. 다시 입력하세요.")
-// 		             return false;
-		            } 
+// 		        	var userCheck = response;
+// // 		        	alert("userCheck>>>"+userCheck);
+// 		            if(userCheck==1)
+// 		            {
+// 		             alert("로그인 해줄게요. 기다리세요.")
+// 		            }
+// 		            else
+// 		            {
+// 		             alert("아이디 또는 비번이 틀렸습니다. 다시 입력하세요.")
+// // 		             return false;
+// 		            } 
 		         
 		           },
 		       error: function (jqXHR, textStatus, errorThrown) {
-	               alert("ERROR" + textStatus + " : " + errorThrown);
+// 	               alert("ERROR" + textStatus + " : " + errorThrown);
 	  	       }
 		       
 		       
