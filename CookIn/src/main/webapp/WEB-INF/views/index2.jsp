@@ -170,7 +170,7 @@ $(document).ready(function(){
                         <a class="page-scroll" href="join"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/cook/mypage"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                        <a class="page-scroll" href="/cook/admin"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/cook/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>

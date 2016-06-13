@@ -61,7 +61,7 @@
       		<div class="widget widgetnum">
 			    <div class="widget-header"><h3>미입금</h3></div>
       			<div class="widget-content">
-			      	<span class="number"><a class="number1" href="../cook/admin/notpaid">3</a></span><span>건</span>	
+			      	<span class="number"><a class="number1" href="../cook/admin/notpaid">2</a></span><span>건</span>	
 	      		</div> 
 	      	</div>
       	</div>

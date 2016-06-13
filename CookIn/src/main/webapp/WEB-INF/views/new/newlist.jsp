@@ -20,7 +20,7 @@
 }
 
 .carousel-holder {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .carousel-control,
@@ -141,17 +141,9 @@
                                 <h4 class="pull-right">1,000\</h4>
                                 <h4><a href="/cook/b1detail">허쉬 자이언트 초콜렛</a>
                                 </h4>
-                                <p>허쉬 자이언트 초콜렛(크림카카오, 화이트, 밀크)</p>
+                             
                             </div>
-                              <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
+                           
                         </div>
                     </div>
                     
@@ -162,17 +154,9 @@
                                 <h4 class="pull-right">800\</h4>
                                 <h4><a href="/cook/b2detail">로아커웨하스 미니 3종</a>
                                 </h4>
-                                <p>로하커웨하스 미니45g 3종(나폴리타너,바닐라,크림카카오) </p>
+                              
                             </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
+                        
                         </div>
                     </div>
                     
@@ -183,17 +167,9 @@
                                 <h4 class="pull-right">2,300\</h4>
                                 <h4><a href="/cook/b3detail">하리보 신상품 판타지아</a>
                                 </h4>
-                                <p>하리보 신상품 판타지아 200g/ 크레지파이션 175g </p>
+                                
                             </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
                     
@@ -204,17 +180,9 @@
                                 <h4 class="pull-right">2,700\</h4>
                                 <h4><a href="/cook/b4detail">우마이봉 4종 </a>
                                 </h4>
-                                <p>우마이봉(멘타이,초코,치즈,콘포타지)_유통기한 임박 세일</p>
+                       
                             </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
+                        
                         </div>
                     </div>
                     
@@ -225,41 +193,25 @@
                                 <h4 class="pull-right">1,100\</h4>
                                 <h4><a href="/cook/b5detail">피오렐라 초코 비스켓</a>
                                 </h4>
-                                <p>피오렐라 초코 비스켓_ 유통기한 임박 세일(2016.06.26)</p>
+                             
                             </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
+                           
                         </div>
                     </div>
                     
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <a href="/cook/b6detail"><img src="/cook/resources/imgs/ck6.PNG" ></a>
+                            <a href="/cook/pdtdetail?serial_num=100010"><img src="/cook/resources/imgs/a3d1.png" ></a>
                             <div class="caption">
-                                <h4 class="pull-right">2,500\</h4>
-                                <h4><a href="/cook/b6detail">바이올란타 3종</a>
+                                <h4 class="pull-right">1,200\</h4>
+                                <h4><a href="/cook/pdtdetail?serial_num=100010">스위스미스 핫코코아 믹스</a>
                                 </h4>
-                                <p>full45 & cookies & cream biscuits </p>
+                             
                             </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
+                          
                         </div>
                     </div>
-             
+               
                 </div>
             </div> <!-- list 끝 -->
 
